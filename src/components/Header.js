@@ -2,8 +2,11 @@ import React, { Component } from "react";
 import "./Header.scss";
 import logo from "../copy/img/logo/ezfy-logo-transparent-small.png";
 import stickyLogo from "../copy/img/logo/ezfy-logo-small.png";
+import { HashLink as Link } from "react-router-hash-link";
 
-function Header() {
+const url = `website-2020`;
+
+function Header(props) {
   return (
     <header
       id="navbarSection"
@@ -36,28 +39,31 @@ function Header() {
           <nav>
             <ul className="navbar-nav" id="navbar-nav">
               <li className="nav-item">
-                <a
-                  className="nav-link scroll"
-                  href="#about"
-                  data-scroll-offset={-60}>
+                <Link
+                  scrollOffset={-150}
+                  smooth
+                  to={`${url}/#about`}
+                  className="nav-link scroll">
                   About Us
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
+                <Link
+                  smooth
                   className="nav-link scroll"
-                  href="#reviews"
-                  data-scroll-offset={-40}>
+                  to={`${url}/#reviews`}
+                  scrolloffset={-40}>
                   Reviews
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
+                <Link
+                  smooth
                   className="nav-link scroll"
-                  href="#portfolio"
+                  to={`${url}/#portfolio`}
                   data-scroll-offset={-40}>
                   Portfolio
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a

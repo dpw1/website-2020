@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.scss";
 import { HashRouter, Route, Link } from "react-router-dom";
@@ -8,6 +8,7 @@ import About from "./components/About";
 import Preloader from "./components/Preloader";
 import ScrollToTop from "./components/ScrollToTop";
 import Reviews from "./components/Reviews";
+import Portfolio from "./components/Portfolio";
 
 const Home = () => (
   <div>
@@ -17,13 +18,14 @@ const Home = () => (
     <Hero></Hero>
     <About></About>
     <Reviews></Reviews>
+    <Portfolio></Portfolio>
   </div>
 );
 
-function App() {
+function App(props) {
   return (
-    <div className="App">
-      <HashRouter basename="/">
+    <div className="App main">
+      <HashRouter>
         <div>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
