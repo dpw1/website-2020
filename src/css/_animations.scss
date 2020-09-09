@@ -1,0 +1,244 @@
+/* ALL PAGES start
+=============================================== */
+.desktop-only {
+  @media (max-width: $xs) {
+    display: none;
+  }
+}
+.mobile-only {
+  @media (min-width: $xs) {
+    display: none;
+  }
+}
+
+#scrollUp {
+  display: block;
+  right: 0px;
+  bottom: 93px;
+  height: 40px;
+  width: 35px;
+}
+#scrollUp > svg {
+  font-size: 14px;
+}
+[data-toggle="collapse"]:after {
+  transition: all 0.23s ease;
+}
+[data-toggle="collapse"].collapsed:after {
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 25px;
+}
+[data-toggle="collapse"]:not(.collapsed):after {
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 25px;
+  transform: rotate(90deg) translate(0px, 2px);
+  transform-origin: 8px 7px;
+}
+
+.custom-btn {
+  background: transparent;
+  border: 1px solid #ffffff2b;
+  margin-right: 20px;
+}
+
+.custom-link {
+  border-bottom: 1px solid #7c4fe0;
+  color: #7c4fe0;
+}
+.custom-link:hover {
+  opacity: 0.8;
+}
+
+.slick-slide {
+  cursor: grab;
+  outline: none !important;
+}
+
+.slick-slide:active {
+  cursor: grabbing;
+}
+
+.ptb_25 {
+  padding: 25px 0;
+}
+
+.media-body {
+  word-break: break-word;
+}
+
+video::-internal-media-controls-download-button {
+  display: none;
+}
+
+video::-webkit-media-controls-enclosure {
+  position: relative;
+}
+
+video::-webkit-media-controls-timeline {
+  padding: 0;
+  box-shadow: unset;
+}
+
+video::-internal-media-controls-overflow-button {
+  display: none;
+  position: relative;
+  right: 200px;
+  width: 1px;
+}
+
+video::-webkit-media-controls-volume-control-container,
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-time-remaining-display {
+  display: none;
+}
+
+video::-webkit-media-controls-panel {
+  position: relative;
+}
+
+video {
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  video::-webkit-media-controls-panel {
+    background-position-y: 97px;
+  }
+}
+
+.custom-emphasis {
+  color: #7c4fe0;
+}
+
+.section-heading-accent {
+  h2 {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 70px;
+      background-color: white;
+      bottom: -15px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .fancybox-slide.fancybox-slide--video {
+    padding: 0 !important;
+  }
+
+  .fancybox-video,
+  .fancybox-content {
+    width: 100% !important;
+  }
+}
+
+section[id]:not(#footerSection) {
+  z-index: 2;
+}
+
+#footerSection {
+  z-index: -2;
+}
+
+#scrollUp {
+  border-radius: $border-radius;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* ALL PAGES end
+=============================================== */
+
+/* ANIMATIONS start
+=============================================== */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.fade-out {
+  -webkit-animation: fade-out 0.85s ease both;
+  animation: fade-out 0.85s ease both;
+}
+
+@-webkit-keyframes bounceHero {
+  0% {
+    top: 0px;
+  }
+
+  50% {
+    top: 25px;
+  }
+
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes bounceHero {
+  0% {
+    top: 0px;
+  }
+
+  50% {
+    top: 25px;
+  }
+
+  100% {
+    top: 0px;
+  }
+}
+
+.animation--float {
+  position: relative;
+  animation: bounceHero 3s infinite;
+}
+
+.animation--gradient-text {
+  background-image: -webkit-linear-gradient(84deg, #ba99ff, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 10s infinite linear;
+  padding-right: 5px;
+  position: relative;
+  right: -2px;
+}
+
+@keyframes hue {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(-360deg);
+  }
+}
+
+/* ANIMATIONS end
+=============================================== */
