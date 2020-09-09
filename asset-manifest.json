@@ -1,23 +1,39 @@
 {
   "files": {
-    "main.css": "/website-2020/static/css/main.5f361e03.chunk.css",
-    "main.js": "/website-2020/static/js/main.d2921756.chunk.js",
-    "main.js.map": "/website-2020/static/js/main.d2921756.chunk.js.map",
+    "main.css": "/website-2020/static/css/main.c8c50113.chunk.css",
+    "main.js": "/website-2020/static/js/main.dbdac68d.chunk.js",
+    "main.js.map": "/website-2020/static/js/main.dbdac68d.chunk.js.map",
     "runtime-main.js": "/website-2020/static/js/runtime-main.651a5696.js",
     "runtime-main.js.map": "/website-2020/static/js/runtime-main.651a5696.js.map",
-    "static/js/2.f97553d0.chunk.js": "/website-2020/static/js/2.f97553d0.chunk.js",
-    "static/js/2.f97553d0.chunk.js.map": "/website-2020/static/js/2.f97553d0.chunk.js.map",
+    "static/js/2.18825a77.chunk.js": "/website-2020/static/js/2.18825a77.chunk.js",
+    "static/js/2.18825a77.chunk.js.map": "/website-2020/static/js/2.18825a77.chunk.js.map",
     "index.html": "/website-2020/index.html",
-    "precache-manifest.092b958eec72498243261ebd567df25c.js": "/website-2020/precache-manifest.092b958eec72498243261ebd567df25c.js",
+    "precache-manifest.de9b9b6f74016aee5df144537c1e4b86.js": "/website-2020/precache-manifest.de9b9b6f74016aee5df144537c1e4b86.js",
     "service-worker.js": "/website-2020/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/website-2020/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.f97553d0.chunk.js.LICENSE.txt": "/website-2020/static/js/2.f97553d0.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/website-2020/static/media/logo.5d5d9eef.svg"
+    "static/css/main.c8c50113.chunk.css.map": "/website-2020/static/css/main.c8c50113.chunk.css.map",
+    "static/js/2.18825a77.chunk.js.LICENSE.txt": "/website-2020/static/js/2.18825a77.chunk.js.LICENSE.txt",
+    "static/media/diego.jpg": "/website-2020/static/media/diego.2336f72b.jpg",
+    "static/media/Hero.scss": "/website-2020/static/media/ezfy-office.15b81b8d.jpg",
+    "static/media/ezfy-proof-mobile-up.jpg": "/website-2020/static/media/ezfy-proof-mobile-up.b922ef5a.jpg",
+    "static/media/logo.svg": "/website-2020/static/media/logo.5d5d9eef.svg",
+    "static/media/pixel_quite_black_portrait_trim_up.png": "/website-2020/static/media/pixel_quite_black_portrait_trim_up.9c2af6b0.png",
+    "static/media/r1.jpg": "/website-2020/static/media/r1.f086634d.jpg",
+    "static/media/r10.jpg": "/website-2020/static/media/r10.9ff1df8c.jpg",
+    "static/media/r11.jpg": "/website-2020/static/media/r11.568374e0.jpg",
+    "static/media/r12.jpg": "/website-2020/static/media/r12.25dea9f4.jpg",
+    "static/media/r2.jpg": "/website-2020/static/media/r2.31a85ed1.jpg",
+    "static/media/r3.jpg": "/website-2020/static/media/r3.84bb6265.jpg",
+    "static/media/r4.jpg": "/website-2020/static/media/r4.745336fe.jpg",
+    "static/media/r5.jpg": "/website-2020/static/media/r5.6c6588f4.jpg",
+    "static/media/r6.jpg": "/website-2020/static/media/r6.45e36577.jpg",
+    "static/media/r7.jpg": "/website-2020/static/media/r7.1b7bd781.jpg",
+    "static/media/r8.jpg": "/website-2020/static/media/r8.f26e4b0f.jpg",
+    "static/media/r9.jpg": "/website-2020/static/media/r9.e15f62ea.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.651a5696.js",
-    "static/js/2.f97553d0.chunk.js",
-    "static/css/main.5f361e03.chunk.css",
-    "static/js/main.d2921756.chunk.js"
+    "static/js/2.18825a77.chunk.js",
+    "static/css/main.c8c50113.chunk.css",
+    "static/js/main.dbdac68d.chunk.js"
   ]
 }
