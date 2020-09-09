@@ -11,7 +11,7 @@ import Reviews from "./components/Reviews";
 
 const Home = () => (
   <div>
-    <Preloader></Preloader>
+    {/* <Preloader></Preloader> */}
     <ScrollToTop></ScrollToTop>
     <Header></Header>
     <Hero></Hero>
@@ -22,7 +22,7 @@ const Home = () => (
 
 function App() {
   return (
-    <div className="App main">
+    <div className="App">
       <HashRouter basename="/">
         <div>
           <Route exact path="/" component={Home} />
