@@ -61,7 +61,7 @@ function App(props) {
   }, []);
   return (
     <div className="App main">
-      <HashRouter>
+      <HashRouter basename="/website-2020">
         <div>
           <Route exact path="/" component={() => <Home></Home>} />
           <Route path="/about" component={() => <About></About>} />
