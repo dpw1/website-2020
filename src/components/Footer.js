@@ -5,7 +5,7 @@ import "./Footer.scss";
 function Footer() {
   return (
     <React.Fragment>
-      <div class="height-emulator d-none d-lg-block"></div>
+      <div className="height-emulator d-none d-lg-block"></div>
       <footer id="footerSection" className="footer-area footer-fixed">
         {/* Footer Top */}
         <div className="footer-top ptb_100">

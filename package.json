@@ -2,7 +2,7 @@
   "name": "ezfy",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dpw1.github.io/website-2020",
+  "homepage": "https://dpw1.github.io/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -15,7 +15,8 @@
     "react-router-dom": "^5.2.0",
     "react-router-hash-link": "^2.0.0",
     "react-router-hash-link-offset": "^1.2.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "react-video-scroll": "^1.0.1"
   },
   "scripts": {
     "predeploy": "npm run build",

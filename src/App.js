@@ -16,6 +16,7 @@ import Faq from "./components/Faq";
 import Steps from "./components/Steps";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Services from "./components/Services";
 
 let history = createBrowserHistory();
 
@@ -28,6 +29,7 @@ const Home = () => (
     <About></About>
     <Reviews></Reviews>
     <Portfolio></Portfolio>
+    <Services></Services>
     <Faq></Faq>
     <Steps></Steps>
     <Contact></Contact>

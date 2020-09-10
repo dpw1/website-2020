@@ -363,7 +363,7 @@ ezfy = (function () {
   }
 
   function lazyLoadVideos() {
-    var lazyVideos = [].slice.call(document.querySelectorAll("video.lazyload"));
+    var lazyVideos = [].slice.call(document.querySelectorAll("video"));
 
     if ("IntersectionObserver" in window) {
       var lazyVideoObserver = new IntersectionObserver(function (
@@ -382,9 +382,13 @@ ezfy = (function () {
               }
             }
 
-            video.target.load();
+            console.log("me");
+            // video.target.load();
+            video.target.play();
             video.target.classList.remove("lazy");
             lazyVideoObserver.unobserve(video.target);
+
+            console.log(video.target);
           }
         });
       });
@@ -510,14 +514,42 @@ ezfy = (function () {
     })();
   }
 
+  function autoplayVideo() {
+    var videos = [].slice.call(document.querySelectorAll("video"));
+
+    if ("IntersectionObserver" in window) {
+      let options = {
+        root: document.querySelector("#scrollArea"),
+        rootMargin: "23%",
+        threshold: 1.0,
+      };
+
+      let observer = new IntersectionObserver(function (entry) {
+        const video = entry[0];
+        console.log(video);
+        if (video.isIntersecting) {
+          console.log("play", video.target);
+          video.target.play();
+        } else if (!video.isIntersecting) {
+          console.log("pause", video.target);
+          video.target.pause();
+        }
+      }, options);
+
+      videos.forEach((each) => {
+        observer.observe(each);
+      });
+    }
+  }
   return {
     init: function () {
       document.addEventListener("DOMContentLoaded", function () {
         lazyLoadImages();
-        lazyLoadVideos();
+        // lazyLoadVideos();
         addTagsToPortfolioItems();
         addTagsToPortfolioFilter();
         portfolioTagHandleOnClick();
+        autoplayVideo();
       });
 
       window.onresize = function (event) {};
