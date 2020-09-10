@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/website-2020/static/css/main.6aa147a8.chunk.css",
-    "main.js": "/website-2020/static/js/main.19671183.chunk.js",
-    "main.js.map": "/website-2020/static/js/main.19671183.chunk.js.map",
+    "main.css": "/website-2020/static/css/main.f8b00366.chunk.css",
+    "main.js": "/website-2020/static/js/main.11273aae.chunk.js",
+    "main.js.map": "/website-2020/static/js/main.11273aae.chunk.js.map",
     "runtime-main.js": "/website-2020/static/js/runtime-main.651a5696.js",
     "runtime-main.js.map": "/website-2020/static/js/runtime-main.651a5696.js.map",
-    "static/js/2.885f9b74.chunk.js": "/website-2020/static/js/2.885f9b74.chunk.js",
-    "static/js/2.885f9b74.chunk.js.map": "/website-2020/static/js/2.885f9b74.chunk.js.map",
+    "static/js/2.f2e806dd.chunk.js": "/website-2020/static/js/2.f2e806dd.chunk.js",
+    "static/js/2.f2e806dd.chunk.js.map": "/website-2020/static/js/2.f2e806dd.chunk.js.map",
     "index.html": "/website-2020/index.html",
-    "precache-manifest.eb25876ecdf209c566af393dce486bf2.js": "/website-2020/precache-manifest.eb25876ecdf209c566af393dce486bf2.js",
+    "precache-manifest.ce2a0bd78d9819d40e3db3551a75f7de.js": "/website-2020/precache-manifest.ce2a0bd78d9819d40e3db3551a75f7de.js",
     "service-worker.js": "/website-2020/service-worker.js",
-    "static/css/main.6aa147a8.chunk.css.map": "/website-2020/static/css/main.6aa147a8.chunk.css.map",
-    "static/js/2.885f9b74.chunk.js.LICENSE.txt": "/website-2020/static/js/2.885f9b74.chunk.js.LICENSE.txt",
+    "static/css/main.f8b00366.chunk.css.map": "/website-2020/static/css/main.f8b00366.chunk.css.map",
+    "static/js/2.f2e806dd.chunk.js.LICENSE.txt": "/website-2020/static/js/2.f2e806dd.chunk.js.LICENSE.txt",
     "static/media/diego.jpg": "/website-2020/static/media/diego.2336f72b.jpg",
     "static/media/Hero.scss": "/website-2020/static/media/ezfy-office.15b81b8d.jpg",
     "static/media/ezfy-proof-mobile-up.jpg": "/website-2020/static/media/ezfy-proof-mobile-up.b922ef5a.jpg",
     "static/media/logo.svg": "/website-2020/static/media/logo.5d5d9eef.svg",
     "static/media/pixel_quite_black_portrait_trim_up.png": "/website-2020/static/media/pixel_quite_black_portrait_trim_up.9c2af6b0.png",
+    "static/media/porto-picture.jpg": "/website-2020/static/media/porto-picture.1ddf436c.jpg",
     "static/media/r1.jpg": "/website-2020/static/media/r1.f086634d.jpg",
     "static/media/r10.jpg": "/website-2020/static/media/r10.9ff1df8c.jpg",
     "static/media/r11.jpg": "/website-2020/static/media/r11.568374e0.jpg",
@@ -52,8 +53,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.651a5696.js",
-    "static/js/2.885f9b74.chunk.js",
-    "static/css/main.6aa147a8.chunk.css",
-    "static/js/main.19671183.chunk.js"
+    "static/js/2.f2e806dd.chunk.js",
+    "static/css/main.f8b00366.chunk.css",
+    "static/js/main.11273aae.chunk.js"
   ]
 }
