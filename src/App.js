@@ -9,6 +9,10 @@ import Preloader from "./components/Preloader";
 import ScrollToTop from "./components/ScrollToTop";
 import Reviews from "./components/Reviews";
 import Portfolio from "./components/Portfolio";
+import Faq from "./components/Faq";
+import Steps from "./components/Steps";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 const Home = () => (
   <div>
@@ -19,6 +23,10 @@ const Home = () => (
     <About></About>
     <Reviews></Reviews>
     <Portfolio></Portfolio>
+    <Faq></Faq>
+    <Steps></Steps>
+    <Contact></Contact>
+    <Footer></Footer>
   </div>
 );
 
