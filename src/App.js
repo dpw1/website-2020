@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.scss";
+
 import { HashRouter, Route, Link } from "react-router-dom";
+import { createBrowserHistory } from "history";
+
 import Hero from "./components/Hero";
 import Header from "./components/Header";
 import About from "./components/About";
@@ -13,6 +16,8 @@ import Faq from "./components/Faq";
 import Steps from "./components/Steps";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+
+let history = createBrowserHistory();
 
 const Home = () => (
   <div>
@@ -30,13 +35,36 @@ const Home = () => (
   </div>
 );
 
+function reloadOnURLChange() {
+  history.listen((location, action) => {
+    const url = location.location.hash;
+    const prevUrl = localStorage.getItem("prev-url");
+
+    if (!prevUrl) {
+      localStorage.setItem("prev-url", url);
+    }
+
+    if (prevUrl !== url) {
+      console.log("reload it");
+
+      localStorage.removeItem("prev-url");
+      window.location.reload();
+    }
+
+    console.log(url, prevUrl);
+  });
+}
+
 function App(props) {
+  useEffect(() => {
+    reloadOnURLChange();
+  }, []);
   return (
     <div className="App main">
       <HashRouter>
         <div>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
+          <Route exact path="/" component={() => <Home></Home>} />
+          <Route path="/about" component={() => <About></About>} />
         </div>
       </HashRouter>
     </div>
