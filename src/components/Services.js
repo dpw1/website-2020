@@ -5,6 +5,95 @@ import "./Services.scss";
 
 import arvalVideo from "../copy/videos/video-arval.mp4";
 
+const items = [
+  {
+    tags: ["HTML5", "CSS3", "jQuery", "UX"],
+    video: require("../copy/videos/video-arval.mp4"),
+    image: require("../copy/img/thumbnail/thumbnail-arval.jpg"),
+    sourceCode: "",
+    liveWebsite: "https://arvalmq.com/",
+    title: "Arval",
+    subtitle: `Arval is a printing machine company. They needed their old
+  website updated so we developed a brand new design +
+  website for them.`,
+  },
+];
+
+const PortfolioItem = (
+  tags,
+  video,
+  image,
+  sourceCode,
+  liveWebsite,
+  title,
+  subtitle,
+) => {
+  return (
+    <div
+      className="col-12 col-md-6 portfolio-item"
+      data-portfolio-item-tags={tags.join(", ")}>
+      <div className="single-portfolio res-margin">
+        {/* Portfolio Thumb */}
+        <div className="portfolio-thumb blog-thumb">
+          <a className="play-btn" data-fancybox="gallery" href={video}>
+            <div className="btn-circle play-animation" />
+            <div className="btn-circle play-animation animation-short" />
+            {/* Play Icon */}
+            <div className="play-icon">
+              <svg
+                className="svg-inline--fa fa-play fa-w-14"
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="play"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                data-fa-i2svg>
+                <path
+                  fill="currentColor"
+                  d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
+              </svg>
+              {/* <i class="fas fa-play"></i> */}
+            </div>
+          </a>
+          <figure className="custom-overlay">
+            <img className="lazyload" data-src={image} alt={title} />
+          </figure>
+        </div>
+        {/* Portfolio Content */}
+        <div className="portfolio-content blog-content p-4">
+          {/* Meta Info */}
+          <ul className="meta-info d-flex">
+            <li>
+              <a
+                className={sourceCode.length <= 0 && "portfolio-blocked"}
+                href={sourceCode.length <= 0 ? "#" : sourceCode}
+                target="_blank">
+                Source Code
+              </a>
+            </li>
+            <li>
+              <a
+                className={liveWebsite.length <= 0 && "portfolio-blocked"}
+                href={liveWebsite.length <= 0 ? "#" : liveWebsite}
+                target="_blank">
+                Live Website
+              </a>
+            </li>
+          </ul>
+          {/* Portfolio Title */}
+          <h3 className="blog-title my-3">
+            <span>{title}</span>
+          </h3>
+          <p>{subtitle}</p>
+        </div>
+        <ul className="portfolio-tags blog-content p-4"></ul>
+      </div>
+    </div>
+  );
+};
+
 function Services() {
   useEffect(() => {
     // video.play();
@@ -48,7 +137,7 @@ function Services() {
                         className="collapse show text-uppercase d-block p-3"
                         data-toggle="collapse"
                         href="#accordion3">
-                        Tags
+                        Filter
                       </a>
                     </h5>
                     {/* Tags Widget Content */}
@@ -75,48 +164,17 @@ function Services() {
           </div>
           <div className="col-12 col-lg-9">
             <div className="portfolio-row row">
-              {/* Single Portfolio start */}
-              <div
-                className="col-12 col-md-6 portfolio-item"
-                data-portfolio-item-tags="HTML5, CSS3, jQuery, UX">
-                <div className="single-portfolio res-margin">
-                  {/* Portfolio Thumb */}
-                  <div className="portfolio-thumb blog-thumb">
-                    <img
-                      className="lazyload"
-                      data-src="https://www.mapzen.com/assets/images/one-minute-map/countdown.gif"
-                      alt=""
-                    />
-                  </div>
-                  {/* Portfolio Content */}
-                  <div className="portfolio-content blog-content p-4">
-                    {/* Meta Info */}
-                    <ul className="meta-info d-flex">
-                      <li>
-                        <a href="https://github.com/dpw1/arval" target="_blank">
-                          Source Code
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://arvalmq.com/" target="_blank">
-                          Live Website
-                        </a>
-                      </li>
-                    </ul>
-                    {/* Portfolio Title */}
-                    <h3 className="blog-title my-3">
-                      <span>Arval</span>
-                    </h3>
-                    <p>
-                      Arval is a printing machine company. They needed their old
-                      website updated so we developed a brand new design +
-                      website for them.
-                    </p>
-                  </div>
-                  <ul className="portfolio-tags blog-content p-4"></ul>
-                </div>
-              </div>
-              {/* Single Portfolio end */}
+              {items.map((e) =>
+                PortfolioItem(
+                  e.tags,
+                  e.video,
+                  e.image,
+                  e.sourceCode,
+                  e.liveWebsite,
+                  e.title,
+                  e.subtitle,
+                ),
+              )}
             </div>
           </div>
         </div>

@@ -60,9 +60,9 @@ function Header(props) {
                 <Link
                   smooth
                   className="nav-link scroll"
-                  to={`${url}/#portfolio`}
+                  to={`${url}/#services`}
                   data-scroll-offset={-40}>
-                  Portfolio
+                  Services
                 </Link>
               </li>
               <li className="nav-item">
