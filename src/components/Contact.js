@@ -35,7 +35,7 @@ function Contact() {
                       <i className="fab fa-facebook-f" />
                     </div>
                     <span className="media-body align-self-center">
-                      fb.com/ezfyforshopify
+                      facebook.com/ezfyforshopify
                     </span>
                   </a>
                 </li>

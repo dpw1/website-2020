@@ -77,6 +77,12 @@ const questions = [
           <li>create custom sections;</li>
           <li>bug fixes.</li>
         </ul>
+        Please{" "}
+        <a className="custom-link scroll" href="#contact">
+          send us an email
+        </a>{" "}
+        for any questions or requests you may have, we'll return within 24
+        hours!
       </p>
     ),
   },
