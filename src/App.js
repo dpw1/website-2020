@@ -27,7 +27,6 @@ const HomePage = () => (
     <Hero></Hero>
     <About></About>
     <Reviews></Reviews>
-    {/* <Portfolio></Portfolio> */}
     <Services></Services>
     <Faq></Faq>
     <Steps></Steps>

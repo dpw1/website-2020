@@ -4,7 +4,7 @@ import TrustBadge from "./TrustBadge";
 
 const items = [
   {
-    tags: ["HTML5", "CSS3", "jQuery", "UX"],
+    tags: ["Custom Shopify Section"],
     video: require("../copy/videos/section-countdown.mp4"),
     price: "49",
     image: require("../copy/img/thumbnail/thumbnail-section-countdown.gif"),
@@ -16,6 +16,22 @@ const items = [
           <i class="fa fa-check" aria-hidden="true"></i>
           <span>Customize colors, text and expiration date</span>
         </li>
+
+        <li>
+          <i class="fa fa-check" aria-hidden="true"></i>
+          <span>Works with any theme (without usage of apps)</span>
+        </li>
+        <li>
+          <i class="fa fa-check" aria-hidden="true"></i>
+          <span>
+            It's a Shopify section: move it around, hide it, have full control
+            and freedom
+          </span>
+        </li>
+        <li>
+          <i class="fa fa-check" aria-hidden="true"></i>
+          <span>Super lightweight: won't slow down your website</span>
+        </li>
         <li>
           <i class="fa fa-check" aria-hidden="true"></i>
           <span>
@@ -24,14 +40,9 @@ const items = [
         </li>
         <li>
           <i class="fa fa-check" aria-hidden="true"></i>
-          <span>Works with any theme without any apps</span>
+          <span>Free installation included</span>
         </li>
-        <li>
-          <i class="fa fa-check" aria-hidden="true"></i>
-          <span>
-            Set yourself apart from the crowd having an unique feature!
-          </span>
-        </li>
+
         <li>
           <small>Secure checkout with PayPal.</small>
           <div style={{ marginTop: 10 }}>
@@ -127,8 +138,8 @@ function Services() {
             <div className="section-heading text-center">
               <h2 className="text-capitalize">Services</h2>
               <p className="d-sm-block mt-4">
-                Below you can find a succinct list of some of the websites coded
-                for our customers.
+                Besides bug fixes and customizations we also sell premade
+                sections.
                 <br />
                 <span className="custom-emphasis">
                   Click on the play button

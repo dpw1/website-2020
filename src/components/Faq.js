@@ -7,6 +7,36 @@ const faqId = `apolo-accordion`;
 
 const questions = [
   {
+    id: "support",
+    question: `What is a Shopify section?`,
+    answer: () => (
+      <p>
+        Shopify sections are customizable elements of a page which can have
+        multiple functions. They're super lightweight since they're coded into
+        your theme which is an advantage over Shopify apps.
+      </p>
+    ),
+  },
+  {
+    id: "support",
+    question: `Why not download an app that does the same as a section?`,
+    answer: () => (
+      <p>
+        Although most apps are undoubtedly helpful, they inevitably end up
+        slowing down your website. It's best to avoid them whenever possible if
+        you aim for an optimized store. You can read in details how the
+        excessive usage of apps can negatively affect your store{" "}
+        <a
+          className="custom-link"
+          target="_blank"
+          href="https://outofthesandbox.com/blogs/shopify-theme-blog/apps-speed?source=ezfycode.com">
+          clicking here
+        </a>
+        .
+      </p>
+    ),
+  },
+  {
     id: "payment",
     question: `What exactly happens after I purchase a section?`,
     answer: () => (
@@ -20,17 +50,7 @@ const questions = [
       </p>
     ),
   },
-  {
-    id: "support",
-    question: `Is there any support once the service is done?`,
-    answer: () => (
-      <p>
-        Absolutely! In case anything we coded breaks you can get in touch with
-        us within 7 days and we'll get back to you within 24 hours to fix it
-        with no extra charges.
-      </p>
-    ),
-  },
+
   {
     id: "payment-methods",
     question: `What payment methods are available?`,
@@ -38,7 +58,7 @@ const questions = [
       <p>
         Currently we work with <span className="custom-emphasis">PayPal</span>{" "}
         and
-        <span className="custom-emphasis">Bank Transfer</span>.{" "}
+        <span className="custom-emphasis"> Bank Transfer</span>.{" "}
         <b>Bank transfers</b> are encouraged since we can give you
         <b> 7% of discount</b>. Additionally we have bank accounts in Australia,
         the United States &amp; Europe, so you don't have to worry about
@@ -48,19 +68,14 @@ const questions = [
   },
   {
     id: "faq-services",
-    question: `What type of services do you offer?`,
+    question: `What other type of services do you offer?`,
     answer: () => (
       <p>
         <p>We can help you with:</p>
         <ul>
-          <li>bug fixes; </li>
-          <li>implementation of custom sections;</li>
-          <li>general customizations;</li>
-          <li>development tweaks;</li>
-          <li>
-            Give you control to customize any part of your website such as but
-            not limited to: colors, font-size, text... anything!{" "}
-          </li>
+          <li>Speed optimization;</li>
+          <li>create custom sections;</li>
+          <li>bug fixes.</li>
         </ul>
       </p>
     ),
@@ -86,7 +101,7 @@ const questions = [
         <a className="custom-link" href="#/portfolio">
           click here
         </a>{" "}
-        to take a look at my portfolio.
+        to take a look at it.
       </p>
     ),
   },

@@ -39,31 +39,36 @@ function Header(props) {
           <nav>
             <ul className="navbar-nav" id="navbar-nav">
               <li className="nav-item">
-                <Link
-                  scrollOffset={-150}
-                  smooth
-                  to={`${url}/#about`}
-                  className="nav-link scroll">
+                <a
+                  className="nav-link scroll"
+                  href="#about"
+                  data-scroll-offset={-60}>
                   About Us
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
-                <Link
-                  smooth
+                <a
                   className="nav-link scroll"
-                  to={`${url}/#reviews`}
-                  scrolloffset={-40}>
+                  href="#reviews"
+                  data-scroll-offset={-40}>
                   Reviews
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
-                <Link
-                  smooth
+                <a
                   className="nav-link scroll"
-                  to={`${url}/#services`}
+                  href="#services"
                   data-scroll-offset={-40}>
                   Services
-                </Link>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link"
+                  href="#/portfolio"
+                  data-scroll-offset={-40}>
+                  Portfolio
+                </a>
               </li>
               <li className="nav-item">
                 <a
