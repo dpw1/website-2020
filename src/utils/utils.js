@@ -85,6 +85,12 @@ export const portfolioNavbarLinks = [
     scroll: true,
   },
   {
+    name: "FAQ",
+    url: "#faq",
+    offset: -60,
+    scroll: true,
+  },
+  {
     name: "Contact",
     url: "#contact",
     offset: -60,

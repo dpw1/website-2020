@@ -14,7 +14,7 @@ const items = [
       <ul>
         <li>
           <i class="fa fa-check" aria-hidden="true"></i>
-          <span>Customize colors, text and expiration date</span>
+          <span>Customize colors, text, expiration date and more</span>
         </li>
 
         <li>

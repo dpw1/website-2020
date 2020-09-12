@@ -31,7 +31,7 @@ const HomePage = () => (
     <Faq></Faq>
     <Steps></Steps>
     <Contact></Contact>
-    <Footer></Footer>
+    <Footer page={"home"}></Footer>
   </React.Fragment>
 );
 
@@ -41,8 +41,9 @@ const PortfolioPage = () => (
     <Header page="portfolio"></Header>
     <Hero scrollTo="#portfolio"></Hero>
     <Portfolio></Portfolio>
+    <Faq></Faq>
     <Contact></Contact>
-    <Footer></Footer>
+    <Footer page={"portfolio"}></Footer>
   </React.Fragment>
 );
 
