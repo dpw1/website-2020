@@ -541,6 +541,22 @@ ezfy = (function () {
       });
     }
   }
+
+  function addToCartListener() {
+    const atc = document.querySelectorAll(".services-button");
+
+    for (const each of atc) {
+      each.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const button = each.querySelector(`form`);
+
+        console.log(button);
+        button.submit();
+        // alert("ok");
+      });
+    }
+  }
   return {
     init: function () {
       document.addEventListener("DOMContentLoaded", function () {
@@ -550,6 +566,7 @@ ezfy = (function () {
         addTagsToPortfolioFilter();
         portfolioTagHandleOnClick();
         autoplayVideo();
+        addToCartListener();
       });
 
       window.onresize = function (event) {};

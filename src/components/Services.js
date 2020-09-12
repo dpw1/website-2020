@@ -1,108 +1,125 @@
-import React, { useEffect } from "react";
-import mobileImage from "../copy/img/ezfy-proof-mobile-up.jpg";
-import desktopImage from "../copy/img/pixel_quite_black_portrait_trim_up.png";
+import React, { useState } from "react";
 import "./Services.scss";
-
-import arvalVideo from "../copy/videos/video-arval.mp4";
+import TrustBadge from "./TrustBadge";
 
 const items = [
   {
     tags: ["HTML5", "CSS3", "jQuery", "UX"],
-    video: require("../copy/videos/video-arval.mp4"),
-    image: require("../copy/img/thumbnail/thumbnail-arval.jpg"),
-    sourceCode: "",
-    liveWebsite: "https://arvalmq.com/",
-    title: "Arval",
-    subtitle: `Arval is a printing machine company. They needed their old
-  website updated so we developed a brand new design +
-  website for them.`,
+    video: require("../copy/videos/section-countdown.mp4"),
+    price: "49",
+    image: require("../copy/img/thumbnail/thumbnail-section-countdown.gif"),
+    preview: "https://acid-tests.myshopify.com/",
+    title: `Animated Countdown`,
+    subtitle: () => (
+      <ul>
+        <li>
+          <i class="fa fa-check" aria-hidden="true"></i>
+          <span>Customize colors, text and expiration date</span>
+        </li>
+        <li>
+          <i class="fa fa-check" aria-hidden="true"></i>
+          <span>
+            Perfect to boost conversions for festive dates & sale seasons
+          </span>
+        </li>
+        <li>
+          <i class="fa fa-check" aria-hidden="true"></i>
+          <span>Works with any theme without any apps</span>
+        </li>
+        <li>
+          <i class="fa fa-check" aria-hidden="true"></i>
+          <span>
+            Set yourself apart from the crowd having an unique feature!
+          </span>
+        </li>
+        <li>
+          <small>Secure checkout with PayPal.</small>
+          <div style={{ marginTop: 10 }}>
+            <TrustBadge></TrustBadge>
+          </div>
+        </li>
+      </ul>
+    ),
   },
 ];
 
-const PortfolioItem = (
-  tags,
-  video,
-  image,
-  sourceCode,
-  liveWebsite,
-  title,
-  subtitle,
-) => {
+const ServicesItem = (tags, video, image, preview, title, subtitle, price) => {
+  const [loading, setLoading] = useState(false);
   return (
     <div
-      className="col-12 col-md-6 portfolio-item"
+      className="col-12 col-md-6 portfolio-item service-item"
       data-portfolio-item-tags={tags.join(", ")}>
-      <div className="single-portfolio res-margin">
+      <div className="single-portfolio service-single res-margin">
         {/* Portfolio Thumb */}
-        <div className="portfolio-thumb blog-thumb">
-          <a className="play-btn" data-fancybox="gallery" href={video}>
-            <div className="btn-circle play-animation" />
-            <div className="btn-circle play-animation animation-short" />
-            {/* Play Icon */}
-            <div className="play-icon">
-              <svg
-                className="svg-inline--fa fa-play fa-w-14"
-                aria-hidden="true"
-                focusable="false"
-                data-prefix="fas"
-                data-icon="play"
-                role="img"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-                data-fa-i2svg>
-                <path
-                  fill="currentColor"
-                  d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
-              </svg>
-              {/* <i class="fas fa-play"></i> */}
-            </div>
-          </a>
+        <div
+          href={video}
+          className="portfolio-thumb blog-thumb"
+          data-fancybox="/lightbox-service">
           <figure className="custom-overlay">
             <img className="lazyload" data-src={image} alt={title} />
           </figure>
         </div>
         {/* Portfolio Content */}
         <div className="portfolio-content blog-content p-4">
-          {/* Meta Info */}
+          {/* Portfolio Title */}
+          <div className="services-price">
+            <h3 className="blog-title services-price-title my-3">
+              <span>{title}</span>
+            </h3>
+            <h3 class="services-price-small color-primary">
+              <small class="fw-7">$</small>
+              {price}
+            </h3>
+          </div>
           <ul className="meta-info d-flex">
             <li>
               <a
-                className={sourceCode.length <= 0 && "portfolio-blocked"}
-                href={sourceCode.length <= 0 ? "#" : sourceCode}
+                className={
+                  preview.length > 0
+                    ? "custom-link"
+                    : " custom-link portfolio-blocked"
+                }
+                href={preview.length <= 0 ? "#" : preview}
                 target="_blank">
-                Source Code
-              </a>
-            </li>
-            <li>
-              <a
-                className={liveWebsite.length <= 0 && "portfolio-blocked"}
-                href={liveWebsite.length <= 0 ? "#" : liveWebsite}
-                target="_blank">
-                Live Website
+                Click here to view a live demo!
               </a>
             </li>
           </ul>
-          {/* Portfolio Title */}
-          <h3 className="blog-title my-3">
-            <span>{title}</span>
-          </h3>
-          <p>{subtitle}</p>
+
+          <div className="services-subtitle">{subtitle()}</div>
         </div>
-        <ul className="portfolio-tags blog-content p-4"></ul>
+        <div class="services-button">
+          <a
+            href="#"
+            class="btn mt-4"
+            onClick={() => {
+              setLoading(true);
+            }}>
+            {loading ? "Redirecting to PayPal..." : "Buy Now"}
+          </a>
+          <form
+            action="https://www.paypal.com/cgi-bin/webscr"
+            method="post"
+            target="_top">
+            <input type="hidden" name="cmd" defaultValue="_s-xclick" />
+            <input
+              type="hidden"
+              name="hosted_button_id"
+              defaultValue="YV4CYUCEEL7VQ"
+            />
+            <input type="hidden" border={0} name="send" />
+          </form>
+        </div>
       </div>
     </div>
   );
 };
 
 function Services() {
-  useEffect(() => {
-    // video.play();
-  }, []);
-
   return (
     <section
       id="services"
-      className="section section-services blog-area bg-gray ptb_50">
+      className="section services blog-area bg-gray ptb_50">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-md-10 col-lg-7">
@@ -165,14 +182,15 @@ function Services() {
           <div className="col-12 col-lg-9">
             <div className="portfolio-row row">
               {items.map((e) =>
-                PortfolioItem(
+                ServicesItem(
                   e.tags,
                   e.video,
                   e.image,
-                  e.sourceCode,
-                  e.liveWebsite,
+
+                  e.preview,
                   e.title,
                   e.subtitle,
+                  e.price,
                 ),
               )}
             </div>

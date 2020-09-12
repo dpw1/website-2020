@@ -8,15 +8,15 @@ const faqId = `apolo-accordion`;
 const questions = [
   {
     id: "payment",
-    question: `How much do you charge?`,
+    question: `What exactly happens after I purchase a section?`,
     answer: () => (
       <p>
-        Every project has different needs which reflects a different price
-        point. Feel free to{" "}
-        <a className="scroll custom-link" href="#contact">
-          send us an email
+        Immediately after your purchase we'll send you an e-mail requesting your
+        Shopify store URL so the section can be installed. You can{" "}
+        <a className="custom-link scroll" href="#contact">
+          contact us
         </a>{" "}
-        and request a free quote!
+        before purchasing if you have any questions!
       </p>
     ),
   },
@@ -40,7 +40,7 @@ const questions = [
         and
         <span className="custom-emphasis">Bank Transfer</span>.{" "}
         <b>Bank transfers</b> are encouraged since we can give you
-        <b>7% of discount</b>. Additionally we have bank accounts in Australia,
+        <b> 7% of discount</b>. Additionally we have bank accounts in Australia,
         the United States &amp; Europe, so you don't have to worry about
         overseas fees if you reside in any of those places.
       </p>
@@ -67,8 +67,7 @@ const questions = [
   },
   {
     id: "faq-custom-website",
-    question: `I want a custom theme for my business. Can you build
-    one?`,
+    question: `I want a custom theme for my business. Can you build one?`,
     answer: () => (
       <p>
         Currently we do not work by building themes from scratch. In such
@@ -80,19 +79,14 @@ const questions = [
   },
   {
     id: "faq-review-website",
-    question: `Can you review my store and tell me what can be
-    improved?`,
+    question: `Do you have a portfolio of previously done websites?`,
     answer: () => (
       <p>
-        Yes! Just shoot us a{" "}
-        <a className="custom-link" href="https://m.me/ezfyforshopify">
-          Facebook Message
+        Yes! Please{" "}
+        <a className="custom-link" href="#/portfolio">
+          click here
         </a>{" "}
-        or an{" "}
-        <a className="scroll custom-link" href="#contact">
-          e-mail{" "}
-        </a>
-        so we can get it checked for you free of charges.
+        to take a look at my portfolio.
       </p>
     ),
   },
@@ -105,7 +99,7 @@ const FaqItem = (id, question, answer, isOpen = false, newLine = false) => {
       <div className="card-header">
         <h2 className="mb-0">
           <button
-            className="btn p-2"
+            className={`btn p-2 ${isOpen || "collapsed"}`}
             type="button"
             data-toggle="collapse"
             data-target={`#${id}`}>

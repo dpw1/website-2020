@@ -17,12 +17,11 @@ import Steps from "./components/Steps";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Services from "./components/Services";
+import { reloadOnURLChange } from "./utils/utils";
 
-let history = createBrowserHistory();
-
-const Home = () => (
-  <div>
-    {/* <Preloader></Preloader> */}
+const HomePage = () => (
+  <React.Fragment>
+    <Preloader></Preloader>
     <ScrollToTop></ScrollToTop>
     <Header></Header>
     <Hero></Hero>
@@ -34,39 +33,37 @@ const Home = () => (
     <Steps></Steps>
     <Contact></Contact>
     <Footer></Footer>
-  </div>
+  </React.Fragment>
 );
 
-function reloadOnURLChange() {
-  history.listen((location, action) => {
-    const url = location.location.hash;
-    const prevUrl = localStorage.getItem("prev-url");
-
-    if (!prevUrl) {
-      localStorage.setItem("prev-url", url);
-    }
-
-    if (prevUrl !== url) {
-      console.log("reload it");
-
-      localStorage.removeItem("prev-url");
-      window.location.reload();
-    }
-
-    console.log(url, prevUrl);
-  });
-}
+const PortfolioPage = () => (
+  <React.Fragment>
+    <ScrollToTop></ScrollToTop>
+    <Header></Header>
+    <Hero></Hero>
+    <Portfolio></Portfolio>
+    <Contact></Contact>
+    <Footer></Footer>
+  </React.Fragment>
+);
 
 function App(props) {
   useEffect(() => {
-    reloadOnURLChange();
+    try {
+      reloadOnURLChange();
+    } catch (err) {
+      console.log(err);
+    }
   }, []);
   return (
     <div className="App main">
       <HashRouter basename="/website-2020">
         <div>
-          <Route exact path="/" component={() => <Home></Home>} />
-          <Route path="/about" component={() => <About></About>} />
+          <Route exact path="/" component={() => <HomePage></HomePage>} />
+          <Route
+            path="/portfolio"
+            component={() => <PortfolioPage></PortfolioPage>}
+          />
         </div>
       </HashRouter>
     </div>

@@ -69,9 +69,9 @@ function Footer() {
                     <li className="py-2">
                       <a
                         className=" scroll"
-                        href="#portfolio"
+                        href="#services"
                         data-scroll-offset={-40}>
-                        Portfolio
+                        Services
                       </a>
                     </li>
                     <li className="py-2">
