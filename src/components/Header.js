@@ -4,8 +4,6 @@ import logo from "../copy/img/logo/ezfy-logo-transparent-small.png";
 import stickyLogo from "../copy/img/logo/ezfy-logo-small.png";
 import { HashLink as Link } from "react-router-hash-link";
 
-const url = `website-2020`;
-
 function Header(props) {
   return (
     <header

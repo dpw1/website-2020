@@ -141,10 +141,8 @@ function Services() {
                 Besides bug fixes and customizations we also sell premade
                 sections.
                 <br />
-                <span className="custom-emphasis">
-                  Click on the play button
-                </span>{" "}
-                to watch a video showcasing the respective project.
+                <span className="custom-emphasis">Click on the gif</span> to
+                watch a short video showcasing the respective section.
               </p>
             </div>
           </div>
