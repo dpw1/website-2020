@@ -36,6 +36,7 @@
     }
   }
   .play-btn {
+    pointer-events: none;
     svg {
       position: relative;
       left: 2px;

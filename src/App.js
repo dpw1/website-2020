@@ -23,8 +23,8 @@ const HomePage = () => (
   <React.Fragment>
     <Preloader></Preloader>
     <ScrollToTop></ScrollToTop>
-    <Header></Header>
-    <Hero></Hero>
+    <Header page={"home"}></Header>
+    <Hero scrollTo="#about"></Hero>
     <About></About>
     <Reviews></Reviews>
     <Services></Services>
@@ -38,8 +38,8 @@ const HomePage = () => (
 const PortfolioPage = () => (
   <React.Fragment>
     <ScrollToTop></ScrollToTop>
-    <Header></Header>
-    <Hero></Hero>
+    <Header page="portfolio"></Header>
+    <Hero scrollTo="#portfolio"></Hero>
     <Portfolio></Portfolio>
     <Contact></Contact>
     <Footer></Footer>

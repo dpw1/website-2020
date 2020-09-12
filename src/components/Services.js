@@ -44,7 +44,7 @@ const items = [
         </li>
 
         <li>
-          <small>Secure checkout with PayPal.</small>
+          <small>You'll be redirected to PayPal for secure checkout.</small>
           <div style={{ marginTop: 10 }}>
             <TrustBadge></TrustBadge>
           </div>

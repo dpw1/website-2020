@@ -2,7 +2,21 @@ import React, { Component } from "react";
 
 import "./Footer.scss";
 
-function Footer() {
+import { renderNav } from "../utils/utils";
+
+const footerItem = (props) => (
+  <li className="py-2">
+    <a
+      className={props.scroll && "scroll"}
+      href={props.url}
+      data-scroll-offset={props.offset}>
+      {props.name}
+    </a>
+  </li>
+);
+function Footer(props) {
+  const { page } = props;
+
   return (
     <React.Fragment>
       <div className="height-emulator d-none d-lg-block"></div>
@@ -57,48 +71,7 @@ function Footer() {
                 <div className="footer-items">
                   {/* Footer Title */}
                   <h3 className="footer-title mb-2">Useful Links</h3>
-                  <ul>
-                    <li className="py-2">
-                      <a
-                        className=" scroll"
-                        href="#about"
-                        data-scroll-offset={-60}>
-                        About Us
-                      </a>
-                    </li>
-                    <li className="py-2">
-                      <a
-                        className=" scroll"
-                        href="#services"
-                        data-scroll-offset={-40}>
-                        Services
-                      </a>
-                    </li>
-                    <li className="py-2">
-                      <a
-                        className=" scroll"
-                        href="#reviews"
-                        data-scroll-offset={-40}>
-                        Reviews
-                      </a>
-                    </li>
-                    <li className="py-2">
-                      <a
-                        className=" scroll"
-                        href="#faq"
-                        data-scroll-offset={-60}>
-                        FAQ
-                      </a>
-                    </li>
-                    <li className="py-2">
-                      <a
-                        className=" scroll"
-                        href="#contact"
-                        data-scroll-offset={-60}>
-                        Contact
-                      </a>
-                    </li>
-                  </ul>
+                  <ul>{renderNav(page, footerItem)}</ul>
                 </div>
               </div>
               <div className="col-12 col-sm-6 col-lg-6">

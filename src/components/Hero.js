@@ -3,7 +3,8 @@ import mobileImage from "../copy/img/ezfy-proof-mobile-up.jpg";
 import desktopImage from "../copy/img/pixel_quite_black_portrait_trim_up.png";
 import "./Hero.scss";
 
-function Hero() {
+function Hero(props) {
+  const { scrollTo } = props;
   return (
     <section
       id="hero"
@@ -77,7 +78,7 @@ function Hero() {
                 <a
                   type="submit"
                   className="btn custom-btn text-uppercase scroll"
-                  href="#about"
+                  href={scrollTo}
                   data-scroll-offset={-60}>
                   Get started
                 </a>

@@ -3,8 +3,22 @@ import "./Header.scss";
 import logo from "../copy/img/logo/ezfy-logo-transparent-small.png";
 import stickyLogo from "../copy/img/logo/ezfy-logo-small.png";
 import { HashLink as Link } from "react-router-hash-link";
+import { renderNav } from "../utils/utils";
+
+const headerItem = (props) => (
+  <li className="nav-item">
+    <a
+      className={props.scroll ? "nav-link scroll" : "nav-link"}
+      href={props.url}
+      data-scroll-offset={props.offset}>
+      {props.name}
+    </a>
+  </li>
+);
 
 function Header(props) {
+  const { page } = props;
+
   return (
     <header
       id="navbarSection"
@@ -36,54 +50,7 @@ function Header(props) {
           </button>
           <nav>
             <ul className="navbar-nav" id="navbar-nav">
-              <li className="nav-item">
-                <a
-                  className="nav-link scroll"
-                  href="#about"
-                  data-scroll-offset={-60}>
-                  About Us
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link scroll"
-                  href="#reviews"
-                  data-scroll-offset={-40}>
-                  Reviews
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link scroll"
-                  href="#services"
-                  data-scroll-offset={-40}>
-                  Services
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link"
-                  href="#/portfolio"
-                  data-scroll-offset={-40}>
-                  Portfolio
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link scroll"
-                  href="#faq"
-                  data-scroll-offset={-60}>
-                  FAQ
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link scroll"
-                  href="#contact"
-                  data-scroll-offset={-60}>
-                  Contact
-                </a>
-              </li>
+              {renderNav(page, headerItem)}
             </ul>
           </nav>
         </div>

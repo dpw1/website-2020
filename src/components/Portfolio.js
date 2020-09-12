@@ -162,11 +162,11 @@ function Portfolio() {
                 data-portfolio-item-tags="HTML5, CSS3, jQuery, UX">
                 <div className="single-portfolio res-margin">
                   {/* Portfolio Thumb */}
-                  <div className="portfolio-thumb blog-thumb">
-                    <a
-                      className="play-btn"
-                      data-fancybox="gallery"
-                      href={require("../copy/videos/video-arval.mp4")}>
+                  <div
+                    className="portfolio-thumb blog-thumb"
+                    data-fancybox="gallery"
+                    href={require("../copy/videos/video-arval.mp4")}>
+                    <a className="play-btn" href="#">
                       <div className="btn-circle play-animation" />
                       <div className="btn-circle play-animation animation-short" />
                       {/* Play Icon */}
@@ -231,11 +231,11 @@ function Portfolio() {
                 data-portfolio-item-tags="HTML5, CSS3, Shopify, Liquid, ES7, SCSS / SASS, jQuery">
                 <div className=" single-portfolio res-margin">
                   {/* Portfolio Thumb */}
-                  <div className="portfolio-thumb blog-thumb">
-                    <a
-                      className="play-btn"
-                      data-fancybox="gallery"
-                      href={require("../copy/videos/video-bubs.mp4")}>
+                  <div
+                    className="portfolio-thumb blog-thumb"
+                    data-fancybox="gallery"
+                    href={require("../copy/videos/video-bubs.mp4")}>
+                    <a href="#" className="play-btn">
                       <div className="btn-circle play-animation" />
                       <div className="btn-circle play-animation animation-short" />
                       {/* Play Icon */}
@@ -298,11 +298,11 @@ function Portfolio() {
                 data-portfolio-item-tags="HTML5, CSS3, Shopify, Liquid, ES7, SCSS / SASS, jQuery">
                 <div className="single-portfolio res-margin">
                   {/* Portfolio Thumb */}
-                  <div className="portfolio-thumb blog-thumb">
-                    <a
-                      className="play-btn"
-                      data-fancybox="gallery"
-                      href={require("../copy/videos/video-light-bricks.mp4")}>
+                  <div
+                    className="portfolio-thumb blog-thumb"
+                    data-fancybox="gallery"
+                    href={require("../copy/videos/video-light-bricks.mp4")}>
+                    <a className="play-btn" href="#">
                       <div className="btn-circle play-animation" />
                       <div className="btn-circle play-animation animation-short" />
                       {/* Play Icon */}
@@ -363,11 +363,11 @@ function Portfolio() {
                 data-portfolio-item-tags="HTML5, CSS3, Shopify, Liquid, ES7, SCSS / SASS, jQuery">
                 <div className="single-portfolio res-margin">
                   {/* Portfolio Thumb */}
-                  <div className="portfolio-thumb blog-thumb">
-                    <a
-                      className="play-btn"
-                      data-fancybox="gallery"
-                      href={require("../copy/videos/video-zudo.mp4")}>
+                  <div
+                    className="portfolio-thumb blog-thumb"
+                    data-fancybox="gallery"
+                    href={require("../copy/videos/video-zudo.mp4")}>
+                    <a className="play-btn" href="#">
                       <div className="btn-circle play-animation" />
                       <div className="btn-circle play-animation animation-short" />
                       {/* Play Icon */}
@@ -424,11 +424,11 @@ function Portfolio() {
                 data-portfolio-item-tags="HTML5, CSS3, Handlebars.js,  SCSS / SASS, jQuery, UX">
                 <div className="single-portfolio res-margin">
                   {/* Portfolio Thumb */}
-                  <div className="portfolio-thumb blog-thumb">
-                    <a
-                      className="play-btn"
-                      data-fancybox="gallery"
-                      href={require("../copy/videos/video-studiotagus.mp4")}>
+                  <div
+                    className="portfolio-thumb blog-thumb"
+                    data-fancybox="gallery"
+                    href={require("../copy/videos/video-studiotagus.mp4")}>
+                    <a className="play-btn" href="#">
                       <div className="btn-circle play-animation" />
                       <div className="btn-circle play-animation animation-short" />
                       {/* Play Icon */}
@@ -494,11 +494,11 @@ function Portfolio() {
                 data-portfolio-item-tags="HTML5, CSS3, Stylus, jQuery, UX">
                 <div className="single-portfolio res-margin">
                   {/* Portfolio Thumb */}
-                  <div className="portfolio-thumb blog-thumb">
-                    <a
-                      className="play-btn"
-                      data-fancybox="gallery"
-                      href={require("../copy/videos/video-megalancers.mp4")}>
+                  <div
+                    className="portfolio-thumb blog-thumb"
+                    data-fancybox="gallery"
+                    href={require("../copy/videos/video-megalancers.mp4")}>
+                    <a href="#" className="play-btn">
                       <div className="btn-circle play-animation" />
                       <div className="btn-circle play-animation animation-short" />
                       {/* Play Icon */}
@@ -555,11 +555,11 @@ function Portfolio() {
                 data-portfolio-item-tags="HTML5, CSS3, Shopify, Liquid, ES7, SCSS / SASS, jQuery">
                 <div className="single-portfolio res-margin">
                   {/* Portfolio Thumb */}
-                  <div className="portfolio-thumb blog-thumb">
-                    <a
-                      className="play-btn"
-                      data-fancybox="gallery"
-                      href={require("../copy/videos/video-yokd.mp4")}>
+                  <div
+                    className="portfolio-thumb blog-thumb"
+                    data-fancybox="gallery"
+                    href={require("../copy/videos/video-yokd.mp4")}>
+                    <a href="#" className="play-btn">
                       <div className="btn-circle play-animation" />
                       <div className="btn-circle play-animation animation-short" />
                       {/* Play Icon */}
@@ -617,11 +617,11 @@ function Portfolio() {
                 data-portfolio-item-tags="HTML5, CSS3, Shopify, Liquid, ES7, SCSS / SASS, jQuery">
                 <div className="single-portfolio res-margin">
                   {/* Portfolio Thumb */}
-                  <div className="portfolio-thumb blog-thumb">
-                    <a
-                      className="play-btn"
-                      data-fancybox="gallery"
-                      href={require("../copy/videos/video-dog.mp4")}>
+                  <div
+                    className="portfolio-thumb blog-thumb"
+                    data-fancybox="gallery"
+                    href={require("../copy/videos/video-dog.mp4")}>
+                    <a className="play-btn" href="#">
                       <div className="btn-circle play-animation" />
                       <div className="btn-circle play-animation animation-short" />
                       {/* Play Icon */}
@@ -680,11 +680,11 @@ function Portfolio() {
                 data-portfolio-item-tags="HTML5, CSS3, Shopify, Liquid, ES7, SCSS / SASS, jQuery">
                 <div className="single-portfolio res-margin">
                   {/* Portfolio Thumb */}
-                  <div className="portfolio-thumb blog-thumb">
-                    <a
-                      className="play-btn"
-                      data-fancybox="gallery"
-                      href={require("../copy/videos/video-birthcanva.mp4")}>
+                  <div
+                    className="portfolio-thumb blog-thumb"
+                    data-fancybox="gallery"
+                    href={require("../copy/videos/video-birthcanva.mp4")}>
+                    <a href="#" className="play-btn">
                       <div className="btn-circle play-animation" />
                       <div className="btn-circle play-animation animation-short" />
                       {/* Play Icon */}
@@ -742,11 +742,11 @@ function Portfolio() {
                 data-portfolio-item-tags="HTML5, CSS3, Shopify, Liquid, ES7, SCSS / SASS, jQuery, UX">
                 <div className="single-portfolio res-margin">
                   {/* Portfolio Thumb */}
-                  <div className="portfolio-thumb blog-thumb">
-                    <a
-                      className="play-btn"
-                      data-fancybox="gallery"
-                      href={require("../copy/videos/video-jim.mp4")}>
+                  <div
+                    className="portfolio-thumb blog-thumb"
+                    data-fancybox="gallery"
+                    href={require("../copy/videos/video-jim.mp4")}>
+                    <a href="#" className="play-btn">
                       <div className="btn-circle play-animation" />
                       <div className="btn-circle play-animation animation-short" />
                       {/* Play Icon */}
