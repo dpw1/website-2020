@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.fc082424.chunk.css",
-    "main.js": "/static/js/main.82dc3688.chunk.js",
-    "main.js.map": "/static/js/main.82dc3688.chunk.js.map",
+    "main.css": "/static/css/main.fdb96da5.chunk.css",
+    "main.js": "/static/js/main.ed4cf9ee.chunk.js",
+    "main.js.map": "/static/js/main.ed4cf9ee.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.cf853edb.js",
     "runtime-main.js.map": "/static/js/runtime-main.cf853edb.js.map",
     "static/js/2.6326cdd5.chunk.js": "/static/js/2.6326cdd5.chunk.js",
     "static/js/2.6326cdd5.chunk.js.map": "/static/js/2.6326cdd5.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.262f9f8057af25176796b33eef11f918.js": "/precache-manifest.262f9f8057af25176796b33eef11f918.js",
+    "precache-manifest.6acc07b5310ad084182684bba6972cd2.js": "/precache-manifest.6acc07b5310ad084182684bba6972cd2.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.fc082424.chunk.css.map": "/static/css/main.fc082424.chunk.css.map",
+    "static/css/main.fdb96da5.chunk.css.map": "/static/css/main.fdb96da5.chunk.css.map",
     "static/js/2.6326cdd5.chunk.js.LICENSE.txt": "/static/js/2.6326cdd5.chunk.js.LICENSE.txt",
     "static/media/diego.jpg": "/static/media/diego.2336f72b.jpg",
     "static/media/Hero.scss": "/static/media/ezfy-office.15b81b8d.jpg",
@@ -30,6 +30,7 @@
     "static/media/r7.jpg": "/static/media/r7.1b7bd781.jpg",
     "static/media/r8.jpg": "/static/media/r8.f26e4b0f.jpg",
     "static/media/r9.jpg": "/static/media/r9.e15f62ea.jpg",
+    "static/media/section-banner.mp4": "/static/media/section-banner.2580c3c6.mp4",
     "static/media/section-countdown.mp4": "/static/media/section-countdown.d5255125.mp4",
     "static/media/thumbnail-arval.jpg": "/static/media/thumbnail-arval.64aabac0.jpg",
     "static/media/thumbnail-birthcanva.jpg": "/static/media/thumbnail-birthcanva.807c7dc7.jpg",
@@ -38,6 +39,7 @@
     "static/media/thumbnail-jim.jpg": "/static/media/thumbnail-jim.27651a2d.jpg",
     "static/media/thumbnail-light-bricks.jpg": "/static/media/thumbnail-light-bricks.b2b71976.jpg",
     "static/media/thumbnail-megalancers.jpg": "/static/media/thumbnail-megalancers.d5745b97.jpg",
+    "static/media/thumbnail-section-banner.gif": "/static/media/thumbnail-section-banner.5a94525b.gif",
     "static/media/thumbnail-section-countdown.gif": "/static/media/thumbnail-section-countdown.66a7b3ee.gif",
     "static/media/thumbnail-studiotagus.jpg": "/static/media/thumbnail-studiotagus.adffe78d.jpg",
     "static/media/thumbnail-yokd.jpg": "/static/media/thumbnail-yokd.44382dc4.jpg",
@@ -56,7 +58,7 @@
   "entrypoints": [
     "static/js/runtime-main.cf853edb.js",
     "static/js/2.6326cdd5.chunk.js",
-    "static/css/main.fc082424.chunk.css",
-    "static/js/main.82dc3688.chunk.js"
+    "static/css/main.fdb96da5.chunk.css",
+    "static/js/main.ed4cf9ee.chunk.js"
   ]
 }

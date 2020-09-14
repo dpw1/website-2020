@@ -557,6 +557,18 @@ ezfy = (function () {
       });
     }
   }
+
+  function readMoreForServices() {
+    const readmore = document.querySelectorAll(`.services-read-more`);
+
+    for (let each of readmore) {
+      each.addEventListener("click", function (e) {
+        each
+          .closest(`.services-subtitle`)
+          .classList.add(`services-subtitle--visible`);
+      });
+    }
+  }
   return {
     init: function () {
       document.addEventListener("DOMContentLoaded", function () {
@@ -567,6 +579,7 @@ ezfy = (function () {
         portfolioTagHandleOnClick();
         autoplayVideo();
         addToCartListener();
+        readMoreForServices();
       });
 
       window.onresize = function (event) {};
