@@ -29,7 +29,7 @@ const questions = [
         <a
           className="custom-link"
           target="_blank"
-          href="https://outofthesandbox.com/blogs/shopify-theme-blog/apps-speed?source=ezfycode.com">
+          href="https://outofthesandbox.com/blogs/shopify-theme-blog/apps-speed?rfsn=4557612.d5a506">
           clicking here
         </a>
         .
