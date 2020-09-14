@@ -74,7 +74,7 @@ const questions = [
         <p>We can help you with:</p>
         <ul>
           <li>Speed optimization;</li>
-          <li>create custom sections;</li>
+          <li>Custom code any part of your website;</li>
           <li>bug fixes.</li>
         </ul>
         Please{" "}
