@@ -10,6 +10,23 @@ const items = [
     image: require("../copy/img/thumbnail/thumbnail-section-countdown.gif"),
     preview: "https://acid-tests.myshopify.com/",
     title: `Animated Countdown`,
+    paypalForm: () => (
+      <React.Fragment>
+        {" "}
+        <form
+          action="https://www.paypal.com/cgi-bin/webscr"
+          method="post"
+          target="_top">
+          <input type="hidden" name="cmd" defaultValue="_s-xclick" />
+          <input
+            type="hidden"
+            name="hosted_button_id"
+            defaultValue="YV4CYUCEEL7VQ"
+          />
+          <input type="hidden" border={0} name="send" />
+        </form>
+      </React.Fragment>
+    ),
     subtitle: () => (
       <ul>
         <li>
@@ -57,8 +74,22 @@ const items = [
     video: require("../copy/videos/section-banner.mp4"),
     price: "49",
     image: require("../copy/img/thumbnail/thumbnail-section-banner.gif"),
-    preview: "https://acid-tests.myshopify.com/pages/premium-banner",
+    preview: "https://acid-tests.myshopify.com/",
     title: `Premium Banner`,
+    paypalForm: () => (
+      <form
+        action="https://www.paypal.com/cgi-bin/webscr"
+        method="post"
+        target="_top">
+        <input type="hidden" name="cmd" defaultValue="_s-xclick" />
+        <input
+          type="hidden"
+          name="hosted_button_id"
+          defaultValue="ZUB26QUB5QHM2"
+        />
+        <input border={0} name="send" type="hidden" />
+      </form>
+    ),
     subtitle: () => (
       <React.Fragment>
         <ul>
@@ -69,7 +100,7 @@ const items = [
           <li>
             <i class="fa fa-check" aria-hidden="true"></i>
             <span>
-              Add a background image to mobile and a different one to desktop
+              Freedom to add a an image to mobile and a different one to desktop
             </span>
           </li>
 
@@ -105,7 +136,18 @@ const items = [
   },
 ];
 
-const ServicesItem = (tags, video, image, preview, title, subtitle, price) => {
+const ServicesItem = (props) => {
+  const {
+    tags,
+    video,
+    price,
+    image,
+    preview,
+
+    title,
+    paypalForm,
+    subtitle,
+  } = props;
   const [loading, setLoading] = useState(false);
   return (
     <div
@@ -157,26 +199,18 @@ const ServicesItem = (tags, video, image, preview, title, subtitle, price) => {
           </div>
         </div>
         <div class="services-button">
-          <a
-            href="#"
-            class="btn mt-4"
-            onClick={() => {
-              setLoading(true);
-            }}>
-            {loading ? "Redirecting to PayPal..." : "Buy Now"}
-          </a>
-          <form
-            action="https://www.paypal.com/cgi-bin/webscr"
-            method="post"
-            target="_top">
-            <input type="hidden" name="cmd" defaultValue="_s-xclick" />
-            <input
-              type="hidden"
-              name="hosted_button_id"
-              defaultValue="YV4CYUCEEL7VQ"
-            />
-            <input type="hidden" border={0} name="send" />
-          </form>
+          {paypalForm && (
+            <a
+              href="#"
+              class="btn mt-4"
+              onClick={() => {
+                setLoading(true);
+              }}>
+              {loading ? "Redirecting to PayPal..." : "Buy Now"}
+            </a>
+          )}
+
+          {paypalForm && paypalForm()}
         </div>
       </div>
     </div>
@@ -247,18 +281,7 @@ function Services() {
           </div>
           <div className="col-12 col-lg-9">
             <div className="portfolio-row row">
-              {items.map((e) =>
-                ServicesItem(
-                  e.tags,
-                  e.video,
-                  e.image,
-
-                  e.preview,
-                  e.title,
-                  e.subtitle,
-                  e.price,
-                ),
-              )}
+              {items.map((e) => ServicesItem(e))}
             </div>
           </div>
         </div>
