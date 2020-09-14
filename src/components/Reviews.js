@@ -73,7 +73,7 @@ function Reviews() {
                   <img
                     className="lazyload"
                     data-src={require("../copy/img/reviews/r1.jpg")}
-                    alt
+                    alt="Diego is great! Very responsive and customizes everything to your wish. Very friendly and comprehensive."
                   />
                 </a>
               </div>
@@ -85,7 +85,7 @@ function Reviews() {
                   <img
                     className="lazyload"
                     data-src={require("../copy/img/reviews/r2.jpg")}
-                    alt
+                    alt="Diego is a great resource. He's prompt and highly accommodating, which all leads to a great end result. Highly recommended!"
                   />
                 </a>
               </div>
@@ -94,7 +94,10 @@ function Reviews() {
                 <a
                   target="_blank"
                   href="https://www.facebook.com/ron.bercovitch/posts/10161454417070285">
-                  <img data-lazy={require("../copy/img/reviews/r3.jpg")} alt />
+                  <img
+                    data-lazy={require("../copy/img/reviews/r3.jpg")}
+                    alt="Incredible work - I got them to help fix some things on my Shopify store and for such a great price! "
+                  />
                 </a>
               </div>
               {/* Single Screenshot Item */}
@@ -102,7 +105,10 @@ function Reviews() {
                 <a
                   target="_blank"
                   href="https://www.facebook.com/shawn.pansiri/posts/2443221389022677">
-                  <img data-lazy={require("../copy/img/reviews/r4.jpg")} alt />
+                  <img
+                    data-lazy={require("../copy/img/reviews/r4.jpg")}
+                    alt="Working with Diego was one of the best experiences I have ever had he is a professional and knows his stuff."
+                  />
                 </a>
               </div>
               {/* Single Screenshot Item */}
@@ -110,7 +116,10 @@ function Reviews() {
                 <a
                   target="_blank"
                   href="https://www.facebook.com/csegervall/posts/10155865648326714">
-                  <img data-lazy={require("../copy/img/reviews/r5.jpg")} alt />
+                  <img
+                    data-lazy={require("../copy/img/reviews/r5.jpg")}
+                    alt="Hands down the best agency I have ever worked with. Always happy with the awesome results."
+                  />
                 </a>
               </div>
               {/* Single Screenshot Item */}
@@ -118,15 +127,21 @@ function Reviews() {
                 <a
                   target="_blank"
                   href="https://www.facebook.com/nathanngo21/posts/10155898793046436">
-                  <img data-lazy={require("../copy/img/reviews/r6.jpg")} alt />
+                  <img
+                    data-lazy={require("../copy/img/reviews/r6.jpg")}
+                    alt="He knows his stuff and is very quick with making changes! An absolute wizard at shopify! Really recommend him!"
+                  />
                 </a>
               </div>
-              {/* Single Screenshot Item */}
+              {/* Single Screenshot Item */}=""
               <div className="single-screenshot">
                 <a
                   href="https://www.facebook.com/ibraheem.nadeem/posts/10161783472635352"
                   target="_blank">
-                  <img data-lazy={require("../copy/img/reviews/r7.jpg")} alt />
+                  <img
+                    data-lazy={require("../copy/img/reviews/r7.jpg")}
+                    alt="Diego is amazing at what he does. I've been using his web development services for over a year (I have 20+ projects completed with the EZFY team) and he is always super helpful. His CRO tips are incredible and have definitely helped my conversion rates!"
+                  />
                 </a>
               </div>
               {/* Single Screenshot Item */}
@@ -134,7 +149,10 @@ function Reviews() {
                 <a
                   target="_blank"
                   href="https://www.facebook.com/wesdwa/posts/2581923468495155">
-                  <img data-lazy={require("../copy/img/reviews/r8.jpg")} alt />
+                  <img
+                    data-lazy={require("../copy/img/reviews/r8.jpg")}
+                    alt="10/10!!! Customization and bug repairs that were impossible for a few previous devs of mine were an easy task for Diego! Honestly cannot recommend him enough. If you like testing different tweaks on your site or have an annoying bug - he's the man. Also his response time is of the charts + same day delivery (Amazon of devs 😁)"
+                  />
                 </a>
               </div>
               {/* Single Screenshot Item */}
@@ -142,7 +160,10 @@ function Reviews() {
                 <a
                   target="_blank"
                   href="https://www.facebook.com/jeffreyprichardson/posts/10212580477741031">
-                  <img data-lazy={require("../copy/img/reviews/r9.jpg")} alt />
+                  <img
+                    data-lazy={require("../copy/img/reviews/r9.jpg")}
+                    alt=" This team went FAR beyond my expectations! It felt as if i had another employee, instead of a service. Their recommendations and exceptional work made my project come out perfectly. Their ability to show me examples, modify at no cost and finish everything extremely fast was amazing. will work with these guys for now on."
+                  />
                 </a>
               </div>
               {/* Single Screenshot Item */}
@@ -150,15 +171,21 @@ function Reviews() {
                 <a
                   target="_blank"
                   href="https://www.facebook.com/brogan.domaschenz/posts/2094168197296835">
-                  <img data-lazy={require("../copy/img/reviews/r10.jpg")} alt />
+                  <img
+                    data-lazy={require("../copy/img/reviews/r10.jpg")}
+                    alt="VERY VERY IMPRESSED! - understood exactly what i was trying to get across and produced something even better then i could of imagined in a shorter time frame then expected and in a very professional manner."
+                  />
                 </a>
               </div>
               {/* Single Screenshot Item */}
               <div className="single-screenshot">
                 <a
                   target="_blank"
-                  href="https://www.facebook.com/daniel.walker.9843/posts/3406178189405829">
-                  <img data-lazy={require("../copy/img/reviews/r11.jpg")} alt />
+                  href="https://www.facebook.com/daniel.walker.9843/posts/34Super happy with Diego’s work! He was quick to help out, easy to communicate with, and finished the work I needed at a very high standard! Thank you Diego!">
+                  <img
+                    data-lazy={require("../copy/img/reviews/r11.jpg")}
+                    alt=""
+                  />
                 </a>
               </div>
               {/* Single Screenshot Item */}
@@ -166,7 +193,10 @@ function Reviews() {
                 <a
                   target="_blank"
                   href="https://www.facebook.com/Jay.ripper1990/posts/10156444786948231">
-                  <img data-lazy={require("../copy/img/reviews/r12.jpg")} alt />
+                  <img
+                    data-lazy={require("../copy/img/reviews/r12.jpg")}
+                    alt="I'm extremely happy with the work carried out by Diego! Will definitely be utilising his skills again!"
+                  />
                 </a>
               </div>
             </div>
