@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./Services.scss";
 import TrustBadge from "./TrustBadge";
 
@@ -52,13 +52,64 @@ const items = [
       </ul>
     ),
   },
+  {
+    tags: ["Custom Shopify Section"],
+    video: require("../copy/videos/section-banner.mp4"),
+    price: "49",
+    image: require("../copy/img/thumbnail/thumbnail-section-banner.gif"),
+    preview: "https://acid-tests.myshopify.com/pages/premium-banner",
+    title: `Premium Banner`,
+    subtitle: () => (
+      <React.Fragment>
+        <ul>
+          <li>
+            <i class="fa fa-check" aria-hidden="true"></i>
+            <span>Control text, sizing, words to animate, colors and more</span>
+          </li>
+          <li>
+            <i class="fa fa-check" aria-hidden="true"></i>
+            <span>
+              Add a background image to mobile and a different one to desktop
+            </span>
+          </li>
+
+          <li>
+            <i class="fa fa-check" aria-hidden="true"></i>
+            <span>Optimized images to not affect your website's speed</span>
+          </li>
+          <li>
+            <i class="fa fa-check" aria-hidden="true"></i>
+            <span>Works with any theme (without usage of apps)</span>
+          </li>
+          <li>
+            <i class="fa fa-check" aria-hidden="true"></i>
+            <span>
+              It's a Shopify section: move it around, hide it, have full control
+              and freedom
+            </span>
+          </li>
+
+          <li>
+            <i class="fa fa-check" aria-hidden="true"></i>
+            <span>Free installation included</span>
+          </li>
+          <li>
+            <small>You'll be redirected to PayPal for secure checkout.</small>
+            <div style={{ marginTop: 10 }}>
+              <TrustBadge></TrustBadge>
+            </div>
+          </li>
+        </ul>
+      </React.Fragment>
+    ),
+  },
 ];
 
 const ServicesItem = (tags, video, image, preview, title, subtitle, price) => {
   const [loading, setLoading] = useState(false);
   return (
     <div
-      className="col-12 col-md-6 portfolio-item service-item"
+      className="col-12 col-md-6 portfolio-item services-item"
       data-portfolio-item-tags={tags.join(", ")}>
       <div className="single-portfolio service-single res-margin">
         {/* Portfolio Thumb */}
@@ -71,7 +122,7 @@ const ServicesItem = (tags, video, image, preview, title, subtitle, price) => {
           </figure>
         </div>
         {/* Portfolio Content */}
-        <div className="portfolio-content blog-content p-4">
+        <div className="portfolio-content services-content blog-content p-4">
           {/* Portfolio Title */}
           <div className="services-price">
             <h3 className="blog-title services-price-title my-3">
@@ -97,7 +148,13 @@ const ServicesItem = (tags, video, image, preview, title, subtitle, price) => {
             </li>
           </ul>
 
-          <div className="services-subtitle">{subtitle()}</div>
+          <div className="services-subtitle">
+            {subtitle()}
+
+            <a href="#" className="services-read-more custom-link">
+              Read more
+            </a>
+          </div>
         </div>
         <div class="services-button">
           <a
@@ -138,8 +195,8 @@ function Services() {
             <div className="section-heading text-center">
               <h2 className="text-capitalize">Services</h2>
               <p className="d-sm-block mt-4">
-                Besides bug fixes and customizations we also sell premade
-                sections.
+                Besides bug fixes, speed optimization and customizations we also
+                sell <b>Shopify sections.</b>
                 <br />
                 <span className="custom-emphasis">Click on the gif</span> to
                 watch a short video showcasing the respective section.

@@ -18,8 +18,8 @@ const questions = [
     ),
   },
   {
-    id: "support",
-    question: `Why not download an app that does the same as a section?`,
+    id: "why-app",
+    question: `Why not use an app instead?`,
     answer: () => (
       <p>
         Although most apps are undoubtedly helpful, they inevitably end up
@@ -46,7 +46,7 @@ const questions = [
         <a className="custom-link scroll" href="#contact">
           contact us
         </a>{" "}
-        before purchasing if you have any questions!
+        before purchasing if you have any questions or concerns!
       </p>
     ),
   },
@@ -82,7 +82,7 @@ const questions = [
           send us an email
         </a>{" "}
         for any questions or requests you may have, we'll return within 24
-        hours!
+        hours.
       </p>
     ),
   },
@@ -92,9 +92,14 @@ const questions = [
     answer: () => (
       <p>
         Currently we do not work by building themes from scratch. In such
-        scenarios we'll recommend you a good theme that fits your needs and from
-        there we'll help by customizing everything focused specifically for your
-        niche.
+        scenarios we'll recommend you a good{" "}
+        <a
+          className="custom-link"
+          href="https://outofthesandbox.com/?rfsn=4557612.d5a506"
+          target="_blank">
+          Turbo theme from our Out of The Sandbox
+        </a>{" "}
+        and work toogether to optimize your store for conversions!
       </p>
     ),
   },
@@ -161,18 +166,20 @@ function Faq() {
               {/* Accordion */}
               <div className="accordion pt-5" id="apolo-accordion">
                 <div className="row">
-                  {groupItems(questions, 3).map((children, index) => (
-                    <div className="accordion-group col-12 col-lg-6">
-                      {children.map((e, i) =>
-                        FaqItem(
-                          e.id,
-                          e.question,
-                          e.answer,
-                          index === 0 && i === 0 && true,
-                        ),
-                      )}
-                    </div>
-                  ))}
+                  {groupItems(questions, Math.round(questions.length / 2)).map(
+                    (children, index) => (
+                      <div className="accordion-group col-12 col-lg-6">
+                        {children.map((e, i) =>
+                          FaqItem(
+                            e.id,
+                            e.question,
+                            e.answer,
+                            index === 0 && i === 0 && true,
+                          ),
+                        )}
+                      </div>
+                    ),
+                  )}
                 </div>
               </div>
               <span className="d-block text-center mt-5">
