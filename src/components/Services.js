@@ -186,7 +186,7 @@ const ServicesItem = (props) => {
                 }
                 href={preview.length <= 0 ? "#" : preview}
                 target="_blank">
-                Click here to view a live demo!
+                Click here for a quick live demo!
               </a>
             </li>
           </ul>

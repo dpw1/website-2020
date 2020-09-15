@@ -61,7 +61,7 @@ function Header(props) {
         page_id={2076491679249035}
         theme_color="#0084ff"
         greeting_dialog_display="fade"
-        greeting_dialog_delay={20}
+        greeting_dialog_delay={15}
         logged_in_greeting="Hi! How can we help you?"
         logged_out_greeting="Hi! How can we help you?"></div>
       ;
