@@ -30,33 +30,33 @@ const items = [
     subtitle: () => (
       <ul>
         <li>
-          <i class="fa fa-check" aria-hidden="true"></i>
+          <i className="fa fa-check" aria-hidden="true"></i>
           <span>Customize colors, text, expiration date and more</span>
         </li>
 
         <li>
-          <i class="fa fa-check" aria-hidden="true"></i>
+          <i className="fa fa-check" aria-hidden="true"></i>
           <span>Works with any theme (without usage of apps)</span>
         </li>
         <li>
-          <i class="fa fa-check" aria-hidden="true"></i>
+          <i className="fa fa-check" aria-hidden="true"></i>
           <span>
             It's a Shopify section: move it around, hide it, have full control
             and freedom
           </span>
         </li>
         <li>
-          <i class="fa fa-check" aria-hidden="true"></i>
+          <i className="fa fa-check" aria-hidden="true"></i>
           <span>Super lightweight: won't slow down your website</span>
         </li>
         <li>
-          <i class="fa fa-check" aria-hidden="true"></i>
+          <i className="fa fa-check" aria-hidden="true"></i>
           <span>
             Perfect to boost conversions for festive dates & sale seasons
           </span>
         </li>
         <li>
-          <i class="fa fa-check" aria-hidden="true"></i>
+          <i className="fa fa-check" aria-hidden="true"></i>
           <span>Free installation included</span>
         </li>
 
@@ -94,26 +94,26 @@ const items = [
       <React.Fragment>
         <ul>
           <li>
-            <i class="fa fa-check" aria-hidden="true"></i>
+            <i className="fa fa-check" aria-hidden="true"></i>
             <span>Control text, sizing, words to animate, colors and more</span>
           </li>
           <li>
-            <i class="fa fa-check" aria-hidden="true"></i>
+            <i className="fa fa-check" aria-hidden="true"></i>
             <span>
               Freedom to add a an image to mobile and a different one to desktop
             </span>
           </li>
 
           <li>
-            <i class="fa fa-check" aria-hidden="true"></i>
+            <i className="fa fa-check" aria-hidden="true"></i>
             <span>Optimized images to not affect your website's speed</span>
           </li>
           <li>
-            <i class="fa fa-check" aria-hidden="true"></i>
+            <i className="fa fa-check" aria-hidden="true"></i>
             <span>Works with any theme (without usage of apps)</span>
           </li>
           <li>
-            <i class="fa fa-check" aria-hidden="true"></i>
+            <i className="fa fa-check" aria-hidden="true"></i>
             <span>
               It's a Shopify section: move it around, hide it, have full control
               and freedom
@@ -121,7 +121,7 @@ const items = [
           </li>
 
           <li>
-            <i class="fa fa-check" aria-hidden="true"></i>
+            <i className="fa fa-check" aria-hidden="true"></i>
             <span>Free installation included</span>
           </li>
           <li>
@@ -151,6 +151,7 @@ const ServicesItem = (props) => {
   const [loading, setLoading] = useState(false);
   return (
     <div
+      key={JSON.stringify(props)}
       className="col-12 col-md-6 portfolio-item services-item"
       data-portfolio-item-tags={tags.join(", ")}>
       <div className="single-portfolio service-single res-margin">
@@ -170,8 +171,8 @@ const ServicesItem = (props) => {
             <h3 className="blog-title services-price-title my-3">
               <span>{title}</span>
             </h3>
-            <h3 class="services-price-small color-primary">
-              <small class="fw-7">$</small>
+            <h3 className="services-price-small color-primary">
+              <small className="fw-7">$</small>
               {price}
             </h3>
           </div>
@@ -198,11 +199,11 @@ const ServicesItem = (props) => {
             </a>
           </div>
         </div>
-        <div class="services-button">
+        <div className="services-button">
           {paypalForm && (
             <a
               href="#"
-              class="btn mt-4"
+              className="btn mt-4"
               onClick={() => {
                 setLoading(true);
               }}>

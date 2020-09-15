@@ -6,7 +6,7 @@ import { HashLink as Link } from "react-router-hash-link";
 import { renderNav } from "../utils/utils";
 
 const headerItem = (props) => (
-  <li className="nav-item">
+  <li key={JSON.stringify(props)} className="nav-item">
     <a
       className={props.scroll ? "nav-link scroll" : "nav-link"}
       href={props.url}
@@ -55,6 +55,16 @@ function Header(props) {
           </nav>
         </div>
       </div>
+      <div
+        className="fb-customerchat"
+        attribution="setup_tool"
+        page_id={2076491679249035}
+        theme_color="#0084ff"
+        greeting_dialog_display="fade"
+        greeting_dialog_delay={20}
+        logged_in_greeting="Hi! How can we help you?"
+        logged_out_greeting="Hi! How can we help you?"></div>
+      ;
     </header>
   );
 }

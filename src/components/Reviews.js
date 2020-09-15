@@ -122,7 +122,7 @@ function Reviews() {
                   />
                 </a>
               </div>
-              {/* Single Screenshot Item */}
+              {/* Single Screenshot Item xxx */}
               <div className="single-screenshot">
                 <a
                   target="_blank"
@@ -133,14 +133,14 @@ function Reviews() {
                   />
                 </a>
               </div>
-              {/* Single Screenshot Item */}=""
+              {/* Single Screenshot Item */}
               <div className="single-screenshot">
                 <a
                   href="https://www.facebook.com/ibraheem.nadeem/posts/10161783472635352"
                   target="_blank">
                   <img
                     data-lazy={require("../copy/img/reviews/r7.jpg")}
-                    alt="Diego is amazing at what he does. I've been using his web development services for over a year (I have 20+ projects completed with the EZFY team) and he is always super helpful. His CRO tips are incredible and have definitely helped my conversion rates!"
+                    alt={`Diego is amazing at what he does. I've been using his web development services for over a year (I have 20+ projects completed with the EZFY team) and he is always super helpful. His CRO tips are incredible and have definitely helped my conversion rates!`}
                   />
                 </a>
               </div>
@@ -151,7 +151,7 @@ function Reviews() {
                   href="https://www.facebook.com/wesdwa/posts/2581923468495155">
                   <img
                     data-lazy={require("../copy/img/reviews/r8.jpg")}
-                    alt="10/10!!! Customization and bug repairs that were impossible for a few previous devs of mine were an easy task for Diego! Honestly cannot recommend him enough. If you like testing different tweaks on your site or have an annoying bug - he's the man. Also his response time is of the charts + same day delivery (Amazon of devs 😁)"
+                    alt={`10/10!!! Customization and bug repairs that were impossible for a few previous devs of mine were an easy task for Diego! Honestly cannot recommend him enough. If you like testing different tweaks on your site or have an annoying bug - he's the man. Also his response time is of the charts + same day delivery (Amazon of devs 😁)`}
                   />
                 </a>
               </div>

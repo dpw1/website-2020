@@ -120,7 +120,7 @@ const questions = [
 
 const FaqItem = (id, question, answer, isOpen = false, newLine = false) => {
   return (
-    <div key={id} className="card my-2">
+    <div key={question} className="card my-2">
       {/* Card Header */}
       <div className="card-header">
         <h2 className="mb-0">
