@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import "./Faq.scss";
 import { groupItems } from "../utils/utils";
 
@@ -7,21 +6,21 @@ const faqId = `apolo-accordion`;
 
 const questions = [
   {
-    id: "support",
     question: `What is a Shopify section?`,
     answer: () => (
       <p>
         Shopify sections are customizable elements of a page which can have
         multiple functions. They're super lightweight since they're coded into
-        your theme which is an advantage over Shopify apps.
+        your theme.
       </p>
     ),
   },
   {
-    id: "why-app",
-    question: `Why not use an app instead?`,
+    question: `What is the difference between an app and a section?`,
     answer: () => (
       <p>
+        Sections are coded directly into your theme which helps to optimize the
+        wensite speed since there are no external libraries being loaded.
         Although most apps are undoubtedly helpful, they inevitably end up
         slowing down your website. It's best to avoid them whenever possible if
         you aim for an optimized store. You can read in details how the
@@ -37,7 +36,6 @@ const questions = [
     ),
   },
   {
-    id: "payment",
     question: `What exactly happens after I purchase a section?`,
     answer: () => (
       <p>
@@ -52,29 +50,25 @@ const questions = [
   },
 
   {
-    id: "payment-methods",
     question: `What payment methods are available?`,
     answer: () => (
       <p>
         Currently we work with <span className="custom-emphasis">PayPal</span>{" "}
         and
-        <span className="custom-emphasis"> Bank Transfer</span>.{" "}
-        <b>Bank transfers</b> are encouraged since we can give you
-        <b> 7% of discount</b>. Additionally we have bank accounts in Australia,
-        the United States &amp; Europe, so you don't have to worry about
-        overseas fees if you reside in any of those places.
+        <span className="custom-emphasis"> Bank Transfer</span>. We have bank
+        accounts in Australia, the United States &amp; Europe, so you don't have
+        to worry about overseas fees if you reside in any of those places.
       </p>
     ),
   },
   {
-    id: "faq-services",
     question: `What other type of services do you offer?`,
     answer: () => (
       <p>
         <p>We can help you with:</p>
         <ul>
           <li>Speed optimization;</li>
-          <li>Custom code any part of your website;</li>
+          <li>Customize any part of your website;</li>
           <li>bug fixes.</li>
         </ul>
         Please{" "}
@@ -87,7 +81,6 @@ const questions = [
     ),
   },
   {
-    id: "faq-custom-website",
     question: `I want a custom theme for my business. Can you build one?`,
     answer: () => (
       <p>
@@ -104,7 +97,6 @@ const questions = [
     ),
   },
   {
-    id: "faq-review-website",
     question: `Do you have a portfolio of previously done websites?`,
     answer: () => (
       <p>
@@ -116,9 +108,20 @@ const questions = [
       </p>
     ),
   },
+  {
+    question: `Is purchasing through this website safe?`,
+    answer: () => (
+      <p>
+        Yes, 100%. After clicking on "Buy Now" you'll be redirected to PayPal's
+        official website for secure checkout, therefore all of your sensitive
+        data will be safe.
+      </p>
+    ),
+  },
 ];
 
-const FaqItem = (id, question, answer, isOpen = false, newLine = false) => {
+const FaqItem = (question, answer, isOpen = false, newLine = false) => {
+  const id = question.replace(/[^a-zA-Z]/g, "").toLowerCase();
   return (
     <div key={question} className="card my-2">
       {/* Card Header */}
@@ -171,7 +174,6 @@ function Faq() {
                       <div className="accordion-group col-12 col-lg-6">
                         {children.map((e, i) =>
                           FaqItem(
-                            e.id,
                             e.question,
                             e.answer,
                             index === 0 && i === 0 && true,

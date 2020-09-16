@@ -67,6 +67,9 @@
     margin-bottom: 30px;
     display: table;
     position: relative;
+    background: transparent;
+    border: unset;
+    border-bottom: 1px solid;
   }
 
   &-single {
