@@ -1,224 +1,43 @@
 import React, { useState, useRef } from "react";
 import "./Services.scss";
 import TrustBadge from "./TrustBadge";
+import { servicesItems } from "./../utils/utils";
+import ServicesItem from "./ServicesItem";
 
-const items = [
-  {
-    tags: ["Custom Shopify Section"],
-    video: require("../copy/videos/section-countdown.mp4"),
-    price: "49",
-    image: require("../copy/img/thumbnail/thumbnail-section-countdown.gif"),
-    preview: "https://acid-tests.myshopify.com/",
-    title: `Animated Countdown`,
-    paypalForm: () => (
-      <React.Fragment>
-        {" "}
-        <form
-          action="https://www.paypal.com/cgi-bin/webscr"
-          method="post"
-          target="_top">
-          <input type="hidden" name="cmd" defaultValue="_s-xclick" />
-          <input
-            type="hidden"
-            name="hosted_button_id"
-            defaultValue="YV4CYUCEEL7VQ"
-          />
-          <input type="hidden" border={0} name="send" />
-        </form>
-      </React.Fragment>
-    ),
-    subtitle: () => (
-      <ul>
-        <li>
-          <i className="fa fa-check" aria-hidden="true"></i>
-          <span>Customize colors, text, expiration date and more</span>
-        </li>
-
-        <li>
-          <i className="fa fa-check" aria-hidden="true"></i>
-          <span>Works with any theme (without usage of apps)</span>
-        </li>
-        <li>
-          <i className="fa fa-check" aria-hidden="true"></i>
-          <span>
-            It's a Shopify section: move it around, hide it, have full control
-            and freedom
-          </span>
-        </li>
-        <li>
-          <i className="fa fa-check" aria-hidden="true"></i>
-          <span>Super lightweight: won't slow down your website</span>
-        </li>
-        <li>
-          <i className="fa fa-check" aria-hidden="true"></i>
-          <span>
-            Perfect to boost conversions for festive dates & sale seasons
-          </span>
-        </li>
-        <li>
-          <i className="fa fa-check" aria-hidden="true"></i>
-          <span>Free installation included</span>
-        </li>
-
-        <li>
-          <small>You'll be redirected to PayPal for secure checkout.</small>
-          <div style={{ marginTop: 10 }}>
-            <TrustBadge></TrustBadge>
-          </div>
-        </li>
-      </ul>
-    ),
-  },
-  {
-    tags: ["Custom Shopify Section"],
-    video: require("../copy/videos/section-banner.mp4"),
-    price: "49",
-    image: require("../copy/img/thumbnail/thumbnail-section-banner.gif"),
-    preview: "https://acid-tests.myshopify.com/",
-    title: `Premium Banner`,
-    paypalForm: () => (
-      <form
-        action="https://www.paypal.com/cgi-bin/webscr"
-        method="post"
-        target="_top">
-        <input type="hidden" name="cmd" defaultValue="_s-xclick" />
-        <input
-          type="hidden"
-          name="hosted_button_id"
-          defaultValue="ZUB26QUB5QHM2"
-        />
-        <input border={0} name="send" type="hidden" />
-      </form>
-    ),
-    subtitle: () => (
-      <React.Fragment>
-        <ul>
-          <li>
-            <i className="fa fa-check" aria-hidden="true"></i>
-            <span>Control text, sizing, words to animate, colors and more</span>
-          </li>
-          <li>
-            <i className="fa fa-check" aria-hidden="true"></i>
-            <span>
-              Freedom to add a an image to mobile and a different one to desktop
-            </span>
-          </li>
-
-          <li>
-            <i className="fa fa-check" aria-hidden="true"></i>
-            <span>Optimized images to not affect your website's speed</span>
-          </li>
-          <li>
-            <i className="fa fa-check" aria-hidden="true"></i>
-            <span>Works with any theme (without usage of apps)</span>
-          </li>
-          <li>
-            <i className="fa fa-check" aria-hidden="true"></i>
-            <span>
-              It's a Shopify section: move it around, hide it, have full control
-              and freedom
-            </span>
-          </li>
-
-          <li>
-            <i className="fa fa-check" aria-hidden="true"></i>
-            <span>Free installation included</span>
-          </li>
-          <li>
-            <small>You'll be redirected to PayPal for secure checkout.</small>
-            <div style={{ marginTop: 10 }}>
-              <TrustBadge></TrustBadge>
-            </div>
-          </li>
-        </ul>
-      </React.Fragment>
-    ),
-  },
-];
-
-const ServicesItem = (props) => {
-  const {
-    tags,
-    video,
-    price,
-    image,
-    preview,
-
-    title,
-    paypalForm,
-    subtitle,
-  } = props;
-  const [loading, setLoading] = useState(false);
-  return (
-    <div
-      key={JSON.stringify(props)}
-      className="col-12 col-md-6 portfolio-item services-item"
-      data-portfolio-item-tags={tags.join(", ")}>
-      <div className="single-portfolio service-single res-margin">
-        {/* Portfolio Thumb */}
-        <div
-          href={video}
-          className="portfolio-thumb blog-thumb"
-          data-fancybox="/lightbox-service">
-          <figure className="custom-overlay">
-            <img className="lazyload" data-src={image} alt={title} />
-          </figure>
-        </div>
-        {/* Portfolio Content */}
-        <div className="portfolio-content services-content blog-content p-4">
-          {/* Portfolio Title */}
-          <div className="services-price">
-            <h3 className="blog-title services-price-title my-3">
-              <span>{title}</span>
-            </h3>
-            <h3 className="services-price-small color-primary">
-              <small className="fw-7">$</small>
-              {price}
-            </h3>
-          </div>
-          <ul className="meta-info d-flex">
-            <li>
-              <a
-                className={
-                  preview.length > 0
-                    ? "custom-link"
-                    : " custom-link portfolio-blocked"
-                }
-                href={preview.length <= 0 ? "#" : preview}
-                target="_blank">
-                Click here for a quick live demo!
-              </a>
-            </li>
-          </ul>
-
-          <div className="services-subtitle">
-            {subtitle()}
-
-            <a href="#" className="services-read-more custom-link">
-              Read more
-            </a>
-          </div>
-        </div>
-        <div className="services-button">
-          {paypalForm && (
-            <a
-              href="#"
-              className="btn mt-4"
-              onClick={() => {
-                setLoading(true);
-              }}>
-              {loading ? "Redirecting to PayPal..." : "Buy Now"}
-            </a>
-          )}
-
-          {paypalForm && paypalForm()}
-        </div>
-      </div>
-    </div>
-  );
-};
+const items = servicesItems;
 
 function Services() {
+  const loadItemsAmount = 2;
+  const [itemsToShow, setItemsToShow] = useState(loadItemsAmount);
+  const [loadedItems, setLoadedItems] = useState(items);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isButtonLoading, setIsButtonLoading] = useState(false);
+
+  const loadMoreItems = () => {
+    console.log("loading", loadedItems);
+
+    if (itemsToShow > loadedItems.length) {
+      return;
+    }
+
+    return Array(itemsToShow)
+      .fill(null)
+      .map((_, i) => i)
+      .map((e) => {
+        let item = items[e];
+
+        item.loadImage = true;
+        item.isButtonLoading = isButtonLoading;
+        item.setIsButtonLoading = setIsButtonLoading;
+
+        if (itemsToShow <= loadItemsAmount) {
+          item.loadImage = false;
+        }
+
+        return ServicesItem(item);
+      });
+  };
+
   return (
     <section
       id="services"
@@ -281,9 +100,18 @@ function Services() {
             </aside>
           </div>
           <div className="col-12 col-lg-9">
-            <div className="portfolio-row row">
-              {items.map((e) => ServicesItem(e))}
-            </div>
+            <div className="portfolio-row row">{loadMoreItems()}</div>
+            {/* {itemsToShow >= loadedItems.length || (
+              <button
+                style={{ display: "block", margin: "0 auto" }}
+                onClick={() => {
+                  setItemsToShow(itemsToShow + loadItemsAmount);
+                  return setTimeout(() => window.ezfy.initServices(), 50);
+                }}
+                className="btn mt-4">
+                {isLoading ? "Loading..." : "Load more"}
+              </button>
+            )} */}
           </div>
         </div>
       </div>

@@ -1,4 +1,6 @@
 import { createBrowserHistory } from "history";
+import React from "react";
+import TrustBadge from "../components/TrustBadge";
 
 export function groupItems(items, n) {
   return items.reduce((acc, x, i) => {
@@ -27,10 +29,276 @@ export function reloadOnURLChange() {
     if (localStorage.getItem(localStorageName) !== url) {
       console.log("reload it");
       localStorage.setItem(localStorageName, url);
-      window.location.reload();
+      window.ezfy.init();
+      // window.location.reload();
     }
   });
 }
+
+export const servicesItems = [
+  {
+    tags: ["Custom Shopify Section"],
+    video: require("../copy/videos/section-countdown.mp4"),
+    price: "49",
+    image: require("../copy/img/thumbnail/thumbnail-section-countdown.gif"),
+    preview: "https://acid-tests.myshopify.com/",
+    title: `Animated Countdown`,
+    paypalForm: () => (
+      <React.Fragment>
+        {" "}
+        <form
+          action="https://www.paypal.com/cgi-bin/webscr"
+          method="post"
+          target="_top">
+          <input type="hidden" name="cmd" defaultValue="_s-xclick" />
+          <input
+            type="hidden"
+            name="hosted_button_id"
+            defaultValue="YV4CYUCEEL7VQ"
+          />
+          <input type="hidden" border={0} name="send" />
+        </form>
+      </React.Fragment>
+    ),
+    subtitle: () => (
+      <ul>
+        <li>
+          <i className="fa fa-check" aria-hidden="true"></i>
+          <span>Customize colors, text, expiration date and more</span>
+        </li>
+
+        <li>
+          <i className="fa fa-check" aria-hidden="true"></i>
+          <span>Works with any theme (without usage of apps)</span>
+        </li>
+        <li>
+          <i className="fa fa-check" aria-hidden="true"></i>
+          <span>
+            It's a Shopify section: move it around, hide it, have full control
+            and freedom
+          </span>
+        </li>
+        <li>
+          <i className="fa fa-check" aria-hidden="true"></i>
+          <span>Super lightweight: won't slow down your website</span>
+        </li>
+        <li>
+          <i className="fa fa-check" aria-hidden="true"></i>
+          <span>
+            Perfect to boost conversions for festive dates & sale seasons
+          </span>
+        </li>
+        <li>
+          <i className="fa fa-check" aria-hidden="true"></i>
+          <span>Free installation included</span>
+        </li>
+
+        <li>
+          <small>You'll be redirected to PayPal for secure checkout.</small>
+          <div style={{ marginTop: 10 }}>
+            <TrustBadge></TrustBadge>
+          </div>
+        </li>
+      </ul>
+    ),
+  },
+  {
+    tags: ["Custom Shopify Section"],
+    video: require("../copy/videos/section-banner.mp4"),
+    price: "49",
+    image: require("../copy/img/thumbnail/thumbnail-section-banner.gif"),
+    preview: "https://acid-tests.myshopify.com/",
+    title: `Premium Banner`,
+    paypalForm: () => (
+      <form
+        action="https://www.paypal.com/cgi-bin/webscr"
+        method="post"
+        target="_top">
+        <input type="hidden" name="cmd" defaultValue="_s-xclick" />
+        <input
+          type="hidden"
+          name="hosted_button_id"
+          defaultValue="ZUB26QUB5QHM2"
+        />
+        <input border={0} name="send" type="hidden" />
+      </form>
+    ),
+    subtitle: () => (
+      <React.Fragment>
+        <ul>
+          <li>
+            <i className="fa fa-check" aria-hidden="true"></i>
+            <span>Control text, sizing, words to animate, colors and more</span>
+          </li>
+          <li>
+            <i className="fa fa-check" aria-hidden="true"></i>
+            <span>
+              Freedom to add a an image to mobile and a different one to desktop
+            </span>
+          </li>
+
+          <li>
+            <i className="fa fa-check" aria-hidden="true"></i>
+            <span>Optimized images to not affect your website's speed</span>
+          </li>
+          <li>
+            <i className="fa fa-check" aria-hidden="true"></i>
+            <span>Works with any theme (without usage of apps)</span>
+          </li>
+          <li>
+            <i className="fa fa-check" aria-hidden="true"></i>
+            <span>
+              It's a Shopify section: move it around, hide it, have full control
+              and freedom
+            </span>
+          </li>
+
+          <li>
+            <i className="fa fa-check" aria-hidden="true"></i>
+            <span>Free installation included</span>
+          </li>
+          <li>
+            <small>You'll be redirected to PayPal for secure checkout.</small>
+            <div style={{ marginTop: 10 }}>
+              <TrustBadge></TrustBadge>
+            </div>
+          </li>
+        </ul>
+      </React.Fragment>
+    ),
+  },
+  {
+    tags: ["Custom Shopify Section"],
+    video: require("../copy/videos/section-countdown.mp4"),
+    price: "49",
+    image: require("../copy/img/thumbnail/thumbnail-section-countdown.gif"),
+    preview: "https://acid-tests.myshopify.com/",
+    title: `TEST`,
+    paypalForm: () => (
+      <React.Fragment>
+        {" "}
+        <form
+          action="https://www.paypal.com/cgi-bin/webscr"
+          method="post"
+          target="_top">
+          <input type="hidden" name="cmd" defaultValue="_s-xclick" />
+          <input
+            type="hidden"
+            name="hosted_button_id"
+            defaultValue="YV4CYUCEEL7VQ"
+          />
+          <input type="hidden" border={0} name="send" />
+        </form>
+      </React.Fragment>
+    ),
+    subtitle: () => (
+      <ul>
+        <li>
+          <i className="fa fa-check" aria-hidden="true"></i>
+          <span>Customize colors, text, expiration date and more</span>
+        </li>
+
+        <li>
+          <i className="fa fa-check" aria-hidden="true"></i>
+          <span>Works with any theme (without usage of apps)</span>
+        </li>
+        <li>
+          <i className="fa fa-check" aria-hidden="true"></i>
+          <span>
+            It's a Shopify section: move it around, hide it, have full control
+            and freedom
+          </span>
+        </li>
+        <li>
+          <i className="fa fa-check" aria-hidden="true"></i>
+          <span>Super lightweight: won't slow down your website</span>
+        </li>
+        <li>
+          <i className="fa fa-check" aria-hidden="true"></i>
+          <span>
+            Perfect to boost conversions for festive dates & sale seasons
+          </span>
+        </li>
+        <li>
+          <i className="fa fa-check" aria-hidden="true"></i>
+          <span>Free installation included</span>
+        </li>
+
+        <li>
+          <small>You'll be redirected to PayPal for secure checkout.</small>
+          <div style={{ marginTop: 10 }}>
+            <TrustBadge></TrustBadge>
+          </div>
+        </li>
+      </ul>
+    ),
+  },
+  {
+    tags: ["Custom Shopify Section"],
+    video: require("../copy/videos/section-banner.mp4"),
+    price: "49",
+    image: require("../copy/img/thumbnail/thumbnail-section-banner.gif"),
+    preview: "https://acid-tests.myshopify.com/",
+    title: `321 Banner`,
+    paypalForm: () => (
+      <form
+        action="https://www.paypal.com/cgi-bin/webscr"
+        method="post"
+        target="_top">
+        <input type="hidden" name="cmd" defaultValue="_s-xclick" />
+        <input
+          type="hidden"
+          name="hosted_button_id"
+          defaultValue="ZUB26QUB5QHM2"
+        />
+        <input border={0} name="send" type="hidden" />
+      </form>
+    ),
+    subtitle: () => (
+      <React.Fragment>
+        <ul>
+          <li>
+            <i className="fa fa-check" aria-hidden="true"></i>
+            <span>Control text, sizing, words to animate, colors and more</span>
+          </li>
+          <li>
+            <i className="fa fa-check" aria-hidden="true"></i>
+            <span>
+              Freedom to add a an image to mobile and a different one to desktop
+            </span>
+          </li>
+
+          <li>
+            <i className="fa fa-check" aria-hidden="true"></i>
+            <span>Optimized images to not affect your website's speed</span>
+          </li>
+          <li>
+            <i className="fa fa-check" aria-hidden="true"></i>
+            <span>Works with any theme (without usage of apps)</span>
+          </li>
+          <li>
+            <i className="fa fa-check" aria-hidden="true"></i>
+            <span>
+              It's a Shopify section: move it around, hide it, have full control
+              and freedom
+            </span>
+          </li>
+
+          <li>
+            <i className="fa fa-check" aria-hidden="true"></i>
+            <span>Free installation included</span>
+          </li>
+          <li>
+            <small>You'll be redirected to PayPal for secure checkout.</small>
+            <div style={{ marginTop: 10 }}>
+              <TrustBadge></TrustBadge>
+            </div>
+          </li>
+        </ul>
+      </React.Fragment>
+    ),
+  },
+];
 
 export const homepageNavbarLinks = [
   {
