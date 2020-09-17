@@ -340,7 +340,6 @@ ezfy = (function () {
 
     var lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
 
-    console.log("lazyimages", lazyImages);
     if ("IntersectionObserver" in window) {
       let lazyImageObserver = new IntersectionObserver(function (
         entries,
@@ -544,16 +543,21 @@ ezfy = (function () {
 
   function addToCartListener() {
     const atc = document.querySelectorAll(".services-button");
+    const redirectText = `Redirecting to PayPal...`;
+
+    if (!atc) {
+      return;
+    }
 
     for (const each of atc) {
       each.addEventListener("click", function (e) {
         e.preventDefault();
 
+        console.log(each.innerHTML);
+        e.target.textContent = redirectText;
         const button = each.querySelector(`form`);
 
-        console.log(button);
         button.submit();
-        // alert("ok");
       });
     }
   }
@@ -563,6 +567,8 @@ ezfy = (function () {
 
     for (let each of readmore) {
       each.addEventListener("click", function (e) {
+        e.preventDefault();
+
         each
           .closest(`.services-subtitle`)
           .classList.add(`services-subtitle--visible`);
@@ -570,6 +576,10 @@ ezfy = (function () {
     }
   }
   return {
+    initServices: () => {
+      readMoreForServices();
+      addToCartListener();
+    },
     init: function () {
       document.addEventListener("DOMContentLoaded", function () {
         lazyLoadImages();
@@ -578,8 +588,7 @@ ezfy = (function () {
         addTagsToPortfolioFilter();
         portfolioTagHandleOnClick();
         autoplayVideo();
-        addToCartListener();
-        readMoreForServices();
+        window.ezfy.initServices();
       });
 
       window.onresize = function (event) {};
@@ -589,4 +598,4 @@ ezfy = (function () {
   };
 })();
 
-ezfy.init();
+window.ezfy.init();
