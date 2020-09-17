@@ -27,10 +27,9 @@ export function reloadOnURLChange() {
     console.log(localStorage.getItem(localStorageName), url);
 
     if (localStorage.getItem(localStorageName) !== url) {
-      console.log("reload it");
       localStorage.setItem(localStorageName, url);
-      window.ezfy.init();
-      // window.location.reload();
+      // window.ezfy.init();
+      window.location.reload();
     }
   });
 }
