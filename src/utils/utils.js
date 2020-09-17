@@ -320,7 +320,7 @@ export const homepageNavbarLinks = [
   },
   {
     name: "Portfolio",
-    url: "#portfolio",
+    url: "/portfolio",
     offset: -40,
     scroll: false,
   },

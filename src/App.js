@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.scss";
 
-import { HashRouter, Route, Link } from "react-router-dom";
+import { HashRouter, Route, Link, BrowserRouter } from "react-router-dom";
 import { createBrowserHistory } from "history";
 
 import Hero from "./components/Hero";
@@ -57,15 +57,15 @@ function App(props) {
   }, []);
   return (
     <div className="App main">
-      <HashRouter basename="/website-2020">
+      <BrowserRouter basename="https://ezfycode.com">
         <div>
-          <Route exact path="/" component={() => <HomePage></HomePage>} />
+          <Route exact path="/" render={() => <HomePage></HomePage>} />
           <Route
             path="/portfolio"
-            component={() => <PortfolioPage></PortfolioPage>}
+            render={() => <PortfolioPage></PortfolioPage>}
           />
         </div>
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }
