@@ -272,7 +272,7 @@ function Portfolio() {
                       <li className="portfolio-blocked">Source Code</li>
                       <li>
                         <a
-                          href="https://www.bubswarehouse.com/"
+                          href="http://www.blankrefer.com/?https://www.bubswarehouse.com/"
                           target="_blank">
                           Live Website
                         </a>
@@ -595,7 +595,9 @@ function Portfolio() {
                     <ul className="meta-info d-flex">
                       <li className="portfolio-blocked">Source Code</li>
                       <li>
-                        <a href="https://www.getyokd.com/">Live Website</a>
+                        <a href="http://www.blankrefer.com/?https://www.getyokd.com/">
+                          Live Website
+                        </a>
                       </li>
                     </ul>
                     {/* Portfolio Title */}
@@ -657,7 +659,9 @@ function Portfolio() {
                     <ul className="meta-info d-flex">
                       <li className="portfolio-blocked">Source Code</li>
                       <li>
-                        <a href="https://www.getyokd.com/">Live Website</a>
+                        <a href="http://www.blankrefer.com/?https://www.getyokd.com/">
+                          Live Website
+                        </a>
                       </li>
                     </ul>
                     {/* Portfolio Title */}
@@ -720,7 +724,9 @@ function Portfolio() {
                     <ul className="meta-info d-flex">
                       <li className="portfolio-blocked">Source Code</li>
                       <li>
-                        <a href="https://birthcanva.com/">Live Website</a>
+                        <a href="http://www.blankrefer.com/?https://birthcanva.com/">
+                          Live Website
+                        </a>
                       </li>
                     </ul>
                     {/* Portfolio Title */}
@@ -782,7 +788,9 @@ function Portfolio() {
                     <ul className="meta-info d-flex">
                       <li className="portfolio-blocked">Source Code</li>
                       <li>
-                        <a href="https://www.jimsdecor.com.au/">Live Website</a>
+                        <a href="http://www.blankrefer.com/?https://www.jimsdecor.com.au/">
+                          Live Website
+                        </a>
                       </li>
                     </ul>
                     {/* Portfolio Title */}
