@@ -38,7 +38,7 @@ export const servicesItems = [
   {
     tags: ["Custom Shopify Section"],
     video: require("../copy/videos/section-countdown.mp4"),
-    price: "49",
+    price: "19",
     image: require("../copy/img/thumbnail/thumbnail-section-countdown.gif"),
     preview: "https://acid-tests.myshopify.com/",
     title: `Animated Countdown`,
@@ -93,7 +93,6 @@ export const servicesItems = [
         </li>
 
         <li>
-          <small>You'll be redirected to PayPal for secure checkout.</small>
           <div style={{ marginTop: 10 }}>
             <TrustBadge></TrustBadge>
           </div>
@@ -157,7 +156,6 @@ export const servicesItems = [
             <span>Free installation included</span>
           </li>
           <li>
-            <small>You'll be redirected to PayPal for secure checkout.</small>
             <div style={{ marginTop: 10 }}>
               <TrustBadge></TrustBadge>
             </div>

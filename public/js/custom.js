@@ -562,6 +562,26 @@ ezfy = (function () {
     }
   }
 
+  function redirectToPaymentGateway() {
+    const atc = document.querySelectorAll(".services-button");
+    const redirectText = `Please wait...`;
+
+    if (!atc) {
+      return;
+    }
+
+    for (const each of atc) {
+      each.addEventListener("click", function (e) {
+        // e.preventDefault();
+
+        e.target.textContent = redirectText;
+        const button = each.querySelector(`form`);
+
+        button.submit();
+      });
+    }
+  }
+
   function readMoreForServices() {
     const readmore = document.querySelectorAll(`.services-read-more`);
 
@@ -578,7 +598,8 @@ ezfy = (function () {
   return {
     initServices: () => {
       readMoreForServices();
-      addToCartListener();
+      redirectToPaymentGateway();
+      // addToCartListener();
     },
     init: function () {
       document.addEventListener("DOMContentLoaded", function () {

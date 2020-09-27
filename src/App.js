@@ -57,15 +57,15 @@ function App(props) {
   }, []);
   return (
     <div className="App main">
-      <HashRouter basename="https://ezfycode.com">
+      <BrowserRouter basename="/">
         <div>
-          <Route exact path="/" render={() => <HomePage></HomePage>} />
+          <Route exact path="/" component={() => <HomePage></HomePage>} />
           <Route
             path="/portfolio"
-            render={() => <PortfolioPage></PortfolioPage>}
+            component={() => <PortfolioPage></PortfolioPage>}
           />
         </div>
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }

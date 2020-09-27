@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 // import "./Services.scss";
 import TrustBadge from "./TrustBadge";
 import { servicesItems } from "./../utils/utils";
+import PaypalCheckout from "./PaypalCheckout";
 
 function ServicesItem(props) {
   const {
@@ -43,7 +44,9 @@ function ServicesItem(props) {
           {/* Portfolio Title */}
           <div className="services-price">
             <h3 className="blog-title services-price-title my-3">
-              <span>{title}</span>
+              <a href={video} data-fancybox="/lightbox-service">
+                <span>{title}</span>
+              </a>
             </h3>
             <h3 className="services-price-small color-primary">
               <small className="fw-7">$</small>
@@ -74,9 +77,14 @@ function ServicesItem(props) {
           </div>
         </div>
         <div className="services-button">
-          {paypalForm && <button className="btn mt-4">Buy Now</button>}
-
-          {paypalForm && paypalForm()}
+          {paypalForm && (
+            <a
+              href="https://gum.co/zoDQl?wanted=true"
+              data-gumroad-single-product="true"
+              className="btn mt-4">
+              Buy Now
+            </a>
+          )}
         </div>
       </div>
     </div>

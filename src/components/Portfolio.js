@@ -129,7 +129,7 @@ function Portfolio() {
                         className="collapse show text-uppercase d-block p-3"
                         data-toggle="collapse"
                         href="#accordion3">
-                        Tags
+                        Filter
                       </a>
                     </h5>
                     {/* Tags Widget Content */}

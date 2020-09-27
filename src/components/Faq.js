@@ -84,15 +84,15 @@ const questions = [
     question: `I want a custom theme for my business. Can you build one?`,
     answer: () => (
       <p>
-        Currently we do not work by building themes from scratch. In such
-        scenarios we'll recommend you a good{" "}
+        Absolutely! In such scenarios we'll recommend you a good{" "}
         <a
           className="custom-link"
           href="https://outofthesandbox.com/?rfsn=4557612.d5a506"
           target="_blank">
           Turbo theme from our Out of The Sandbox
         </a>{" "}
-        and work toogether to optimize your store for conversions!
+        and work toogether to optimize your store both for conversion rate and
+        speed.
       </p>
     ),
   },
@@ -101,7 +101,7 @@ const questions = [
     answer: () => (
       <p>
         Yes! Please{" "}
-        <a className="custom-link" href="#/portfolio">
+        <a className="custom-link" href="/portfolio">
           click here
         </a>{" "}
         to take a look at it.

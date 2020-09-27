@@ -44,9 +44,9 @@ function About() {
                       years of professional experience in web development.
                     </p>
                     <p className="d-block mt-4">
-                      Back in the beginning of 2018 I noticed an exponential
+                      Back in the beginning of 2015 I noticed an exponential
                       growth of clients having trouble with or wanting to
-                      customize their pre-owned Shopify themes.
+                      enhance their pre-owned Shopify themes.
                     </p>
                     <p className="d-block mt-4">
                       Bearing that in mind I've founded <b>EZFY</b> to help

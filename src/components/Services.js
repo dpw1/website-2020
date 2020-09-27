@@ -52,7 +52,7 @@ function Services() {
                 Besides bug fixes, speed optimization and customizations we also
                 sell <b>Shopify sections.</b>
                 <br />
-                <span className="custom-emphasis">Click on the gif</span> to
+                <span className="custom-emphasis">Click on the image</span> to
                 watch a short video showcasing the respective section.
               </p>
             </div>
@@ -101,17 +101,6 @@ function Services() {
           </div>
           <div className="col-12 col-lg-9">
             <div className="portfolio-row row">{loadMoreItems()}</div>
-            {/* {itemsToShow >= loadedItems.length || (
-              <button
-                style={{ display: "block", margin: "0 auto" }}
-                onClick={() => {
-                  setItemsToShow(itemsToShow + loadItemsAmount);
-                  return setTimeout(() => window.ezfy.initServices(), 50);
-                }}
-                className="btn mt-4">
-                {isLoading ? "Loading..." : "Load more"}
-              </button>
-            )} */}
           </div>
         </div>
       </div>

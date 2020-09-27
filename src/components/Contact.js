@@ -23,10 +23,10 @@ function Contact() {
             {/* Contact Us */}
             <div className="contact-us">
               <p className="mb-3">
-                Send us an e-mail and we'll get back to you as soon as possible!
+                Send us an e-mail and we'll get back to you within 24 hours!
                 After you hit "send message"{" "}
                 <b>you'll be redirected to FormSpree page</b> so your e-mail can
-                be send. 🙂
+                be sent. 🙂
               </p>
               <ul>
                 <li className="py-2">
@@ -35,7 +35,7 @@ function Contact() {
                       <i className="fab fa-facebook-f" />
                     </div>
                     <span className="media-body align-self-center">
-                      facebook.com/ezfyforshopify
+                      Facebook
                     </span>
                   </a>
                 </li>
@@ -45,7 +45,7 @@ function Contact() {
                       <i className="fab fa-facebook-messenger" />
                     </div>
                     <span className="media-body align-self-center">
-                      m.me/ezfyforshopify
+                      Facebook Messenger
                     </span>
                   </a>
                 </li>

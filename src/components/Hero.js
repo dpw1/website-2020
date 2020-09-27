@@ -58,7 +58,7 @@ function Hero(props) {
                 </span>
                 <br />
                 <span>
-                  More than 25 public recommendations, 180+ Shopify merchants
+                  More than 25 public recommendations, 200+ Shopify merchants
                   helped.
                 </span>
               </h3>

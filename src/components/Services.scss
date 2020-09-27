@@ -179,6 +179,10 @@
 
   &-price-title {
     max-width: 79%;
+    & *:focus,
+    & *:active {
+      color: unset;
+    }
   }
 
   &-subtitle {

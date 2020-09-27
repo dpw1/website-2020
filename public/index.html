@@ -8,6 +8,38 @@
   <meta name="theme-color" content="#000000" />
   <meta name="description"
     content="Globally recognised Shopify Expert, creating beautiful online experiences and results-driven custom coding." />
+
+  <!-- Start Single Page Apps for GitHub Pages -->
+  <script type="text/javascript">
+    // Single Page Apps for GitHub Pages
+    // https://github.com/rafgraph/spa-github-pages
+    // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
+    // ----------------------------------------------------------------------
+    // This script checks to see if a redirect is present in the query string
+    // and converts it back into the correct url and adds it to the
+    // browser's history using window.history.replaceState(...),
+    // which won't cause the browser to attempt to load the new url.
+    // When the single page app is loaded further down in this file,
+    // the correct url will be waiting in the browser's history for
+    // the single page app to route accordingly.
+    (function (l) {
+      if (l.search) {
+        var q = {};
+        l.search.slice(1).split('&').forEach(function (v) {
+          var a = v.split('=');
+          q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
+        });
+        if (q.p !== undefined) {
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + (q.p || '') +
+            (q.q ? ('?' + q.q) : '') +
+            l.hash
+          );
+        }
+      }
+    }(window.location))
+  </script>
+  <!-- End Single Page Apps for GitHub Pages -->
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <!--
       manifest.jsotadata used when your web app is installed on a
@@ -26,20 +58,20 @@
   <title>EZFY | Shopify Made Easy</title>
 
   <script src="./js/vendors.js" defer="defer"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+
   <script src="./js/custom.js" defer="defer"></script>
 
   <!-- HOTJAR -->
   <!-- Hotjar Tracking Code for https://ezfycode.com/ -->
   <script>
-    (function (h, o, t, j, a, r) {
-      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-      h._hjSettings = { hjid: 1956203, hjsv: 6 };
-      a = o.getElementsByTagName('head')[0];
-      r = o.createElement('script'); r.async = 1;
-      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-      a.appendChild(r);
-    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+      (function (h, o, t, j, a, r) {
+        h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+        h._hjSettings = { hjid: 1956203, hjsv: 6 };
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script'); r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
   </script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -90,6 +122,43 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
 
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=ASnyr-EnbUs-fv9Wzs61OXrCeSpsnrHK-exvC0LmUQekJeR7clW-rrNSJJHhfc8s8vhJWH1haxR6NeAL&currency=USD"
+    data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'buynow',
+
+        },
+
+        createOrder: function (data, actions) {
+          return actions.order.create({
+            purchase_units: [{ "description": "Animated Countdown", "amount": { "currency_code": "USD", "value": 1 } }]
+          });
+        },
+
+        onApprove: function (data, actions) {
+          return actions.order.capture().then(function (details) {
+            alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+        },
+
+        onError: function (err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
+  <script src="https://gumroad.com/js/gumroad-embed.js"></script>
 </body>
 
 </html>

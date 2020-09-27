@@ -37,9 +37,9 @@ function Steps() {
               </div>
               <h3 className="text-white py-3">You tell us your needs</h3>
               <p className="text-white">
-                We have a chat about what you want to implement or fix on your
-                website. Once we talk it through all tasks are added into a
-                Google Sheets file with their respective prices and status.
+                We have a chat about what you'd like to add or fix on your
+                website. After that we add all tasks into a Google Sheets file
+                with their respective prices and status.
               </p>
             </div>
           </div>
@@ -66,9 +66,10 @@ function Steps() {
               </div>
               <h3 className="text-white py-3">We code it</h3>
               <p className="text-white">
-                A deadline is given and we start working. Once everything is
-                finished we contact you, you double check whether everything is
-                as you wish and if it's all good payment is fixed.
+                A deadline is given and we start working. We keep in touch
+                throughout the whole process so we're sure that everything is
+                just as you wish. Payment is only after the project completion
+                and your approval.
               </p>
             </div>
           </div>
