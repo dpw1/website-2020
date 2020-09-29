@@ -4,7 +4,7 @@ import desktopImage from "../copy/img/pixel_quite_black_portrait_trim_up.png";
 import "./Hero.scss";
 
 function Hero(props) {
-  const { scrollTo } = props;
+  const { scrollTo, buttonText } = props;
   return (
     <section
       id="hero"
@@ -80,7 +80,7 @@ function Hero(props) {
                   className="btn custom-btn text-uppercase scroll"
                   href={scrollTo}
                   data-scroll-offset={-60}>
-                  Get started
+                  {buttonText ? buttonText : "Get started"}
                 </a>
               </div>
             </div>

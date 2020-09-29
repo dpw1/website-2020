@@ -39,8 +39,9 @@ const questions = [
     question: `What exactly happens after I purchase a section?`,
     answer: () => (
       <p>
-        Immediately after your purchase we'll send you an e-mail requesting your
-        Shopify store URL so the section can be installed. You can{" "}
+        Immediately after your purchase you'll receive the files and
+        instructions to install the section onto your store. You can also
+        request a free installation from us. Feel free to{" "}
         <a className="custom-link scroll" href="#contact">
           contact us
         </a>{" "}
@@ -53,8 +54,8 @@ const questions = [
     question: `What payment methods are available?`,
     answer: () => (
       <p>
-        Currently we work with <span className="custom-emphasis">PayPal</span>{" "}
-        and
+        For custom services we currently accept{" "}
+        <span className="custom-emphasis">PayPal</span> and
         <span className="custom-emphasis"> Bank Transfer</span>. We have bank
         accounts in Australia, the United States &amp; Europe, so you don't have
         to worry about overseas fees if you reside in any of those places.
@@ -84,7 +85,7 @@ const questions = [
     question: `I want a custom theme for my business. Can you build one?`,
     answer: () => (
       <p>
-        Absolutely! In such scenarios we'll recommend you a good{" "}
+        Yes! In such scenarios we'll recommend you a good{" "}
         <a
           className="custom-link"
           href="https://outofthesandbox.com/?rfsn=4557612.d5a506"
@@ -109,12 +110,24 @@ const questions = [
     ),
   },
   {
-    question: `Is purchasing through this website safe?`,
+    question: `How safe is purchasing from this website?`,
     answer: () => (
       <p>
-        Yes, 100%. After clicking on "Buy Now" you'll be redirected to PayPal's
-        official website for secure checkout, therefore all of your sensitive
-        data will be safe.
+        100% safe. We take privacy and security seriously, therefore after
+        clicking on "Buy Now" you'll be redirected to a safe checkout payment
+        platform where you can pay with PayPal or Credit Card.
+      </p>
+    ),
+  },
+  {
+    question: `I have an idea for a section. Can you create it?`,
+    answer: () => (
+      <p>
+        Yes! Please{" "}
+        <a className="custom-link scroll" href="#contact">
+          send us an email
+        </a>{" "}
+        with further information, we'll reply within 24 hours.
       </p>
     ),
   },
@@ -149,7 +162,7 @@ const FaqItem = (question, answer, isOpen = false, newLine = false) => {
 
 function Faq() {
   return (
-    <section id="faq" className="section faq-area ptb_100">
+    <section id="faq" className="section faq-area ptb_50">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-md-10 col-lg-7">

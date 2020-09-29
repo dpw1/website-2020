@@ -39,7 +39,7 @@ const PortfolioPage = () => (
   <React.Fragment>
     <ScrollToTop></ScrollToTop>
     <Header page="portfolio"></Header>
-    <Hero scrollTo="#portfolio"></Hero>
+    <Hero scrollTo="#portfolio" buttonText={"View Portfolio"}></Hero>
     <Portfolio></Portfolio>
     <Faq></Faq>
     <Contact></Contact>
@@ -48,13 +48,6 @@ const PortfolioPage = () => (
 );
 
 function App(props) {
-  useEffect(() => {
-    try {
-      reloadOnURLChange();
-    } catch (err) {
-      console.log(err);
-    }
-  }, []);
   return (
     <div className="App main">
       <BrowserRouter basename="/">

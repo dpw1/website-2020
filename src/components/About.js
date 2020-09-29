@@ -39,22 +39,24 @@ function About() {
                   data-wow-delay="0.2s">
                   <div className="about-text icon-text media-body align-self-center align-self-md-start">
                     <p className="d-sm-block">
-                      Greetings! My name is Diego Fortes. I am a 27 years old
-                      software engineer with 8 years of coding experience and 5
-                      years of professional experience in web development.
+                      Greetings! My name is Diego Fortes. I am a Computer
+                      Science graduate software engineer with 9 years of coding
+                      experience and 6 years of professional experience in
+                      Shopify development.
                     </p>
                     <p className="d-block mt-4">
-                      Back in the beginning of 2015 I noticed an exponential
-                      growth of clients having trouble with or wanting to
-                      enhance their pre-owned Shopify themes.
+                      The main intent of <b className="custom-emphasis">EZFY</b>{" "}
+                      is to cater all of your technical Shopify needs so you can
+                      focus on the business side of your e-commerce.
                     </p>
                     <p className="d-block mt-4">
-                      Bearing that in mind I've founded <b>EZFY</b> to help
-                      people aid those seemingly simpler issues so they wouldn't
-                      need to resort to apps or pricy development teams.
+                      We'll help you with small customizations, bug fixes,
+                      adding extra options to your theme, creating custom
+                      sections and so on and so forth.
                     </p>
                     <p className="d-block mt-4">
-                      Feel free to read about their experience with our work by{" "}
+                      We help dozens of Shopify merchants everyday. Feel free to
+                      read about their experience with our work by{" "}
                       <a href="#reviews" className="scroll custom-link">
                         clicking here
                       </a>

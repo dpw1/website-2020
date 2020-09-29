@@ -14,26 +14,191 @@ const items = [
     subtitle: `Arval is a printing machine company. They needed their old
   website updated so we developed a brand new design +
   website for them.`,
+    alt: "Arval's Printing Machinery Website",
+  },
+  {
+    tags: [
+      "HTML5",
+      "CSS3",
+      "Shopify",
+      "Liquid",
+      "ES7",
+      "SCSS / SASS",
+      "jQuery",
+    ],
+    video: require("../copy/videos/video-bubs.mp4"),
+    image: require("../copy/img/thumbnail/thumbnail-bubs.jpg"),
+    sourceCode: "",
+    liveWebsite: "http://www.blankrefer.com/?https://www.bubswarehouse.com/",
+    title: "Bubswarehouse",
+    subtitle: `Bubswarehouse is one of the biggest online stores in
+    Australia selling baby clothes and toys. We've worked
+    closely together to maximize the store's converion rates.`,
+    alt: "Portfolio - Bubswarehouse's Shopify website",
+  },
+  {
+    tags: [
+      "HTML5",
+      "CSS3",
+      "Shopify",
+      "Liquid",
+      "ES7",
+      "SCSS / SASS",
+      "jQuery",
+    ],
+    video: require("../copy/videos/video-light-bricks.mp4"),
+    image: require("../copy/img/thumbnail/thumbnail-light-bricks.jpg"),
+    sourceCode: "",
+    liveWebsite: "http://www.blankrefer.com/?http://lightmybricks.com.au/",
+    title: "Light My Bricks",
+    subtitle: `A worldwide famous company selling leds for Legos®. Our
+    work consisted of the implementation of new Shopify
+    sections on their websites.`,
+    alt: "Portfolio - Light my Bricks Shopify store",
+  },
+  {
+    tags: [
+      "HTML5",
+      "CSS3",
+      "Shopify",
+      "Liquid",
+      "ES7",
+      "SCSS / SASS",
+      "jQuery",
+    ],
+    video: require("../copy/videos/video-zudo.mp4"),
+    image: require("../copy/img/thumbnail/thumbnail-zudo.jpg"),
+    sourceCode: "",
+    liveWebsite: "http://www.blankrefer.com/?http://zudo.co/",
+    title: "Zudo",
+    subtitle: `Shopify website fully customized for client.`,
+    alt: "Portfolio - Zudo Shopify Store",
+  },
+  {
+    tags: ["HTML5", "CSS3", "Handlebars.js", "SCSS / SASS", "jQuery", "UX"],
+    video: require("../copy/videos/video-studiotagus.mp4"),
+    image: require("../copy/img/thumbnail/thumbnail-studiotagus.jpg"),
+    sourceCode: "https://github.com/dpw1/tagus-v3",
+    liveWebsite: "",
+    title: "Studio Tagus",
+    subtitle: `Digital agency coded by EZFY from the ground up for a startup.`,
+    alt: "Portfolio - Studio Tagus digital agency",
+  },
+  {
+    tags: ["HTML5", "CSS3", "Stylus", "jQuery", "UX"],
+    video: require("../copy/videos/video-megalancers.mp4"),
+    image: require("../copy/img/thumbnail/thumbnail-megalancers.jpg"),
+    sourceCode: "",
+    liveWebsite:
+      "http://www.blankrefer.com/?https://www.facebook.com/megalancers/",
+    title: "Megalancers",
+    subtitle: `Popularly known as the <i>“Brazilian Fiverr”</i> , EZFY
+    assisted the company to bring their website idea to life in. Everything was coded
+    from scratch based on a .PSD file.`,
+    alt: "Portfolio - Megalancers Website",
+  },
+  {
+    tags: [
+      "HTML5",
+      "CSS3",
+      "Shopify",
+      "Liquid",
+      "ES7",
+      "SCSS / SASS",
+      "jQuery",
+    ],
+    video: require("../copy/videos/video-yokd.mp4"),
+    image: require("../copy/img/thumbnail/thumbnail-yokd.jpg"),
+    sourceCode: "",
+    liveWebsite: "http://www.blankrefer.com/?https://www.getyokd.com/",
+    title: "GET YOK'D",
+    subtitle: `The project owner requested website optimizations (namely lazy loading and image compressing), implementation of custom sections and
+    multiple styling modifications.`,
+    alt: "Portfolio - GET YOKED's Website",
+  },
+
+  {
+    tags: [
+      "HTML5",
+      "CSS3",
+      "Shopify",
+      "Liquid",
+      "ES7",
+      "SCSS / SASS",
+      "jQuery",
+    ],
+    video: require("../copy/videos/video-dog.mp4"),
+    image: require("../copy/img/thumbnail/thumbnail-dog.jpg"),
+    sourceCode: "",
+    liveWebsite:
+      "http://www.blankrefer.com/?https://dogsbestfriendaustralia.com.au/",
+    title: "DOG'S BEST FRIEND AUSTRALIA",
+    subtitle: `    Creation of new components on top of a theme.
+    Implementation of the new collection section "Best
+    Sellers".`,
+    alt: "Portfolio - Dog's Best Friend Australia Shopify Website",
+  },
+  {
+    tags: [
+      "HTML5",
+      "CSS3",
+      "Shopify",
+      "Liquid",
+      "ES7",
+      "SCSS / SASS",
+      "jQuery",
+    ],
+    video: require("../copy/videos/video-birthcanva.mp4"),
+    image: require("../copy/img/thumbnail/thumbnail-birthcanva.jpg"),
+    sourceCode: "",
+    liveWebsite: "http://www.blankrefer.com/?https://birthcanva.com/",
+    title: "Birthcanva",
+    subtitle: `Shopify website. We worked together to improve the overall
+    performance, add new sections and styles customizations.`,
+    alt: "Portfolio - Birthcanva Shopify Website",
+  },
+  {
+    tags: [
+      "HTML5",
+      "CSS3",
+      "Shopify",
+      "Liquid",
+      "ES7",
+      "SCSS / SASS",
+      "jQuery",
+    ],
+    video: require("../copy/videos/video-jim.mp4"),
+    image: require("../copy/img/thumbnail/thumbnail-jim.jpg"),
+    sourceCode: "",
+    liveWebsite: "http://www.blankrefer.com/?https://www.cosycribs.com.au/",
+    title: "Cosy Cribs",
+    subtitle: `Australian e-commerce based on Shopify selling furnitures.`,
+    alt: "Portfolio - Cosy Cribs' Website",
   },
 ];
 
-const PortfolioItem = (
-  tags,
-  video,
-  image,
-  sourceCode,
-  liveWebsite,
-  title,
-  subtitle,
-) => {
+const PortfolioItem = (item) => {
+  const {
+    tags,
+    video,
+    image,
+    sourceCode,
+    liveWebsite,
+    title,
+    subtitle,
+    alt,
+  } = item;
   return (
     <div
       className="col-12 col-md-6 portfolio-item"
       data-portfolio-item-tags={tags.join(", ")}>
       <div className="single-portfolio res-margin">
         {/* Portfolio Thumb */}
-        <div className="portfolio-thumb blog-thumb">
-          <a className="play-btn" data-fancybox="gallery" href={video}>
+        <div
+          className="portfolio-thumb blog-thumb"
+          data-fancybox="gallery"
+          href={video}>
+          <a className="play-btn">
             <div className="btn-circle play-animation" />
             <div className="btn-circle play-animation animation-short" />
             {/* Play Icon */}
@@ -56,7 +221,11 @@ const PortfolioItem = (
             </div>
           </a>
           <figure className="custom-overlay">
-            <img className="lazyload" data-src={image} alt={title} />
+            <img
+              className="lazyload"
+              data-src={image}
+              alt={alt ? alt : title}
+            />
           </figure>
         </div>
         {/* Portfolio Content */}
@@ -73,7 +242,11 @@ const PortfolioItem = (
             </li>
             <li>
               <a
-                className={liveWebsite.length <= 0 && "portfolio-blocked"}
+                className={
+                  liveWebsite.length <= 0
+                    ? "portfolio-blocked"
+                    : "custom-emphasis"
+                }
                 href={liveWebsite}
                 target="_blank">
                 Live Website
@@ -156,653 +329,7 @@ function Portfolio() {
           </div>
           <div className="col-12 col-lg-9">
             <div className="portfolio-row row">
-              {/* Single Portfolio start */}
-              <div
-                className="col-12 col-md-6 portfolio-item"
-                data-portfolio-item-tags="HTML5, CSS3, jQuery, UX">
-                <div className="single-portfolio res-margin">
-                  {/* Portfolio Thumb */}
-                  <div
-                    className="portfolio-thumb blog-thumb"
-                    data-fancybox="gallery"
-                    href={require("../copy/videos/video-arval.mp4")}>
-                    <a className="play-btn" href="#">
-                      <div className="btn-circle play-animation" />
-                      <div className="btn-circle play-animation animation-short" />
-                      {/* Play Icon */}
-                      <div className="play-icon">
-                        <svg
-                          className="svg-inline--fa fa-play fa-w-14"
-                          aria-hidden="true"
-                          focusable="false"
-                          data-prefix="fas"
-                          data-icon="play"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 448 512"
-                          data-fa-i2svg>
-                          <path
-                            fill="currentColor"
-                            d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
-                        </svg>
-                        {/* <i class="fas fa-play"></i> */}
-                      </div>
-                    </a>
-                    <figure className="custom-overlay">
-                      <img
-                        className="lazyload"
-                        data-src={require("../copy/img/thumbnail/thumbnail-arval.jpg")}
-                        alt="Website Arval"
-                      />
-                    </figure>
-                  </div>
-                  {/* Portfolio Content */}
-                  <div className="portfolio-content blog-content p-4">
-                    {/* Meta Info */}
-                    <ul className="meta-info d-flex">
-                      <li>
-                        <a href="https://github.com/dpw1/arval" target="_blank">
-                          Source Code
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://arvalmq.com/" target="_blank">
-                          Live Website
-                        </a>
-                      </li>
-                    </ul>
-                    {/* Portfolio Title */}
-                    <h3 className="blog-title my-3">
-                      <span>Arval</span>
-                    </h3>
-                    <p>
-                      Arval is a printing machine company. They needed their old
-                      website updated so we developed a brand new design +
-                      website for them.
-                    </p>
-                  </div>
-                  <ul className="portfolio-tags blog-content p-4"></ul>
-                </div>
-              </div>
-              {/* Single Portfolio end */}
-              {/* Single Portfolio start */}
-              <div
-                className="col-12 col-md-6 portfolio-item"
-                data-portfolio-item-tags="HTML5, CSS3, Shopify, Liquid, ES7, SCSS / SASS, jQuery">
-                <div className=" single-portfolio res-margin">
-                  {/* Portfolio Thumb */}
-                  <div
-                    className="portfolio-thumb blog-thumb"
-                    data-fancybox="gallery"
-                    href={require("../copy/videos/video-bubs.mp4")}>
-                    <a href="#" className="play-btn">
-                      <div className="btn-circle play-animation" />
-                      <div className="btn-circle play-animation animation-short" />
-                      {/* Play Icon */}
-                      <div className="play-icon">
-                        <svg
-                          className="svg-inline--fa fa-play fa-w-14"
-                          aria-hidden="true"
-                          focusable="false"
-                          data-prefix="fas"
-                          data-icon="play"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 448 512"
-                          data-fa-i2svg>
-                          <path
-                            fill="currentColor"
-                            d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
-                        </svg>
-                        {/* <i class="fas fa-play"></i> */}
-                      </div>
-                    </a>
-                    <figure className="custom-overlay">
-                      <img
-                        className="lazyload"
-                        data-src={require("../copy/img/thumbnail/thumbnail-bubs.jpg")}
-                        alt="Portfolio - Bubswarehouse Shopify Store"
-                      />
-                    </figure>
-                  </div>
-                  {/* Portfolio Content */}
-                  <div className="portfolio-content blog-content p-4">
-                    {/* Meta Info */}
-                    <ul className="meta-info d-flex">
-                      <li className="portfolio-blocked">Source Code</li>
-                      <li>
-                        <a
-                          href="http://www.blankrefer.com/?https://www.bubswarehouse.com/"
-                          target="_blank">
-                          Live Website
-                        </a>
-                      </li>
-                    </ul>
-                    {/* Portfolio Title */}
-                    <h3 className="blog-title my-3">
-                      <span>Bubswarehouse</span>
-                    </h3>
-                    <p>
-                      Bubswarehouse is one of the biggest online stores in
-                      Australia selling baby clothes and toys. We've worked
-                      closely together to maximize the store's converion rates.
-                    </p>
-                  </div>
-                  <ul className="portfolio-tags blog-content p-4"></ul>
-                </div>
-              </div>
-              {/* Single Portfolio end */}
-              {/* Single Portfolio start */}
-              <div
-                className="col-12 col-md-6 portfolio-item"
-                data-portfolio-item-tags="HTML5, CSS3, Shopify, Liquid, ES7, SCSS / SASS, jQuery">
-                <div className="single-portfolio res-margin">
-                  {/* Portfolio Thumb */}
-                  <div
-                    className="portfolio-thumb blog-thumb"
-                    data-fancybox="gallery"
-                    href={require("../copy/videos/video-light-bricks.mp4")}>
-                    <a className="play-btn" href="#">
-                      <div className="btn-circle play-animation" />
-                      <div className="btn-circle play-animation animation-short" />
-                      {/* Play Icon */}
-                      <div className="play-icon">
-                        <svg
-                          className="svg-inline--fa fa-play fa-w-14"
-                          aria-hidden="true"
-                          focusable="false"
-                          data-prefix="fas"
-                          data-icon="play"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 448 512"
-                          data-fa-i2svg>
-                          <path
-                            fill="currentColor"
-                            d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
-                        </svg>
-                        {/* <i class="fas fa-play"></i> */}
-                      </div>
-                    </a>
-                    <figure className="custom-overlay">
-                      <img
-                        className="lazyload"
-                        data-src={require("../copy/img/thumbnail/thumbnail-light-bricks.jpg")}
-                        alt="Portfolio - Light my Bricks Shopify store"
-                      />
-                    </figure>
-                  </div>
-                  {/* Portfolio Content */}
-                  <div className="portfolio-content blog-content p-4">
-                    {/* Meta Info */}
-                    <ul className="meta-info d-flex">
-                      <li className="portfolio-blocked">Source Code</li>
-                      <li>
-                        <a href="http://lightmybricks.com.au/" target="_blank">
-                          Live Website
-                        </a>
-                      </li>
-                    </ul>
-                    {/* Portfolio Title */}
-                    <h3 className="blog-title my-3">
-                      <span>Light My Bricks</span>
-                    </h3>
-                    <p>
-                      A worldwide famous company selling leds for Legos®. Our
-                      work consisted of the implementation of new Shopify
-                      sections on their websites.
-                    </p>
-                  </div>
-                  <ul className="portfolio-tags blog-content p-4"></ul>
-                </div>
-              </div>
-              {/* Single Portfolio end */}
-              {/* Single Portfolio start */}
-              <div
-                className="col-12 col-md-6 portfolio-item"
-                data-portfolio-item-tags="HTML5, CSS3, Shopify, Liquid, ES7, SCSS / SASS, jQuery">
-                <div className="single-portfolio res-margin">
-                  {/* Portfolio Thumb */}
-                  <div
-                    className="portfolio-thumb blog-thumb"
-                    data-fancybox="gallery"
-                    href={require("../copy/videos/video-zudo.mp4")}>
-                    <a className="play-btn" href="#">
-                      <div className="btn-circle play-animation" />
-                      <div className="btn-circle play-animation animation-short" />
-                      {/* Play Icon */}
-                      <div className="play-icon">
-                        <svg
-                          className="svg-inline--fa fa-play fa-w-14"
-                          aria-hidden="true"
-                          focusable="false"
-                          data-prefix="fas"
-                          data-icon="play"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 448 512"
-                          data-fa-i2svg>
-                          <path
-                            fill="currentColor"
-                            d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
-                        </svg>
-                        {/* <i class="fas fa-play"></i> */}
-                      </div>
-                    </a>
-                    <figure className="custom-overlay">
-                      <img
-                        className="lazyload"
-                        data-src={require("../copy/img/thumbnail/thumbnail-zudo.jpg")}
-                        alt="Portfolio - Zudo Shopify Store"
-                      />
-                    </figure>
-                  </div>
-                  {/* Portfolio Content */}
-                  <div className="portfolio-content blog-content p-4">
-                    {/* Meta Info */}
-                    <ul className="meta-info d-flex">
-                      <li className="portfolio-blocked">Source Code</li>
-                      <li>
-                        <a href="http://zudo.co/" target="_blank">
-                          Live Website
-                        </a>
-                      </li>
-                    </ul>
-                    {/* Portfolio Title */}
-                    <h3 className="blog-title my-3">
-                      <span>Zudo</span>
-                    </h3>
-                    <p>Shopify website fully customized for client.</p>
-                  </div>
-                  <ul className="portfolio-tags blog-content p-4"></ul>
-                </div>
-              </div>
-              {/* Single Portfolio end */}
-              {/* Single Portfolio start */}
-              <div
-                className="col-12 col-md-6 portfolio-item"
-                data-portfolio-item-tags="HTML5, CSS3, Handlebars.js,  SCSS / SASS, jQuery, UX">
-                <div className="single-portfolio res-margin">
-                  {/* Portfolio Thumb */}
-                  <div
-                    className="portfolio-thumb blog-thumb"
-                    data-fancybox="gallery"
-                    href={require("../copy/videos/video-studiotagus.mp4")}>
-                    <a className="play-btn" href="#">
-                      <div className="btn-circle play-animation" />
-                      <div className="btn-circle play-animation animation-short" />
-                      {/* Play Icon */}
-                      <div className="play-icon">
-                        <svg
-                          className="svg-inline--fa fa-play fa-w-14"
-                          aria-hidden="true"
-                          focusable="false"
-                          data-prefix="fas"
-                          data-icon="play"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 448 512"
-                          data-fa-i2svg>
-                          <path
-                            fill="currentColor"
-                            d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
-                        </svg>
-                        {/* <i class="fas fa-play"></i> */}
-                      </div>
-                    </a>
-                    <figure className="custom-overlay">
-                      <img
-                        className="lazyload"
-                        data-src={require("../copy/img/thumbnail/thumbnail-studiotagus.jpg")}
-                        alt="Portfolio - Studio Tagus Website"
-                      />
-                    </figure>
-                  </div>
-                  {/* Portfolio Content */}
-                  <div className="portfolio-content blog-content p-4">
-                    {/* Meta Info */}
-                    <ul className="meta-info d-flex">
-                      <li>
-                        <a
-                          href="https://github.com/dpw1/tagus-v3"
-                          target="_blank">
-                          Source Code
-                        </a>
-                      </li>
-                      <li className="portfolio-blocked">Live Website</li>
-                    </ul>
-                    {/* Portfolio Title */}
-                    <h3 className="blog-title my-3">
-                      <span>Studio Tagus</span>
-                    </h3>
-                    <p>
-                      First company related to web development that I've brought
-                      up with a couple of friends. Websites were coded in
-                      Wordpress, HTML, CSS (SCSS / SASS &amp; Stylus) and
-                      Javascript (Vanilla &amp; jQuery) to a multitude of
-                      customers. Studio Tagus gave us room to grow and improve
-                      our skills in various ways.
-                    </p>
-                  </div>
-                  <ul className="portfolio-tags blog-content p-4"></ul>
-                </div>
-              </div>
-              {/* Single Portfolio end */}
-              {/* Single Portfolio start */}
-              <div
-                className="col-12 col-md-6 portfolio-item"
-                data-portfolio-item-tags="HTML5, CSS3, Stylus, jQuery, UX">
-                <div className="single-portfolio res-margin">
-                  {/* Portfolio Thumb */}
-                  <div
-                    className="portfolio-thumb blog-thumb"
-                    data-fancybox="gallery"
-                    href={require("../copy/videos/video-megalancers.mp4")}>
-                    <a href="#" className="play-btn">
-                      <div className="btn-circle play-animation" />
-                      <div className="btn-circle play-animation animation-short" />
-                      {/* Play Icon */}
-                      <div className="play-icon">
-                        <svg
-                          className="svg-inline--fa fa-play fa-w-14"
-                          aria-hidden="true"
-                          focusable="false"
-                          data-prefix="fas"
-                          data-icon="play"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 448 512"
-                          data-fa-i2svg>
-                          <path
-                            fill="currentColor"
-                            d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
-                        </svg>
-                        {/* <i class="fas fa-play"></i> */}
-                      </div>
-                    </a>
-                    <figure className="custom-overlay">
-                      <img
-                        className="lazyload"
-                        data-src={require("../copy/img/thumbnail/thumbnail-megalancers.jpg")}
-                        alt="Portfolio - Megalancers Website"
-                      />
-                    </figure>
-                  </div>
-                  {/* Portfolio Content */}
-                  <div className="portfolio-content blog-content p-4">
-                    {/* Meta Info */}
-                    <ul className="meta-info d-flex">
-                      <li className="portfolio-blocked">Source Code</li>
-                      <li className="portfolio-blocked">Live Website</li>
-                    </ul>
-                    {/* Portfolio Title */}
-                    <h3 className="blog-title my-3">
-                      <span>Megalancers</span>
-                    </h3>
-                    <p>
-                      Popularly known as the <i>“Brazilian Fiverr”</i> , EZFY
-                      helped the website to come to life. Everything was coded
-                      from scratch based on a .PSD file.
-                    </p>
-                  </div>
-                  <ul className="portfolio-tags blog-content p-4"></ul>
-                </div>
-              </div>
-              {/* Single Portfolio end */}
-              {/* Single Portfolio start */}
-              <div
-                className="col-12 col-md-6 portfolio-item"
-                data-portfolio-item-tags="HTML5, CSS3, Shopify, Liquid, ES7, SCSS / SASS, jQuery">
-                <div className="single-portfolio res-margin">
-                  {/* Portfolio Thumb */}
-                  <div
-                    className="portfolio-thumb blog-thumb"
-                    data-fancybox="gallery"
-                    href={require("../copy/videos/video-yokd.mp4")}>
-                    <a href="#" className="play-btn">
-                      <div className="btn-circle play-animation" />
-                      <div className="btn-circle play-animation animation-short" />
-                      {/* Play Icon */}
-                      <div className="play-icon">
-                        <svg
-                          className="svg-inline--fa fa-play fa-w-14"
-                          aria-hidden="true"
-                          focusable="false"
-                          data-prefix="fas"
-                          data-icon="play"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 448 512"
-                          data-fa-i2svg>
-                          <path
-                            fill="currentColor"
-                            d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
-                        </svg>
-                        {/* <i class="fas fa-play"></i> */}
-                      </div>
-                    </a>
-                    <figure className="custom-overlay">
-                      <img
-                        className="lazyload"
-                        data-src={require("../copy/img/thumbnail/thumbnail-yokd.jpg")}
-                        alt="Portfolio - Get Yok'd Shopify Website"
-                      />
-                    </figure>
-                  </div>
-                  {/* Portfolio Content */}
-                  <div className="portfolio-content blog-content p-4">
-                    {/* Meta Info */}
-                    <ul className="meta-info d-flex">
-                      <li className="portfolio-blocked">Source Code</li>
-                      <li>
-                        <a href="http://www.blankrefer.com/?https://www.getyokd.com/">
-                          Live Website
-                        </a>
-                      </li>
-                    </ul>
-                    {/* Portfolio Title */}
-                    <h3 className="blog-title my-3">
-                      <span>GET YOK'D</span>
-                    </h3>
-                    <p>
-                      The project owner requested website optimizations and
-                      various styling modifications.
-                    </p>
-                  </div>
-                  <ul className="portfolio-tags blog-content p-4"></ul>
-                </div>
-              </div>
-              {/* Single Portfolio end */}
-              {/* Single Portfolio start */}
-              <div
-                className="col-12 col-md-6 portfolio-item"
-                data-portfolio-item-tags="HTML5, CSS3, Shopify, Liquid, ES7, SCSS / SASS, jQuery">
-                <div className="single-portfolio res-margin">
-                  {/* Portfolio Thumb */}
-                  <div
-                    className="portfolio-thumb blog-thumb"
-                    data-fancybox="gallery"
-                    href={require("../copy/videos/video-dog.mp4")}>
-                    <a className="play-btn" href="#">
-                      <div className="btn-circle play-animation" />
-                      <div className="btn-circle play-animation animation-short" />
-                      {/* Play Icon */}
-                      <div className="play-icon">
-                        <svg
-                          className="svg-inline--fa fa-play fa-w-14"
-                          aria-hidden="true"
-                          focusable="false"
-                          data-prefix="fas"
-                          data-icon="play"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 448 512"
-                          data-fa-i2svg>
-                          <path
-                            fill="currentColor"
-                            d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
-                        </svg>
-                        {/* <i class="fas fa-play"></i> */}
-                      </div>
-                    </a>
-                    <figure className="custom-overlay">
-                      <img
-                        className="lazyload"
-                        data-src={require("../copy/img/thumbnail/thumbnail-dog.jpg")}
-                        alt="Portfolio - Dog's Best Friend Australia Shopify Website"
-                      />
-                    </figure>
-                  </div>
-                  {/* Portfolio Content */}
-                  <div className="portfolio-content blog-content p-4">
-                    {/* Meta Info */}
-                    <ul className="meta-info d-flex">
-                      <li className="portfolio-blocked">Source Code</li>
-                      <li>
-                        <a href="http://www.blankrefer.com/?https://www.getyokd.com/">
-                          Live Website
-                        </a>
-                      </li>
-                    </ul>
-                    {/* Portfolio Title */}
-                    <h3 className="blog-title my-3">
-                      <span>DOG'S BEST FRIEND AUSTRALIA</span>
-                    </h3>
-                    <p>
-                      Creation of new components on top of a theme.
-                      Implementation of the new collection section "Best
-                      Sellers".
-                    </p>
-                  </div>
-                  <ul className="portfolio-tags blog-content p-4"></ul>
-                </div>
-              </div>
-              {/* Single Portfolio end */}
-              {/* Single Portfolio start */}
-              <div
-                className="col-12 col-md-6 portfolio-item"
-                data-portfolio-item-tags="HTML5, CSS3, Shopify, Liquid, ES7, SCSS / SASS, jQuery">
-                <div className="single-portfolio res-margin">
-                  {/* Portfolio Thumb */}
-                  <div
-                    className="portfolio-thumb blog-thumb"
-                    data-fancybox="gallery"
-                    href={require("../copy/videos/video-birthcanva.mp4")}>
-                    <a href="#" className="play-btn">
-                      <div className="btn-circle play-animation" />
-                      <div className="btn-circle play-animation animation-short" />
-                      {/* Play Icon */}
-                      <div className="play-icon">
-                        <svg
-                          className="svg-inline--fa fa-play fa-w-14"
-                          aria-hidden="true"
-                          focusable="false"
-                          data-prefix="fas"
-                          data-icon="play"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 448 512"
-                          data-fa-i2svg>
-                          <path
-                            fill="currentColor"
-                            d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
-                        </svg>
-                        {/* <i class="fas fa-play"></i> */}
-                      </div>
-                    </a>
-                    <figure className="custom-overlay">
-                      <img
-                        className="lazyload"
-                        data-src={require("../copy/img/thumbnail/thumbnail-birthcanva.jpg")}
-                        alt="Portfolio - Birthcanva Shopify Website"
-                      />
-                    </figure>
-                  </div>
-                  {/* Portfolio Content */}
-                  <div className="portfolio-content blog-content p-4">
-                    {/* Meta Info */}
-                    <ul className="meta-info d-flex">
-                      <li className="portfolio-blocked">Source Code</li>
-                      <li>
-                        <a href="http://www.blankrefer.com/?https://birthcanva.com/">
-                          Live Website
-                        </a>
-                      </li>
-                    </ul>
-                    {/* Portfolio Title */}
-                    <h3 className="blog-title my-3">
-                      <span>Birthcanva</span>
-                    </h3>
-                    <p>
-                      Shopify website. We worked together to improve the overall
-                      performance, add new sections and styles customizations.
-                    </p>
-                  </div>
-                  <ul className="portfolio-tags blog-content p-4"></ul>
-                </div>
-              </div>
-              {/* Single Portfolio end */}
-              {/* Single Portfolio start */}
-              <div
-                className="col-12 col-md-6 portfolio-item"
-                data-portfolio-item-tags="HTML5, CSS3, Shopify, Liquid, ES7, SCSS / SASS, jQuery, UX">
-                <div className="single-portfolio res-margin">
-                  {/* Portfolio Thumb */}
-                  <div
-                    className="portfolio-thumb blog-thumb"
-                    data-fancybox="gallery"
-                    href={require("../copy/videos/video-jim.mp4")}>
-                    <a href="#" className="play-btn">
-                      <div className="btn-circle play-animation" />
-                      <div className="btn-circle play-animation animation-short" />
-                      {/* Play Icon */}
-                      <div className="play-icon">
-                        <svg
-                          className="svg-inline--fa fa-play fa-w-14"
-                          aria-hidden="true"
-                          focusable="false"
-                          data-prefix="fas"
-                          data-icon="play"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 448 512"
-                          data-fa-i2svg>
-                          <path
-                            fill="currentColor"
-                            d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
-                        </svg>
-                        {/* <i class="fas fa-play"></i> */}
-                      </div>
-                    </a>
-                    <figure className="custom-overlay">
-                      <img
-                        className="lazyload"
-                        data-src={require("../copy/img/thumbnail/thumbnail-jim.jpg")}
-                        alt="Portfolio - Jim's Décor Shopify Website"
-                      />
-                    </figure>
-                  </div>
-                  {/* Portfolio Content */}
-                  <div className="portfolio-content blog-content p-4">
-                    {/* Meta Info */}
-                    <ul className="meta-info d-flex">
-                      <li className="portfolio-blocked">Source Code</li>
-                      <li>
-                        <a href="http://www.blankrefer.com/?https://www.jimsdecor.com.au/">
-                          Live Website
-                        </a>
-                      </li>
-                    </ul>
-                    {/* Portfolio Title */}
-                    <h3 className="blog-title my-3">
-                      <span>Jim's Décor</span>
-                    </h3>
-                    <p>Australian Shopify e-commerce selling furnitures.</p>
-                  </div>
-                  <ul className="portfolio-tags blog-content p-4"></ul>
-                </div>
-              </div>
-              {/* Single Portfolio end */}
+              {items.map((e) => PortfolioItem(e))}
             </div>
           </div>
         </div>

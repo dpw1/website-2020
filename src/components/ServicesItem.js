@@ -4,6 +4,14 @@ import TrustBadge from "./TrustBadge";
 import { servicesItems } from "./../utils/utils";
 import PaypalCheckout from "./PaypalCheckout";
 
+/* 
+ *
+INFO:
+
+You can find all items' JSON at servicesItems in utils/utils
+ *
+ */
+
 function ServicesItem(props) {
   const {
     tags,
@@ -13,7 +21,8 @@ function ServicesItem(props) {
     preview,
     title,
     loadImage,
-    paypalForm,
+    paymentLink,
+    descriptionList,
     subtitle,
   } = props;
 
@@ -22,7 +31,7 @@ function ServicesItem(props) {
   return (
     <div
       key={JSON.stringify(props)}
-      className="col-12 col-md-6 portfolio-item services-item"
+      className="col-12 col-md-6 col-lg-4  portfolio-item services-item"
       data-portfolio-item-tags={tags.join(", ")}>
       <div className="single-portfolio service-single res-margin">
         {/* Portfolio Thumb */}
@@ -44,7 +53,7 @@ function ServicesItem(props) {
           {/* Portfolio Title */}
           <div className="services-price">
             <h3 className="blog-title services-price-title my-3">
-              <a href={video} data-fancybox="/lightbox-service">
+              <a href={video} data-fancybox="/lightbox-service-1">
                 <span>{title}</span>
               </a>
             </h3>
@@ -63,13 +72,14 @@ function ServicesItem(props) {
                 }
                 href={preview.length <= 0 ? "#" : preview}
                 target="_blank">
-                Click here for a quick live demo!
+                Live demo
               </a>
             </li>
           </ul>
 
           <div className="services-subtitle">
-            {subtitle()}
+            {/* <div className="services-description">{subtitle && subtitle()}</div> */}
+            <React.Fragment>{descriptionList()}</React.Fragment>
 
             <a href="#" className="services-read-more custom-link">
               Read more
@@ -77,9 +87,9 @@ function ServicesItem(props) {
           </div>
         </div>
         <div className="services-button">
-          {paypalForm && (
+          {paymentLink && (
             <a
-              href="https://gum.co/zoDQl?wanted=true"
+              href={`${paymentLink}?wanted=true`}
               data-gumroad-single-product="true"
               className="btn mt-4">
               Buy Now

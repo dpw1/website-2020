@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import image from "../copy/img/trust-badge.jpg";
 import "./TrustBadge.scss";
 
 function TrustBadge(props) {
   return (
     <figure className="payment-icon">
-      <svg
+      <img src={image} alt={"Secure checkout."} />
+      {/* <svg
         className="payment-icon"
         viewBox="0 0 38 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +75,7 @@ function TrustBadge(props) {
           fill="#FF5F00"
           d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z"
         />
-      </svg>{" "}
+      </svg>{" "} */}
     </figure>
   );
 }

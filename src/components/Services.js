@@ -7,15 +7,13 @@ import ServicesItem from "./ServicesItem";
 const items = servicesItems;
 
 function Services() {
-  const loadItemsAmount = 2;
+  const loadItemsAmount = 3;
   const [itemsToShow, setItemsToShow] = useState(loadItemsAmount);
   const [loadedItems, setLoadedItems] = useState(items);
   const [isLoading, setIsLoading] = useState(false);
   const [isButtonLoading, setIsButtonLoading] = useState(false);
 
   const loadMoreItems = () => {
-    console.log("loading", loadedItems);
-
     if (itemsToShow > loadedItems.length) {
       return;
     }
@@ -50,16 +48,16 @@ function Services() {
               <h2 className="text-capitalize">Services</h2>
               <p className="d-sm-block mt-4">
                 Besides bug fixes, speed optimization and customizations we also
-                sell <b>Shopify sections.</b>
+                sell <span className="custom-emphasis">Shopify sections.</span>
                 <br />
-                <span className="custom-emphasis">Click on the image</span> to
-                watch a short video showcasing the respective section.
+                Click on the image to watch a short video showcasing the
+                respective section.
               </p>
             </div>
           </div>
         </div>
         <div className="row">
-          <div className="col-12 col-lg-3">
+          <div className="col-12 col-lg-12">
             <aside className="sidebar">
               {/* Single Widget */}
               <div className="single-widget">
@@ -99,7 +97,7 @@ function Services() {
               </div>
             </aside>
           </div>
-          <div className="col-12 col-lg-9">
+          <div className="col-12 col-lg-12">
             <div className="portfolio-row row">{loadMoreItems()}</div>
           </div>
         </div>
