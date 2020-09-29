@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5a7d33e8800f55a438e6d91019bf9f8f",
+    "revision": "6d228f272987103de3ab2772ccf753b3",
     "url": "/index.html"
   },
   {
-    "revision": "484eb00aa9ad1e41c8cc",
-    "url": "/static/css/main.00ea7039.chunk.css"
+    "revision": "3da61a51251b31ef353c",
+    "url": "/static/css/main.9cd8d951.chunk.css"
   },
   {
-    "revision": "56dfb976748837bf8592",
-    "url": "/static/js/2.af005cda.chunk.js"
+    "revision": "f134e8a7959196c8be9c",
+    "url": "/static/js/2.7edd3631.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/static/js/2.af005cda.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.7edd3631.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "484eb00aa9ad1e41c8cc",
-    "url": "/static/js/main.54403869.chunk.js"
+    "revision": "3da61a51251b31ef353c",
+    "url": "/static/js/main.c670c957.chunk.js"
   },
   {
     "revision": "74b37c168272cea1d06b",
@@ -100,8 +100,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/section-banner.2580c3c6.mp4"
   },
   {
+    "revision": "f07599057491a471ee718d79571da186",
+    "url": "/static/media/section-banner.f0759905.gif"
+  },
+  {
+    "revision": "2b01976495d7e03516316161ec3f7457",
+    "url": "/static/media/section-countdown.2b019764.gif"
+  },
+  {
     "revision": "d5255125bf1afb1b84185060252e2b57",
     "url": "/static/media/section-countdown.d5255125.mp4"
+  },
+  {
+    "revision": "1ebcd0c627692a18fbdad754d1c61e3c",
+    "url": "/static/media/section-freetobekids-gif.1ebcd0c6.gif"
+  },
+  {
+    "revision": "0cbeff1aee4bf1267c02d5a0900b4c5f",
+    "url": "/static/media/section-freetobekids.0cbeff1a.mp4"
   },
   {
     "revision": "64aabac002d488f23fc7ce43d92baeb1",
@@ -132,14 +148,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/thumbnail-megalancers.d5745b97.jpg"
   },
   {
-    "revision": "5a94525bf0410b3ffc3e157896a9dd0c",
-    "url": "/static/media/thumbnail-section-banner.5a94525b.gif"
-  },
-  {
-    "revision": "66a7b3ee7bfb23de679cd70986e08289",
-    "url": "/static/media/thumbnail-section-countdown.66a7b3ee.gif"
-  },
-  {
     "revision": "adffe78d6f54d45adddbf236d231aa3c",
     "url": "/static/media/thumbnail-studiotagus.adffe78d.jpg"
   },
@@ -150,6 +158,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3db618403fa0736e81dd0f8cd3ad5110",
     "url": "/static/media/thumbnail-zudo.3db61840.jpg"
+  },
+  {
+    "revision": "68eb99f1fd263d27e21484fa01c291a5",
+    "url": "/static/media/trust-badge.68eb99f1.jpg"
   },
   {
     "revision": "21ccb34ec3cc797181900339296c2f2f",
