@@ -22,7 +22,6 @@
     "react-video-scroll": "^1.0.1"
   },
   "scripts": {
-    "postbuild": "react-snap",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
