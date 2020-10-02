@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 // import "./Services.scss";
 import TrustBadge from "./TrustBadge";
 import { servicesItems } from "./../utils/utils";
-import PaypalCheckout from "./PaypalCheckout";
+// import PaypalCheckout from "./PaypalCheckout";
 
 /* 
  *
