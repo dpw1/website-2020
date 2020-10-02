@@ -65,6 +65,7 @@ function ServicesItem(props) {
           <ul className="meta-info d-flex">
             <li>
               <a
+                rel="noreferrer"
                 className={
                   preview.length > 0
                     ? "custom-link"

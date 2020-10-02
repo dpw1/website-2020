@@ -26,6 +26,7 @@ const questions = [
         you aim for an optimized store. You can read in details how the
         excessive usage of apps can negatively affect your store{" "}
         <a
+          rel="noreferrer"
           className="custom-link"
           target="_blank"
           href="https://outofthesandbox.com/blogs/shopify-theme-blog/apps-speed?rfsn=4557612.d5a506">
@@ -87,6 +88,7 @@ const questions = [
       <p>
         Yes! In such scenarios we'll recommend you a good{" "}
         <a
+          rel="noreferrer"
           className="custom-link"
           href="https://outofthesandbox.com/?rfsn=4557612.d5a506"
           target="_blank">

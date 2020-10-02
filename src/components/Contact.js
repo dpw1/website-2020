@@ -30,7 +30,10 @@ function Contact() {
               </p>
               <ul>
                 <li className="py-2">
-                  <a className="media" href="https://fb.com/ezfyforshopify">
+                  <a
+                    rel="noreferrer"
+                    className="media"
+                    href="https://fb.com/ezfyforshopify">
                     <div className="social-icon mr-3">
                       <i className="fab fa-facebook-f" />
                     </div>
@@ -40,7 +43,10 @@ function Contact() {
                   </a>
                 </li>
                 <li className="py-2">
-                  <a className="media" href="https://m.me/ezfyforshopify">
+                  <a
+                    className="media"
+                    rel="noreferrer"
+                    href="https://m.me/ezfyforshopify">
                     <div className="social-icon mr-3">
                       <i className="fab fa-facebook-messenger" />
                     </div>
@@ -51,6 +57,7 @@ function Contact() {
                 </li>
                 <li className="py-2">
                   <a
+                    rel="noreferrer"
                     className="media"
                     target="_blank"
                     href="mailto:diego.boarutto.fortes@gmail.com">
