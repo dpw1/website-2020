@@ -18,6 +18,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Services from "./components/Services";
 import { reloadOnURLChange } from "./utils/utils";
+import BlogShowcase from "./components/BlogShowcase";
 
 const HomePage = () => (
   <React.Fragment>
