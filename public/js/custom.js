@@ -149,91 +149,12 @@
     $.preventDefault();
   });
 
-  // :: 9.0 COUNTERUP ACTIVE CODE
-  $(".counter").counterUp({
-    delay: 10,
-    time: 1000,
-  });
-
   // :: 10.0 FANCYBOX VIDEO POPUP ACTIVE CODE
   $(".fancyVideo").fancybox({
     animationEffect: "zoom-in-out",
     transitionEffect: "circular",
     maxWidth: 800,
     maxHeight: 600,
-  });
-
-  // :: 11.0 FEATURES SLIDER ACTIVE CODE
-  $(".features-slider.owl-carousel").owlCarousel({
-    items: 1,
-    loop: true,
-    nav: false,
-    dots: true,
-    smartSpeed: 1500,
-    autoplay: true,
-    autoplayTimeout: 6000,
-    dotsContainer: ".features-content",
-  });
-
-  // :: 12.0 TESTIMONIALS ACTIVE CODE
-  var testimonialSlider = $(".testimonials");
-  testimonialSlider.owlCarousel({
-    items: 1,
-    nav: false,
-    dots: true,
-    smartSpeed: 500,
-    autoplay: true,
-    loop: true,
-    mouseDrag: true,
-    touchDrag: true,
-    responsiveClass: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      600: {
-        items: 1,
-      },
-      768: {
-        items: 1,
-      },
-    },
-  });
-
-  testimonialSlider.on("translate.owl.carousel", function () {
-    $(".single-testimonial img, .single-testimonial-thumb img, .client-rating")
-      .removeClass("animated zoomIn")
-      .css("opacity", "0");
-  });
-  testimonialSlider.on("translated.owl.carousel", function () {
-    $(".single-testimonial img, .single-testimonial-thumb img, .client-rating")
-      .addClass("animated zoomIn")
-      .css("opacity", "1");
-  });
-
-  // :: 13.0 BRANDING SLIDER ACTIVE CODE
-  $(".branding-slider.owl-carousel").owlCarousel({
-    loop: true,
-    margin: 20,
-    nav: false,
-    dots: false,
-    smartSpeed: 2000,
-    autoplay: true,
-    autoplayTimeout: 4000,
-    responsive: {
-      0: {
-        items: 2,
-      },
-      576: {
-        items: 3,
-      },
-      768: {
-        items: 4,
-      },
-      992: {
-        items: 5,
-      },
-    },
   });
 
   // :: 14.0 REVIEWS SLIDER

@@ -33,7 +33,7 @@ function Footer(props) {
                     <img
                       className="lazyload logo"
                       data-src={require("../copy/img/logo/ezfy-logo-small.png")}
-                      alt
+                      alt="EZFY's logo."
                     />
                   </a>
                   <p className="mt-2 mb-3">
@@ -43,6 +43,7 @@ function Footer(props) {
                   {/* Social Icons */}
                   <div className="social-icons d-flex">
                     <a
+                      rel="noreferrer"
                       className="facebook"
                       target="_blank"
                       href="https://fb.com/ezfyforshopify">
@@ -50,6 +51,7 @@ function Footer(props) {
                       <i className="fab fa-facebook-f" />
                     </a>
                     <a
+                      rel="noreferrer"
                       className="facebook-messenger"
                       target="_blank"
                       href="https://m.me/ezfyforshopify">
@@ -57,6 +59,7 @@ function Footer(props) {
                       <i className="fab fa-facebook-messenger" />
                     </a>
                     <a
+                      rel="noreferrer"
                       className="google-plus"
                       target="_blank"
                       href="mailto:diego.boarutto.fortes@gmail.com">

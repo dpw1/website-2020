@@ -51,6 +51,7 @@ function Reviews() {
                 customers testimonials. <br />
                 Yet you can find much more in our{" "}
                 <a
+                  rel="noreferrer"
                   className="custom-link"
                   target="_blank"
                   href="https://fb.com/ezfyforshopify/reviews">
@@ -68,6 +69,7 @@ function Reviews() {
               {/* Single Screenshot Item */}
               <div className="single-screenshot">
                 <a
+                  rel="noreferrer"
                   href="https://www.facebook.com/annadnv/posts/10161291180020618"
                   target="_blank">
                   <img
@@ -80,6 +82,7 @@ function Reviews() {
               {/* Single Screenshot Item */}
               <div className="single-screenshot">
                 <a
+                  rel="noreferrer"
                   href="https://www.facebook.com/permalink.php?story_fbid=465128090696487&id=100015978994970"
                   target="_blank">
                   <img
@@ -92,6 +95,7 @@ function Reviews() {
               {/* Single Screenshot Item */}
               <div className="single-screenshot">
                 <a
+                  rel="noreferrer"
                   target="_blank"
                   href="https://www.facebook.com/ron.bercovitch/posts/10161454417070285">
                   <img
@@ -103,6 +107,7 @@ function Reviews() {
               {/* Single Screenshot Item */}
               <div className="single-screenshot">
                 <a
+                  rel="noreferrer"
                   target="_blank"
                   href="https://www.facebook.com/shawn.pansiri/posts/2443221389022677">
                   <img
@@ -114,6 +119,7 @@ function Reviews() {
               {/* Single Screenshot Item */}
               <div className="single-screenshot">
                 <a
+                  rel="noreferrer"
                   target="_blank"
                   href="https://www.facebook.com/csegervall/posts/10155865648326714">
                   <img
@@ -125,6 +131,7 @@ function Reviews() {
               {/* Single Screenshot Item xxx */}
               <div className="single-screenshot">
                 <a
+                  rel="noreferrer"
                   target="_blank"
                   href="https://www.facebook.com/nathanngo21/posts/10155898793046436">
                   <img
@@ -136,6 +143,7 @@ function Reviews() {
               {/* Single Screenshot Item */}
               <div className="single-screenshot">
                 <a
+                  rel="noreferrer"
                   href="https://www.facebook.com/ibraheem.nadeem/posts/10161783472635352"
                   target="_blank">
                   <img
@@ -147,6 +155,7 @@ function Reviews() {
               {/* Single Screenshot Item */}
               <div className="single-screenshot">
                 <a
+                  rel="noreferrer"
                   target="_blank"
                   href="https://www.facebook.com/wesdwa/posts/2581923468495155">
                   <img
@@ -158,6 +167,7 @@ function Reviews() {
               {/* Single Screenshot Item */}
               <div className="single-screenshot">
                 <a
+                  rel="noreferrer"
                   target="_blank"
                   href="https://www.facebook.com/jeffreyprichardson/posts/10212580477741031">
                   <img
@@ -169,6 +179,7 @@ function Reviews() {
               {/* Single Screenshot Item */}
               <div className="single-screenshot">
                 <a
+                  rel="noreferrer"
                   target="_blank"
                   href="https://www.facebook.com/brogan.domaschenz/posts/2094168197296835">
                   <img
@@ -180,6 +191,7 @@ function Reviews() {
               {/* Single Screenshot Item */}
               <div className="single-screenshot">
                 <a
+                  rel="noreferrer"
                   target="_blank"
                   href="https://www.facebook.com/daniel.walker.9843/posts/34Super happy with Diego’s work! He was quick to help out, easy to communicate with, and finished the work I needed at a very high standard! Thank you Diego!">
                   <img
@@ -191,6 +203,7 @@ function Reviews() {
               {/* Single Screenshot Item */}
               <div className="single-screenshot">
                 <a
+                  rel="noreferrer"
                   target="_blank"
                   href="https://www.facebook.com/Jay.ripper1990/posts/10156444786948231">
                   <img
