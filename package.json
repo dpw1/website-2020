@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://ezfycode.com/",
   "dependencies": {
+    "@craco/craco": "^5.7.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -46,9 +47,13 @@
     ]
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^3.0.0",
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "babel-register": "^6.26.0"
+    "babel-register": "^6.26.0",
+    "glob-all": "^3.2.1",
+    "path": "^0.12.7",
+    "purgecss-webpack-plugin": "^3.0.0"
   }
 }
