@@ -216,18 +216,6 @@ export const portfolioNavbarLinks = [
     scroll: false,
   },
   {
-    name: "Portfolio",
-    url: "#portfolio",
-    offset: -40,
-    scroll: true,
-  },
-  {
-    name: "FAQ",
-    url: "#faq",
-    offset: -60,
-    scroll: true,
-  },
-  {
     name: "Contact",
     url: "#contact",
     offset: -60,
@@ -240,6 +228,8 @@ export function renderNav(page, navItem) {
     case "home":
       return [...homepageNavbarLinks].map((e) => navItem(e));
     case "portfolio":
+      return [...portfolioNavbarLinks].map((e) => navItem(e));
+    case "privacy":
       return [...portfolioNavbarLinks].map((e) => navItem(e));
     default:
       return [...homepageNavbarLinks].map((e) => navItem(e));
