@@ -516,20 +516,73 @@ ezfy = (function () {
       });
     }
   }
+
+  function reviewsTextSlider() {
+    const reviews = document.getElementById(`reviewsTextSlider`);
+
+    if (!reviews) {
+      return;
+    }
+
+    var swiper = new Swiper(".swiper-container", {
+      speed: 750,
+      freeMode: false,
+      resistance: true,
+      resistanceRatio: 0.6,
+      infinite: false,
+      grabCursor: true,
+      slidesPerView: "auto",
+      centeredSlides: true,
+      autoplay: {
+        delay: 3800,
+      },
+      navigation: {
+        nextEl: ".review-text-button-prev",
+        prevEl: ".review-text-button-next",
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: false,
+        dragSize: 30,
+      },
+    });
+
+    // window.$(reviews).slick({
+    //   slidesToShow: 2,
+    //   slidesToScroll: 1,
+    //   infinite: true,
+    //   rows: 1,
+    //   dots: true,
+    //   slidesPerRow: 0,
+    //   responsive: [
+    //     {
+    //       breakpoint: 767,
+    //       settings: {
+    //         rows: 2,
+    //         slidesToShow: 1,
+    //         infinite: false,
+    //         slidesPerRow: 1,
+    //       },
+    //     },
+    //   ],
+    // });
+  }
+
   return {
     initServices: () => {
       readMoreForServices();
       redirectToPaymentGateway();
-      // addToCartListener();
     },
     init: function () {
       document.addEventListener("DOMContentLoaded", function () {
         lazyLoadImages();
-        // lazyLoadVideos();
+        lazyLoadVideos();
         addTagsToPortfolioItems();
         addTagsToPortfolioFilter();
         portfolioTagHandleOnClick();
         autoplayVideo();
+
+        reviewsTextSlider();
         window.ezfy.initServices();
       });
 
