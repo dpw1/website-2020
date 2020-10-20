@@ -100,7 +100,7 @@ const reviews = [
     image: require("../copy/img/reviews_updated/richard.jpg"),
     name: "Richard Agyemang",
     country: "Philadelphia, Pennsylvania, USA",
-    testimonial: `Hands down the best agency I have ever worked with. Always happy with the awesome results :)`,
+    testimonial: `He is the best at what he does. I have worked with a couple of developers but he is by far the best. Thanks for such an amazing job on my site. I 100% recommend him`,
     source:
       "https://www.facebook.com/richard.agyemang.9655/posts/2440297606028451",
   },
