@@ -5,37 +5,104 @@ import "./ReviewsText.scss";
 
 const reviews = [
   {
-    image: "https://litextension.com/wp-content/uploads/2020/06/alex.png",
-    name: "name",
-    country: "Country",
-    testimonial: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-    expedita eligendi aspernatur illum officia. Incidunt ullam error
-    distinctio quam nihil deserunt iste quas, officiis magnam aut
-    repudiandae fuga sequi non sit ipsam! Magnam modi non atque veniam,
-    hic omnis quibusdam`,
-    source: "https://hello.com",
+    image: require("../copy/img/reviews_updated/danail.jpg"),
+    name: "Danail Ilev",
+    country: "Sofia, Bulgaria",
+    testimonial: `10/10!!! Customization and bug repairs that were impossible for a few previous devs of mine were an easy task for Diego! Honestly cannot recommend him enough. If you like testing different tweaks on your site or have an annoying bug - he's the man. Also his response time is of the charts + same day delivery (Amazon of devs 😁)`,
+    source: "https://www.facebook.com/wesdwa/posts/2581923468495155",
   },
   {
-    image: "https://litextension.com/wp-content/uploads/2020/06/alex.png",
-    name: "name 2",
-    country: "Country",
-    testimonial: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-    expedita eligendi aspernatur illum officia. Incidunt ullam error
-    distinctio quam nihil deserunt iste quas, officiis magnam aut
-    repudiandae fuga sequi non sit ipsam! Magnam modi non atque veniam,
-    hic omnis quibusdam`,
-    source: "https://hello.com",
+    image: require("../copy/img/reviews_updated/brogan.jpg"),
+    name: "Brogan Domaschenz",
+    country: "Australia",
+    testimonial: `VERY VERY IMPRESSED! - understood exactly what i was trying to get across and produced something even better then i could of imagined in a shorter time frame then expected and in a very professional manner.
+    Even though its the festive season, and i needed the coding done urgently, you were quick to respond and get in and get the job done, sacrificing your own holiday time, you absolutely went above and beyond all expectations. 
+    I cant recommend you enough!!! 🔥🔥🔥
+    Top Bloke!`,
+    source: "https://www.facebook.com/brogan.domaschenz/posts/2094168197296835",
   },
   {
-    image: "https://litextension.com/wp-content/uploads/2020/06/alex.png",
-    name: "name 3",
-    country: "Country",
-    testimonial: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-    expedita eligendi aspernatur illum officia. Incidunt ullam error
-    distinctio quam nihil deserunt iste quas, officiis magnam aut
-    repudiandae fuga sequi non sit ipsam! Magnam modi non atque veniam,
-    hic omnis quibusdam`,
-    source: "https://hello.com",
+    image: require("../copy/img/reviews_updated/ibr.jpg"),
+    name: "Ibraheem Nadeem",
+    country: "Ann Arbor, Michigan, USA",
+    testimonial: `Diego is amazing at what he does. I've been using his web development services for over a year (I have 20+ projects completed with the EZFY team) and he is always super helpful. His CRO tips are incredible and have definitely helped my conversion rates!
+    Super fast turn around time and always willing to help with support after the project is done. HIGHLY Recommend Diego and the EZFY team for all your Shopify web development needs!`,
+    source: "https://www.facebook.com/ibraheem.nadeem/posts/10161783472635352",
+  },
+  {
+    image: require("../copy/img/reviews_updated/anna-dineva.jpg"),
+    name: "Anna Dineva",
+    country: "Paris, France",
+    testimonial: `Diego is great ! Very responsive and customizes everything to your wish. Very friendly and comprehensive, + the delivery is immediate. I enjoy a lot working with him ! Recommend 100% !`,
+    source: "https://www.facebook.com/annadinevaz/posts/10161291180020618",
+  },
+  {
+    image: require("../copy/img/reviews_updated/matt-reseigh.jpg"),
+    name: "Matt Reseigh",
+    country: "Adelaide, South Australia",
+    testimonial: `Diego was extremely accommodating and easy to work with. He has an extensive amount of knowledge and is willing to go above and beyond. I will certainly be using his services again in the future. Highly recommend!`,
+    source: "https://www.facebook.com/matt.reseigh/posts/3922590694423086",
+  },
+  {
+    image: require("../copy/img/reviews_updated/mev-omie.jpg"),
+    name: "Mev Omie",
+    country: "Melbourne, Victoria, Australia",
+    testimonial: `One of the best website developers out there! Always on time and exceeds expectations!`,
+    source: "https://www.facebook.com/mevlan.omer.1/posts/1688787327966005",
+  },
+  {
+    image: require("../copy/img/reviews_updated/daniel-walker.jpg"),
+    name: "Daniel Walker",
+    country: "Melton, Victoria, Australia",
+    testimonial: `Super happy with Diego’s work! He was quick to help out, easy to communicate with, and finished the work I needed at a very high standard! Thank you Diego!`,
+    source:
+      "https://www.facebook.com/daniel.walker.9843/posts/3406178189405829",
+  },
+
+  {
+    image: require("../copy/img/reviews_updated/wei-tan.jpg"),
+    name: "Wei Tan",
+    country: "Australia",
+    testimonial: `Diego is a great resource. He's prompt and highly accommodating, which all leads to a great end result. Highly recommended!`,
+    source:
+      "https://www.facebook.com/permalink.php?story_fbid=465128090696487&id=100015978994970",
+  },
+  {
+    image: require("../copy/img/reviews_updated/ronny.jpg"),
+    name: "Ronny Berco",
+    country: "Toronto, Ontario",
+    testimonial: `Incredible work - I got them to help fix some things on my Shopify store and for such a great price! They were extremely fast and went above and beyond in filling my request. On top of that they made even more great suggestions on fixes I can do for the site. Thanks! Will definitely work with you again.`,
+    source: "https://www.facebook.com/ron.bercovitch/posts/10161454417070285",
+  },
+  {
+    image: require("../copy/img/reviews_updated/shawn.jpg"),
+    name: "Shawn Pansiri",
+    country: "Asia",
+    testimonial: `Working with Diego was one of the best experiences I have ever had he is a professional and knows his stuff, anything you ask he will get it done he will also go out of his way and help you out if your knowledge is limited in some areas. One of the best hires I have come across and will hire in a heartbeat. Keep up the good work Diego!`,
+    source: "https://www.facebook.com/shawn.pansiri/posts/2443221389022677",
+  },
+  {
+    image: require("../copy/img/reviews_updated/jeff.jpg"),
+    name: "Jeffrey Richardson",
+    country: "Toronto, Ontario",
+    testimonial: `This team went FAR beyond my expectations! It felt as if i had another employee, instead of a service. Their recommendations and exceptional work made my project come out perfectly. Their ability to show me examples, modify at no cost and finish everything extremely fast was amazing. will work with these guys for now on.`,
+    source:
+      "https://www.facebook.com/jeffreyprichardson/posts/10212580477741031",
+  },
+  {
+    image: require("../copy/img/reviews_updated/conny.jpg"),
+    name: "Conny Segervall",
+    country: "Nykarleby, Finland",
+    testimonial: `Hands down the best agency I have ever worked with. Always happy with the awesome results :)`,
+    source: "https://www.facebook.com/csegervall/posts/10155865648326714",
+  },
+  {
+    image: require("../copy/img/reviews_updated/richard.jpg"),
+    name: "Richard Agyemang",
+    country: "Philadelphia, Pennsylvania, USA",
+    testimonial: `Hands down the best agency I have ever worked with. Always happy with the awesome results :)`,
+    source:
+      "https://www.facebook.com/richard.agyemang.9655/posts/2440297606028451",
   },
 ];
 
@@ -63,7 +130,10 @@ const Review = (props) => {
             </div>
           </div>
           <div className="reviews-text-testimonial">{testimonial}</div>
-          <a href={source} className="reviews-text-btn custom-link">
+          <a
+            target="_blank"
+            href={source}
+            className="reviews-text-btn custom-link">
             Review source <i className="fas fa-arrow-right"></i>
           </a>
         </div>
