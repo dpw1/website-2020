@@ -115,7 +115,11 @@ const Review = (props) => {
         <div>
           <div className="reviews-text-box">
             <figure className="reviews-text-figure">
-              <img src={image} alt={`${name}'s picture from Facebook.`} />
+              <img
+                data-src={image}
+                alt={`${name}'s picture from Facebook.`}
+                className="lazyload"
+              />
             </figure>
             <div className="reviews-text-about">
               <h2>{name}</h2>
@@ -132,6 +136,7 @@ const Review = (props) => {
           <div className="reviews-text-testimonial">{testimonial}</div>
           <a
             target="_blank"
+            rel="noreferrer"
             href={source}
             className="reviews-text-btn custom-link">
             Review source <i className="fas fa-arrow-right"></i>

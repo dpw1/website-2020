@@ -48,7 +48,8 @@ function Services() {
               <h2 className="text-capitalize">Services</h2>
               <p className="d-sm-block mt-4">
                 Besides bug fixes, speed optimization and customizations we also
-                sell <span className="custom-emphasis">Shopify sections.</span>
+                develop custom, premium quality{" "}
+                <span className="custom-emphasis">Shopify sections.</span>
                 <br />
                 Click on the image to watch a short video showcasing the
                 respective section.
