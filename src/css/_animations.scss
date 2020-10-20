@@ -240,5 +240,14 @@ section[id]:not(#footerSection) {
   }
 }
 
+@keyframes confetti {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: -100vh;
+  }
+}
+
 /* ANIMATIONS end
 =============================================== */

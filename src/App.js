@@ -19,6 +19,8 @@ import Footer from "./components/Footer";
 import Services from "./components/Services";
 import { reloadOnURLChange } from "./utils/utils";
 import BlogShowcase from "./components/BlogShowcase";
+import Parallax from "./components/Parallax";
+import ReviewsText from "./components/ReviewsText";
 
 const HomePage = () => (
   <React.Fragment>
@@ -27,8 +29,9 @@ const HomePage = () => (
     <Header page={"home"}></Header>
     <Hero scrollTo="#about"></Hero>
     <About></About>
-    <Reviews></Reviews>
+    <ReviewsText></ReviewsText>
     <Services></Services>
+    <Parallax></Parallax>
     <Faq></Faq>
     <Steps></Steps>
     <Contact></Contact>

@@ -3,7 +3,7 @@ import "./FacebookButton.scss";
 
 function FacebookButton(props) {
   return (
-    <div class="fb-livechat">
+    <div className="fb-livechat">
       <a
         href="https://m.me/ezfyforshopify/"
         title="Send us a message on Facebook"

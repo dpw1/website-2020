@@ -76,7 +76,6 @@ function Hero(props) {
               {/* Store Buttons */}
               <div className="button-group store-buttons d-flex">
                 <a
-                  type="submit"
                   className="btn custom-btn text-uppercase scroll"
                   href={scrollTo}
                   data-scroll-offset={-60}>

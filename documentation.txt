@@ -1,0 +1,9 @@
+# to start the app:
+
+yarn start
+
+# to deploy the app:
+
+npm run deploy
+go to https://github.com/dpw1/website-2020  > settings
+scroll down, update "custom domain" field with ezfycode.com
