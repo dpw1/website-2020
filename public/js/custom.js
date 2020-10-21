@@ -533,9 +533,7 @@ ezfy = (function () {
       grabCursor: true,
       slidesPerView: "auto",
       centeredSlides: true,
-      autoplay: {
-        delay: 3800,
-      },
+
       navigation: {
         nextEl: ".review-text-button-prev",
         prevEl: ".review-text-button-next",

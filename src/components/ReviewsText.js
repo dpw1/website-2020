@@ -24,7 +24,7 @@ const reviews = [
   {
     image: require("../copy/img/reviews_updated/ibr.jpg"),
     name: "Ibraheem Nadeem",
-    country: "Ann Arbor, Michigan, USA",
+    country: "Michigan, USA",
     testimonial: `Diego is amazing at what he does. I've been using his web development services for over a year (I have 20+ projects completed with the EZFY team) and he is always super helpful. His CRO tips are incredible and have definitely helped my conversion rates!
     Super fast turn around time and always willing to help with support after the project is done. HIGHLY Recommend Diego and the EZFY team for all your Shopify web development needs!`,
     source: "https://www.facebook.com/ibraheem.nadeem/posts/10161783472635352",
@@ -39,21 +39,21 @@ const reviews = [
   {
     image: require("../copy/img/reviews_updated/matt-reseigh.jpg"),
     name: "Matt Reseigh",
-    country: "Adelaide, South Australia",
+    country: "Adelaide, Australia",
     testimonial: `Diego was extremely accommodating and easy to work with. He has an extensive amount of knowledge and is willing to go above and beyond. I will certainly be using his services again in the future. Highly recommend!`,
     source: "https://www.facebook.com/matt.reseigh/posts/3922590694423086",
   },
   {
     image: require("../copy/img/reviews_updated/mev-omie.jpg"),
     name: "Mev Omie",
-    country: "Melbourne, Victoria, Australia",
+    country: "Melbourne, Australia",
     testimonial: `One of the best website developers out there! Always on time and exceeds expectations!`,
     source: "https://www.facebook.com/mevlan.omer.1/posts/1688787327966005",
   },
   {
     image: require("../copy/img/reviews_updated/daniel-walker.jpg"),
     name: "Daniel Walker",
-    country: "Melton, Victoria, Australia",
+    country: "Melton, Australia",
     testimonial: `Super happy with Diego’s work! He was quick to help out, easy to communicate with, and finished the work I needed at a very high standard! Thank you Diego!`,
     source:
       "https://www.facebook.com/daniel.walker.9843/posts/3406178189405829",
@@ -77,7 +77,7 @@ const reviews = [
   {
     image: require("../copy/img/reviews_updated/shawn.jpg"),
     name: "Shawn Pansiri",
-    country: "Asia",
+    country: "",
     testimonial: `Working with Diego was one of the best experiences I have ever had he is a professional and knows his stuff, anything you ask he will get it done he will also go out of his way and help you out if your knowledge is limited in some areas. One of the best hires I have come across and will hire in a heartbeat. Keep up the good work Diego!`,
     source: "https://www.facebook.com/shawn.pansiri/posts/2443221389022677",
   },
@@ -99,7 +99,7 @@ const reviews = [
   {
     image: require("../copy/img/reviews_updated/richard.jpg"),
     name: "Richard Agyemang",
-    country: "Philadelphia, Pennsylvania, USA",
+    country: "Philadelphia, USA",
     testimonial: `He is the best at what he does. I have worked with a couple of developers but he is by far the best. Thanks for such an amazing job on my site. I 100% recommend him`,
     source:
       "https://www.facebook.com/richard.agyemang.9655/posts/2440297606028451",
@@ -110,7 +110,7 @@ const Review = (props) => {
   const { image, name, country, testimonial, source } = props;
 
   return (
-    <article className="swiper-slide reviews-text-item">
+    <article key={source} className="swiper-slide reviews-text-item">
       <div className="reviews-text-slider-wrapper">
         <div>
           <div className="reviews-text-box">
@@ -122,8 +122,29 @@ const Review = (props) => {
               />
             </figure>
             <div className="reviews-text-about">
-              <h2>{name}</h2>
-              <p>{country}</p>
+              <h2>
+                {name
+                  .trim()
+                  .split(" ")
+                  .map((e) => (
+                    <span>{e}</span>
+                  ))}
+              </h2>
+              <p>
+                {country ? (
+                  country
+                ) : (
+                  <span
+                    style={{
+                      height: 20,
+                      width: 1,
+                      display: "block",
+                      background: "transparent",
+                    }}>
+                    {" "}
+                  </span>
+                )}
+              </p>
               <div>
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>

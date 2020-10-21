@@ -29,6 +29,11 @@ $padding: 30px;
     bottom: -11px !important;
   }
 
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #9b9b9b80;
+  }
+
   &-container {
     max-width: 1200px;
     width: 100%;
@@ -102,11 +107,11 @@ $padding: 30px;
 
   &-testimonial {
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 100px;
+    height: 120px;
   }
   &-figure {
     max-width: 100px;
@@ -129,6 +134,11 @@ $padding: 30px;
     h2 {
       font-size: 18px;
       margin-bottom: 10px;
+      height: 50px;
+
+      span {
+        display: block;
+      }
     }
 
     p {

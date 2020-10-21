@@ -41,8 +41,8 @@ function Parallax() {
         <div className="ezfy-parallax-text">
           <h2>Didn't find what you need?</h2>
           <h3 className="ezfy-parallax-subtitle">
-            No worries! Get in touch with us, we'll work together to find a
-            custom solution that attend your needs.
+            Get in touch with us, we'll work together to find a custom solution
+            that attend your needs.
           </h3>
           <a
             className="btn custom-btn scroll"
