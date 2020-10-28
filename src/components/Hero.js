@@ -58,19 +58,14 @@ function Hero(props) {
                 </span>
                 <br />
                 <span>
-                  More than 25 public recommendations, 200+ Shopify merchants
-                  helped.
+                  Hire one of the best Shopify developers to quickly attend all
+                  of your technical needs.
                 </span>
               </h3>
               <p className="text-white mt-3 mb-4">
                 <span>
-                  Additional features, development tweaks, custom sections, bug
-                  fixes.
-                </span>
-                <br />
-                <span>
-                  Hire one of the best Shopify developers to quickly attend all
-                  of your technical needs.
+                  More than 25 public recommendations, 200+ Shopify merchants
+                  helped.
                 </span>
               </p>
               {/* Store Buttons */}

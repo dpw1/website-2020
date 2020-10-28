@@ -38,7 +38,9 @@ function Steps() {
               <h3 className="text-white py-3">We hear what you need</h3>
               <p className="text-white">
                 We have a chat about what you'd like to add or fix on your
-                website. We quote you accordingly and get started upon approval.
+                website. Usually getting started with a few references or
+                competitor links that you either need the theme to be inspired
+                by or need your theme to be better than.
               </p>
             </div>
           </div>
@@ -63,11 +65,11 @@ function Steps() {
                   <path d="m187.66 78.805c-12.211 0-22.148-9.9375-22.148-22.152 0-12.211 9.9375-22.148 22.148-22.148 12.215 0 22.152 9.9375 22.152 22.148 0 12.215-9.9375 22.152-22.152 22.152zm0-30.305c-4.4922 0-8.1484 3.6562-8.1484 8.1523s3.6562 8.1523 8.1484 8.1523c4.4961 0 8.1523-3.6562 8.1523-8.1523s-3.6562-8.1523-8.1523-8.1523z" />
                 </svg>
               </div>
-              <h3 className="text-white py-3">We do the hard work</h3>
+              <h3 className="text-white py-3">We organize the tasks</h3>
               <p className="text-white">
-                We keep in touch throughout the whole process so we're sure that
-                everything is just as you wish. Payment is only after the
-                project completion and your satisfaction.
+                From there we analyze the sections, snippets and or pages on the
+                reference website and summarize all the features requested onto
+                a Google Sheets list. Upon your approval we start working.
               </p>
             </div>
           </div>
@@ -89,15 +91,11 @@ function Steps() {
                   <path d="m358.1 155.18c-1.348-1.723-3.381-2.771-5.565-2.87l-176.35-8.017c-0.138-6e-3 -0.273-9e-3 -0.412-7e-3 -1.044-3.427-3.25-6.399-6.236-8.391l-21.597-14.398c-3.446-2.297-8.103-1.366-10.4 2.081s-1.366 8.103 2.08 10.4l21.596 14.396c0.102 0.068 0.177 0.171 0.211 0.289l27.509 96.281c0.858 3.002 2.27 5.7 4.083 8.03l-10.065 20.13c-2.423 4.845-2.169 10.488 0.679 15.096 1.033 1.671 2.343 3.094 3.848 4.234-1.97 3.439-3.103 7.417-3.103 11.657 0 12.976 10.557 23.532 23.532 23.532s23.532-10.557 23.532-23.532c0-3.009-0.574-5.885-1.608-8.532h68.377c-1.034 2.647-1.608 5.523-1.608 8.532 0 12.976 10.557 23.532 23.532 23.532s23.532-10.557 23.532-23.532c0-3.764-0.893-7.321-2.471-10.479 1.514-1.372 2.471-3.348 2.471-5.553 0-4.142-3.357-7.5-7.5-7.5h-139.34c-0.107 0-0.288 0-0.439-0.245-0.151-0.244-0.07-0.405-0.022-0.502l9.272-18.543c1.887 0.485 3.853 0.747 5.865 0.747 0.927 0 1.863-0.055 2.805-0.165l105.39-12.398c13.611-1.602 24.562-11.706 27.25-25.146l12.606-63.034c0.429-2.145-0.1-4.37-1.448-6.093zm-37.971 140.38c4.705 0 8.532 3.828 8.532 8.532 0 4.705-3.827 8.532-8.532 8.532s-8.532-3.827-8.532-8.532 3.827-8.532 8.532-8.532zm-112.22 0c4.705 0 8.532 3.827 8.532 8.532s-3.827 8.532-8.532 8.532-8.532-3.827-8.532-8.532 3.827-8.532 8.532-8.532zm-18.392-103.18l-9.399-32.895 29.985 1.363 5.199 31.532h-25.785zm23.042 54.571c-4.182 0.492-8.047-2.087-9.201-6.13l-9.555-33.441h23.972l6.301 38.216-11.517 1.355zm43.963-5.172l-17.532 2.063-6.011-36.461h23.543v34.398zm0-49.399h-26.017l-5.084-30.835 31.101 1.414v29.421zm37.982 44.93l-22.982 2.704v-32.634h25.691l-2.709 29.93zm4.067-44.93h-27.049v-28.74l29.529 1.342-2.48 27.398zm33.666 28.984c-1.41 7.048-7.154 12.349-14.293 13.189l-8.217 0.967 2.547-28.139h22.759l-2.796 13.983zm5.797-28.984h-24.401l2.418-26.716 27.08 1.231-5.097 25.485z" />
                 </svg>
               </div>
-              <h3 className="text-white py-3">You make sales!</h3>
+              <h3 className="text-white py-3">We do the hard work</h3>
               <p className="text-white">
-                That's it! On top of that we offer 7 days of free support in
-                case you need any assistance with the tasks that were done.
-                <small>
-                  {" "}
-                  (additional customizations are not included in the free
-                  support)
-                </small>
+                We keep in touch throughout the whole working process so we're
+                sure that everything is just as you wish. Payment is only after
+                the project completion and your satisfaction.
               </p>
             </div>
           </div>

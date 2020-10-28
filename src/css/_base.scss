@@ -19156,7 +19156,8 @@ img {
 }
 
 /*SOCIAL ICONS*/
-.social-icons > a {
+.social-icons > a,
+.social-icons .social-icon {
   margin: 5px;
   width: 45px;
   height: 45px;
@@ -19333,20 +19334,19 @@ img {
 .preloader-main .loaded .section-right {
   -webkit-transform: translateX(101%);
   transform: translateX(101%);
-  -webkit-transition: 0.7s 0.3s all cubic-bezier(0.1, 0.1, 0.1, 1);
-  transition: 0.7s 0.3s all cubic-bezier(0.1, 0.1, 0.1, 1);
+  transition: 0.2s 0.1s all cubic-bezier(0.1, 0.1, 0.1, 1);
 }
 
 .preloader-main .loaded .section-left {
   -webkit-transform: translateX(-101%);
   transform: translateX(-101%);
-  -webkit-transition: 0.7s 0.3s all cubic-bezier(0.1, 0.1, 0.1, 1);
-  transition: 0.7s 0.3s all cubic-bezier(0.1, 0.1, 0.1, 1);
+  transition: 0.2s 0.1s all cubic-bezier(0.1, 0.1, 0.1, 1);
 }
 
 .preloader-main .loaded .preloader {
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
+
+  
+  transition: 0.1s ease-out;
   visibility: hidden;
   opacity: 0;
 }
@@ -19425,6 +19425,8 @@ img {
 /* ******************************
  :: 7.0 HEADER AREA CSS
  ****************************** */
+
+$navbar-speed: 0.1s;
 .navbar {
   position: absolute;
   top: 0;
@@ -19433,16 +19435,16 @@ img {
   padding-top: 0;
   padding-bottom: 0;
   z-index: 999;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: $navbar-speed;
+  transition: $navbar-speed;
   background: transparent;
 }
 
 .navbar .navbar-nav .nav-link {
   padding-right: 1.25rem;
   padding-left: 1.25rem;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: $navbar-speed;
+  transition: $navbar-speed;
 }
 
 .navbar .navbar-brand-sticky {
@@ -19455,8 +19457,8 @@ img {
 }
 
 .navbar-sticky-transitioned {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: $navbar-speed;
+  transition: $navbar-speed;
 }
 
 .navbar-sticky-moved-up {
@@ -19475,8 +19477,8 @@ img {
 
 .navbar-sticky-on {
   margin-top: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: $navbar-speed;
+  transition: $navbar-speed;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
 }
@@ -21116,8 +21118,8 @@ img {
 
   .navbar .navbar-inner {
     right: -100%;
-    -webkit-transition: right 0.3s 0.2s;
-    transition: right 0.3s 0.2s;
+    -webkit-transition: right 0.2s 0.1s;
+    transition: right 0.2s 0.1s;
   }
 
   .navbar .nav-link {

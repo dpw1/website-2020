@@ -10,6 +10,10 @@
     }
   }
 
+  &:not(.navbar-sticky-on) .container {
+    padding-top: 5px;
+  }
+
   &.navbar-sticky-on a.navbar-brand {
     left: 15px;
     position: relative;

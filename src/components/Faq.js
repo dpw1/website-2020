@@ -66,7 +66,7 @@ const questions = [
   {
     question: `What other type of services do you offer?`,
     answer: () => (
-      <p>
+      <span>
         <p>We can help you with:</p>
         <ul>
           <li>Speed optimization;</li>
@@ -79,7 +79,7 @@ const questions = [
         </a>{" "}
         for any questions or requests you may have, we'll return within 24
         hours.
-      </p>
+      </span>
     ),
   },
   {
@@ -92,10 +92,11 @@ const questions = [
           className="custom-link"
           href="https://outofthesandbox.com/?rfsn=4557612.d5a506"
           target="_blank">
-          Turbo theme from our Out of The Sandbox
+          Turbo theme from our partner Out of The Sandbox
         </a>{" "}
         and work toogether to optimize your store both for conversion rate and
-        speed.
+        speed. If you are on a tighter budget we can also work on top of a free
+        Shopify theme if you prefer.
       </p>
     ),
   },
@@ -135,10 +136,13 @@ const questions = [
   },
 ];
 
-const FaqItem = (question, answer, isOpen = false, newLine = false) => {
+const FaqItem = (props) => {
+  const { question, answer, isOpen } = props;
+  const newLine = false;
+
   const id = question.replace(/[^a-zA-Z]/g, "").toLowerCase();
   return (
-    <div key={question} className="card my-2">
+    <div className="card my-2">
       {/* Card Header */}
       <div className="card-header">
         <h2 className="mb-0">
@@ -187,13 +191,13 @@ function Faq() {
                   {groupItems(questions, Math.round(questions.length / 2)).map(
                     (children, index) => (
                       <div className="accordion-group col-12 col-lg-6">
-                        {children.map((e, i) =>
-                          FaqItem(
-                            e.question,
-                            e.answer,
-                            index === 0 && i === 0 && true,
-                          ),
-                        )}
+                        {children.map((e, i) => (
+                          <FaqItem
+                            key={i}
+                            question={e.question}
+                            answer={e.answer}
+                            isOpen={index === 0 && i === 0 && true}></FaqItem>
+                        ))}
                       </div>
                     ),
                   )}

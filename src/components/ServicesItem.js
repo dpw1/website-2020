@@ -1,7 +1,11 @@
 import React, { useState, useRef } from "react";
-// import "./Services.scss";
+import "./ServicesItem.scss";
 import TrustBadge from "./TrustBadge";
 import { servicesItems } from "./../utils/utils";
+// import ReactGA from "react-ga";
+import parse from "html-react-parser";
+// ReactGA.initialize("UA-112401482-2", { testMode: true });
+// ReactGA.pageview(window.location.pathname + window.location.search);
 // import PaypalCheckout from "./PaypalCheckout";
 
 /* 
@@ -24,7 +28,10 @@ function ServicesItem(props) {
     paymentLink,
     descriptionList,
     subtitle,
+    readmore,
   } = props;
+
+  const text = descriptionList ? descriptionList() : subtitle();
 
   //   const [isButtonLoading, setIsButtonLoading] = useState(false);
 
@@ -54,7 +61,7 @@ function ServicesItem(props) {
           <div className="services-price">
             <h3 className="blog-title services-price-title my-3">
               <a href={video} data-fancybox="/lightbox-service-1">
-                <span>{title}</span>
+                <span>{parse(title)}</span>
               </a>
             </h3>
             <h3 className="services-price-small color-primary">
@@ -62,10 +69,10 @@ function ServicesItem(props) {
               {price}
             </h3>
           </div>
-          <ul className="meta-info d-flex">
+          <ul className="meta-info d-flex services-item-list">
             <li>
               <a
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className={
                   preview.length > 0
                     ? "custom-link"
@@ -76,23 +83,55 @@ function ServicesItem(props) {
                 Live demo
               </a>
             </li>
+            <li>
+              <a
+                rel="noreferrer"
+                className={
+                  preview.length > 0
+                    ? "custom-link"
+                    : " custom-link portfolio-blocked"
+                }
+                href={video}
+                data-fancybox="/lightbox-service-2">
+                More information
+              </a>
+            </li>
           </ul>
 
-          <div className="services-subtitle">
+          <div
+            className={`services-subtitle services-item-subtitle ${
+              !readmore ? "services-item-subtitle--margin" : ""
+            }`}>
             {/* <div className="services-description">{subtitle && subtitle()}</div> */}
-            <React.Fragment>{descriptionList()}</React.Fragment>
+            <React.Fragment>{text}</React.Fragment>
 
-            <a href="#" className="services-read-more custom-link">
-              Read more
-            </a>
+            {console.log(text)}
+
+            {readmore && (
+              <a href="#" className="services-read-more custom-link">
+                Read more
+              </a>
+            )}
           </div>
         </div>
-        <div className="services-button">
+        <div
+          className={`services-button ${
+            paymentLink === "contact" ? "services-button--contact" : undefined
+          }`}>
           {paymentLink && (
             <a
-              href={`${paymentLink}?wanted=true`}
+              onClick={() => {
+                console.log("bought");
+              }}
+              href={
+                paymentLink === "contact"
+                  ? "#contact"
+                  : `${paymentLink}?wanted=true`
+              }
               data-gumroad-single-product="true"
-              className="btn mt-4">
+              className={`btn mt-4 buy-now-button ${
+                paymentLink === "contact" ? "scroll" : undefined
+              }`}>
               Buy Now
             </a>
           )}

@@ -7,7 +7,7 @@ import { renderNav } from "../utils/utils";
 const footerItem = (props) => (
   <li className="py-2">
     <a
-      className={props.scroll && "scroll"}
+      className={props.scroll ? "scroll" : undefined}
       href={props.url}
       data-scroll-offset={props.offset}>
       {props.name}
@@ -29,7 +29,9 @@ function Footer(props) {
                 {/* Footer Items */}
                 <div className="footer-items">
                   {/* Logo */}
-                  <a className="navbar-brand fade-in" href="#">
+                  <a
+                    className="navbar-brand fade-in"
+                    href={window.location.origin}>
                     <img
                       className="lazyload logo"
                       data-src={require("../copy/img/logo/ezfy-logo-small.png")}
@@ -37,13 +39,13 @@ function Footer(props) {
                     />
                   </a>
                   <p className="mt-2 mb-3">
-                    Made with <span style={{ color: "#DC143C" }}>❤</span> in
+                    Coded with <span style={{ color: "#DC143C" }}>❤</span> in
                     Porto, Portugal.
                   </p>
                   {/* Social Icons */}
                   <div className="social-icons d-flex">
                     <a
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="facebook"
                       target="_blank"
                       href="https://fb.com/ezfyforshopify">
@@ -51,7 +53,7 @@ function Footer(props) {
                       <i className="fab fa-facebook-f" />
                     </a>
                     <a
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="facebook-messenger"
                       target="_blank"
                       href="https://m.me/ezfyforshopify">
@@ -59,7 +61,7 @@ function Footer(props) {
                       <i className="fab fa-facebook-messenger" />
                     </a>
                     <a
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="google-plus"
                       target="_blank"
                       href="mailto:diego.boarutto.fortes@gmail.com">
@@ -81,7 +83,7 @@ function Footer(props) {
                 <img
                   className="footer-image lazyload"
                   data-src={require("../copy/img/bg/porto-picture.jpg")}
-                  alt="picture of Porto city, in Portugal"
+                  alt="City of Porto located in Portugal"
                 />
               </div>
             </div>

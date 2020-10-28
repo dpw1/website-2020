@@ -1,7 +1,32 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import "./Preloader.scss";
+import $ from "jquery";
 
 function Preloader() {
+  useEffect(() => {
+    // var $ = window.$;
+    // $(window).on("load", function () {});
+    // window.addEventListener("load", () => {
+    //   console.log("remove preloader");
+    //   setTimeout(() => {
+    //     const preloader = window.document.querySelector(`.preloader-wapper`);
+    //     preloader.classList.add("loaded");
+    //     if (preloader.classList.contains("loaded")) {
+    //       window.document.querySelector(`.preloader-main`).remove();
+    //     }
+    //     console.log(preloader);
+    //   }, 100);
+    //   $(".preloader-wapper").addClass("loaded");
+    //   if ($(".preloader-wapper").hasClass("loaded")) {
+    //     $(".preloader-main")
+    //       .delay(1200)
+    //       .queue(function () {
+    //         $(this).remove();
+    //       });
+    //   }
+    // });
+  }, []);
+
   return (
     <div className="preloader-main">
       <div className="preloader-wapper">

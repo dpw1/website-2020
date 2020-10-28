@@ -4,7 +4,7 @@ import "./Contact.scss";
 
 function Contact() {
   return (
-    <section id="contact" className="contact-area bg-gray ptb_25">
+    <section id="contact" className="contact-area bg-gray ptb_50">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-md-10 col-lg-6">
@@ -28,7 +28,7 @@ function Contact() {
                 <b>you'll be redirected to FormSpree page</b> so your e-mail can
                 be sent. 🙂
               </p>
-              <ul>
+              <ul className="contact-social-icons">
                 <li className="py-2">
                   <a
                     rel="noreferrer"
@@ -38,7 +38,7 @@ function Contact() {
                       <i className="fab fa-facebook-f" />
                     </div>
                     <span className="media-body align-self-center">
-                      Facebook
+                      Follow us on Facebook
                     </span>
                   </a>
                 </li>
@@ -51,7 +51,7 @@ function Contact() {
                       <i className="fab fa-facebook-messenger" />
                     </div>
                     <span className="media-body align-self-center">
-                      Facebook Messenger
+                      Contact via Facebook Messenger
                     </span>
                   </a>
                 </li>
@@ -87,7 +87,7 @@ function Contact() {
                         type="email"
                         className="form-control"
                         name="_replyto"
-                        placeholder="Your Email *"
+                        placeholder="Your email *"
                         required="required"
                       />
                     </div>

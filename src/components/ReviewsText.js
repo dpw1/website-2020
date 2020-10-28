@@ -22,6 +22,14 @@ const reviews = [
     source: "https://www.facebook.com/brogan.domaschenz/posts/2094168197296835",
   },
   {
+    image: require("../copy/img/reviews_updated/mack.jpg"),
+    name: "Mackenzie Dodge",
+    country: "Colorado, USA",
+    testimonial: `Diego was so easy to work with, I literally had the code to fix the announcement banner on our shopify store in less than 15 minutes! From the time I messaged him on FB to the time I had the code with instructions in my email I barely had time to get coffee! Plus payment was affordable and easy! I wish I had the week back I tried to fix it myself. Will definitely message them FIRST in the future!`,
+    source:
+      "https://www.facebook.com/themackenziedodge/posts/10217898828166682",
+  },
+  {
     image: require("../copy/img/reviews_updated/ibr.jpg"),
     name: "Ibraheem Nadeem",
     country: "Michigan, USA",
@@ -42,6 +50,13 @@ const reviews = [
     country: "Adelaide, Australia",
     testimonial: `Diego was extremely accommodating and easy to work with. He has an extensive amount of knowledge and is willing to go above and beyond. I will certainly be using his services again in the future. Highly recommend!`,
     source: "https://www.facebook.com/matt.reseigh/posts/3922590694423086",
+  },
+  {
+    image: require("../copy/img/reviews_updated/ronny.jpg"),
+    name: "Ronny Berco",
+    country: "Toronto, Ontario",
+    testimonial: `Incredible work - I got them to help fix some things on my Shopify store and for such a great price! They were extremely fast and went above and beyond in filling my request. On top of that they made even more great suggestions on fixes I can do for the site. Thanks! Will definitely work with you again.`,
+    source: "https://www.facebook.com/ron.bercovitch/posts/10161454417070285",
   },
   {
     image: require("../copy/img/reviews_updated/mev-omie.jpg"),
@@ -67,13 +82,7 @@ const reviews = [
     source:
       "https://www.facebook.com/permalink.php?story_fbid=465128090696487&id=100015978994970",
   },
-  {
-    image: require("../copy/img/reviews_updated/ronny.jpg"),
-    name: "Ronny Berco",
-    country: "Toronto, Ontario",
-    testimonial: `Incredible work - I got them to help fix some things on my Shopify store and for such a great price! They were extremely fast and went above and beyond in filling my request. On top of that they made even more great suggestions on fixes I can do for the site. Thanks! Will definitely work with you again.`,
-    source: "https://www.facebook.com/ron.bercovitch/posts/10161454417070285",
-  },
+
   {
     image: require("../copy/img/reviews_updated/shawn.jpg"),
     name: "Shawn Pansiri",
@@ -107,7 +116,7 @@ const reviews = [
 ];
 
 const Review = (props) => {
-  const { image, name, country, testimonial, source } = props;
+  const { image, name, country, testimonial, source } = props.data;
 
   return (
     <article key={source} className="swiper-slide reviews-text-item">
@@ -117,7 +126,7 @@ const Review = (props) => {
             <figure className="reviews-text-figure">
               <img
                 data-src={image}
-                alt={`${name}'s picture from Facebook.`}
+                alt={`${name}'s on Facebook.`}
                 className="lazyload"
               />
             </figure>
@@ -126,8 +135,8 @@ const Review = (props) => {
                 {name
                   .trim()
                   .split(" ")
-                  .map((e) => (
-                    <span>{e}</span>
+                  .map((e, i) => (
+                    <span key={i}>{e}</span>
                   ))}
               </h2>
               <p>
@@ -170,7 +179,7 @@ const Review = (props) => {
 
 function ReviewsText() {
   return (
-    <div id="reviews" className="reviews-text ptb_50">
+    <div id="reviews" className="reviews-text ptb_50 bg-gray">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-md-10 col-lg-7">
@@ -210,7 +219,9 @@ function ReviewsText() {
         <div
           id="reviewsTextSlider"
           className="reviews-text-slider swiper-wrapper">
-          {reviews.map((e) => Review(e))}
+          {reviews.map((data, i) => (
+            <Review key={i} data={data}></Review>
+          ))}
         </div>
 
         <div className="review-text-button-prev swiper-button-next"></div>

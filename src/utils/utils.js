@@ -1,5 +1,7 @@
 import { createBrowserHistory } from "history";
 import React from "react";
+
+import * as timeago from "timeago.js";
 import TrustBadge from "../components/TrustBadge";
 
 export function groupItems(items, n) {
@@ -34,140 +36,10 @@ export function reloadOnURLChange() {
   });
 }
 
-export const defaultServiceItemsList = () => {
-  return (
-    <React.Fragment>
-      <li>
-        <i className="fa fa-check" aria-hidden="true"></i>
-        <span>Free installation included</span>
-      </li>
-      <li>
-        <i className="fa fa-check" aria-hidden="true"></i>
-        <span>Works with any theme, no apps required</span>
-      </li>
-      <li>
-        <i className="fa fa-check" aria-hidden="true"></i>
-        <span>
-          It's a Shopify section: move it around, hide it, have full control and
-          freedom
-        </span>
-      </li>
-      <li>
-        <i className="fa fa-check" aria-hidden="true"></i>
-        <span>Super lightweight: does not slow down your website</span>
-      </li>
-      <li>
-        <i className="fa fa-check" aria-hidden="true"></i>
-        <span>Fully responsive: works on all devices and modern browsers</span>
-      </li>
-      <li>
-        <div style={{ marginTop: 10 }}>
-          <TrustBadge></TrustBadge>
-        </div>
-      </li>
-    </React.Fragment>
-  );
+export const getWordpressImageBiggestSize = (imageSrc) => {
+  let img = imageSrc ? imageSrc : "";
+  return img.replace(/(-\d{3,4}x\d{3,4})(\.\w{3,4})/gim, "$2");
 };
-
-export const servicesItems = [
-  {
-    tags: ["Custom Shopify Section"],
-    video: require("../copy/videos/section-countdown.mp4"),
-    price: "19",
-    image: require("../copy/img/thumbnail/section-countdown.gif"),
-    preview: "https://acid-tests.myshopify.com/#shopify-section-1599883670936",
-    title: `Animated Countdown Section`,
-    paymentLink: `https://gumroad.com/l/zoDQl`,
-    descriptionList: () => (
-      <React.Fragment>
-        <ul className="services-list">
-          <li>
-            <i className="fa fa-check" aria-hidden="true"></i>
-            <span>
-              Quickly and easily add a real-time countdown clock to create
-              urgency and increase sales
-            </span>
-          </li>
-
-          <li>
-            <i className="fa fa-check" aria-hidden="true"></i>
-            <span>Customize colors, text, expiration date and more</span>
-          </li>
-
-          <li>
-            <i className="fa fa-check" aria-hidden="true"></i>
-            <span>
-              Perfect to boost conversions for festive dates & sale seasons
-            </span>
-          </li>
-          {defaultServiceItemsList()}
-        </ul>
-      </React.Fragment>
-    ),
-  },
-  {
-    tags: ["Custom Shopify Section"],
-    video: require("../copy/videos/section-freetobekids.mp4"),
-    price: "29",
-    image: require("../copy/img/thumbnail/section-freetobekids-gif.gif"),
-    preview: "http://blankrefer.com/?https://free-to-be-kids.myshopify.com/",
-    title: `Image Slider Section`,
-    paymentLink: "https://gum.co/ZgRVo",
-    descriptionList: () => (
-      <React.Fragment>
-        <ul>
-          <li>
-            <i className="fa fa-check" aria-hidden="true"></i>
-            <span>
-              Draw your customers’ attention to your bestsellers and promotions
-              with a modern image slider
-            </span>
-          </li>
-          {defaultServiceItemsList()}
-        </ul>
-      </React.Fragment>
-    ),
-  },
-  {
-    tags: ["Custom Shopify Section"],
-    video: require("../copy/videos/section-banner.mp4"),
-    price: "29",
-    image: require("../copy/img/thumbnail/section-banner.gif"),
-    preview: "https://acid-tests.myshopify.com/",
-    title: `Self-Typing Banner Section`,
-    paymentLink: "https://gum.co/CxPFC",
-    subtitle: () => (
-      <p>
-        Quickly and easily add a real-time countdown bar to create actual
-        urgency and increase your sales.
-      </p>
-    ),
-    descriptionList: () => (
-      <React.Fragment>
-        <ul>
-          <li>
-            <i className="fa fa-check" aria-hidden="true"></i>
-            <span>
-              Engage your customer with a self-typing banner to make your
-              product feel personal
-            </span>
-          </li>
-          <li>
-            <i className="fa fa-check" aria-hidden="true"></i>
-            <span>Control text, sizing, words to animate, colors and more</span>
-          </li>
-          <li>
-            <i className="fa fa-check" aria-hidden="true"></i>
-            <span>
-              Freedom to add an image to mobile and a different one to desktop
-            </span>
-          </li>
-          {defaultServiceItemsList()}
-        </ul>
-      </React.Fragment>
-    ),
-  },
-];
 
 export const homepageNavbarLinks = [
   {
@@ -187,6 +59,12 @@ export const homepageNavbarLinks = [
     url: "#services",
     offset: -40,
     scroll: true,
+  },
+  {
+    name: "Blog",
+    url: "/blog",
+    offset: -40,
+    scroll: false,
   },
   {
     name: "Portfolio",
@@ -216,6 +94,51 @@ export const portfolioNavbarLinks = [
     scroll: false,
   },
   {
+    name: "Services",
+    url: "/#services",
+    offset: 0,
+    scroll: false,
+  },
+  {
+    name: "Blog",
+    url: "/blog",
+    offset: 0,
+    scroll: false,
+  },
+  {
+    name: "Contact",
+    url: "#contact",
+    offset: -60,
+    scroll: true,
+  },
+];
+
+export const blogNavbarLinks = [
+  {
+    name: "Home",
+    url: window.location.origin,
+    offset: 0,
+    scroll: false,
+  },
+  {
+    name: "Services",
+    url: "/#services",
+    offset: 0,
+    scroll: false,
+  },
+  {
+    name: "Portfolio",
+    url: "/portfolio",
+    offset: 0,
+    scroll: false,
+  },
+  {
+    name: "Blog",
+    url: "/blog",
+    offset: 0,
+    scroll: false,
+  },
+  {
     name: "Contact",
     url: "#contact",
     offset: -60,
@@ -231,7 +154,29 @@ export function renderNav(page, navItem) {
       return [...portfolioNavbarLinks].map((e) => navItem(e));
     case "privacy":
       return [...portfolioNavbarLinks].map((e) => navItem(e));
+    case "blog":
+      return [...blogNavbarLinks].map((e) => navItem(e));
     default:
       return [...homepageNavbarLinks].map((e) => navItem(e));
   }
+}
+
+export function generateBlogUrl(slug, addUrlBefore = true) {
+  const url = `${addUrlBefore ? window.location.origin : ""}/blog/${slug}`;
+  return url;
+}
+
+export function timeSince(date) {
+  return timeago.format(new Date(date)).replace(/$in^(.*)/gim, "$1 ago");
+}
+
+export function formatDate(date) {
+  var options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+
+  return new Date(date).toLocaleDateString("en-US", options);
 }

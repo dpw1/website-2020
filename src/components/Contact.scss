@@ -2,4 +2,10 @@
   .media {
     display: inline-flex;
   }
+
+  .contact-social-icons {
+    svg {
+      vertical-align: 0.075em;
+    }
+  }
 }
