@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.ece900c2.chunk.css",
-    "main.js": "/static/js/main.876f47ee.chunk.js",
-    "main.js.map": "/static/js/main.876f47ee.chunk.js.map",
+    "main.css": "/static/css/main.533d937a.chunk.css",
+    "main.js": "/static/js/main.7e72f8b3.chunk.js",
+    "main.js.map": "/static/js/main.7e72f8b3.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.cf853edb.js",
     "runtime-main.js.map": "/static/js/runtime-main.cf853edb.js.map",
-    "static/js/2.ba7821a4.chunk.js": "/static/js/2.ba7821a4.chunk.js",
-    "static/js/2.ba7821a4.chunk.js.map": "/static/js/2.ba7821a4.chunk.js.map",
+    "static/js/2.a50f7629.chunk.js": "/static/js/2.a50f7629.chunk.js",
+    "static/js/2.a50f7629.chunk.js.map": "/static/js/2.a50f7629.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.c02de90fa235e69887c34ccd9d39115c.js": "/precache-manifest.c02de90fa235e69887c34ccd9d39115c.js",
+    "precache-manifest.9175873942f9ed62a478cb0fa0a9dc62.js": "/precache-manifest.9175873942f9ed62a478cb0fa0a9dc62.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.ece900c2.chunk.css.map": "/static/css/main.ece900c2.chunk.css.map",
-    "static/js/2.ba7821a4.chunk.js.LICENSE.txt": "/static/js/2.ba7821a4.chunk.js.LICENSE.txt",
+    "static/css/main.533d937a.chunk.css.map": "/static/css/main.533d937a.chunk.css.map",
+    "static/js/2.a50f7629.chunk.js.LICENSE.txt": "/static/js/2.a50f7629.chunk.js.LICENSE.txt",
     "static/media/anna-dineva.jpg": "/static/media/anna-dineva.eb211aad.jpg",
     "static/media/brogan.jpg": "/static/media/brogan.d409a831.jpg",
     "static/media/conny.jpg": "/static/media/conny.8622cfe7.jpg",
@@ -22,6 +22,7 @@
     "static/media/ibr.jpg": "/static/media/ibr.54f47821.jpg",
     "static/media/jeff.jpg": "/static/media/jeff.a50b7f7e.jpg",
     "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg",
+    "static/media/mack.jpg": "/static/media/mack.c239e3bb.jpg",
     "static/media/matt-reseigh.jpg": "/static/media/matt-reseigh.5d8ed656.jpg",
     "static/media/mev-omie.jpg": "/static/media/mev-omie.0a5b863c.jpg",
     "static/media/pixel_quite_black_portrait_trim_up.png": "/static/media/pixel_quite_black_portrait_trim_up.9c2af6b0.png",
@@ -71,8 +72,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.cf853edb.js",
-    "static/js/2.ba7821a4.chunk.js",
-    "static/css/main.ece900c2.chunk.css",
-    "static/js/main.876f47ee.chunk.js"
+    "static/js/2.a50f7629.chunk.js",
+    "static/css/main.533d937a.chunk.css",
+    "static/js/main.7e72f8b3.chunk.js"
   ]
 }
