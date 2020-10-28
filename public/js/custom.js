@@ -16,180 +16,182 @@
 // :: 14.0 CONTACT FORM ACTIVE CODE
 
 (function ($) {
-  var $window = $(window);
-  var zero = 0;
+  window.customCode = function () {
+    var $window = $(window);
+    var zero = 0;
 
-  // :: 1.0 PRELOADER ACTIVE CODE
-  $(window).on("load", function () {
-    $(".preloader-wapper").addClass("loaded");
-    if ($(".preloader-wapper").hasClass("loaded")) {
-      $(".preloader-main")
-        .delay(1200)
-        .queue(function () {
-          $(this).remove();
-        });
-    }
-  });
-
-  // :: 2.0 NAVIGATION MENU ACTIVE CODE
-  // dropdown for mobile
-  $(document).ready(function () {
-    checkWidth(true);
-    $(window).resize(function () {
-      checkWidth(false);
-    });
-  });
-
-  function checkWidth(init) {
-    // If browser resized, check width again
-    if ($(window).width() <= 991) {
-      $(".dropdown-submenu a").on("click", function (e) {
-        $(this).next("ul").toggle();
-        e.stopPropagation();
-        e.preventDefault();
-      });
-    }
-  }
-  function navMenu() {
-    // MAIN MENU TOGGLER ICON (MOBILE SITE ONLY)
-    $('[data-toggle="navbarToggler"]').click(function () {
-      $(".navbar").toggleClass("active");
-      $("body").toggleClass("canvas-open");
-    });
-    // MAIN MENU TOGGLER ICON
-    $(".navbar-toggler").click(function () {
-      $(".navbar-toggler-icon").toggleClass("active");
+    // :: 1.0 PRELOADER ACTIVE CODE
+    $(window).on("load", function () {
+      $(".preloader-wapper").addClass("loaded");
+      if ($(".preloader-wapper").hasClass("loaded")) {
+        $(".preloader-main")
+          .delay(400)
+          .queue(function () {
+            $(this).remove();
+          });
+      }
     });
 
-    // NAVBAR STICKY
-    var $stickyNav = $(".navbar-sticky");
+    // :: 2.0 NAVIGATION MENU ACTIVE CODE
+    // dropdown for mobile
+    // $(document).ready(function () {
+    //   checkWidth(true);
+    //   $(window).resize(function () {
+    //     checkWidth(false);
+    //   });
+    // });
 
-    $(window).on("scroll load", function () {
-      var scroll = $(window).scrollTop();
-      if (scroll >= 120) {
-        $stickyNav.addClass("navbar-sticky-moved-up");
+    // function checkWidth(init) {
+    //   // If browser resized, check width again
+    //   if ($(window).width() <= 991) {
+    //     $(".dropdown-submenu a").on("click", function (e) {
+    //       $(this).next("ul").toggle();
+    //       e.stopPropagation();
+    //       e.preventDefault();
+    //     });
+    //   }
+    // }
+
+    // function navMenu() {
+    //   // MAIN MENU TOGGLER ICON (MOBILE SITE ONLY)
+    //   $('[data-toggle="navbarToggler"]').click(function () {
+    //     $(".navbar").toggleClass("active");
+    //     $("body").toggleClass("canvas-open");
+    //   });
+    //   // MAIN MENU TOGGLER ICON
+    //   $(".navbar-toggler").click(function () {
+    //     $(".navbar-toggler-icon").toggleClass("active");
+    //   });
+
+    //   // NAVBAR STICKY
+    //   var $stickyNav = $(".navbar-sticky");
+
+    //   $(window).on("scroll load", function () {
+    //     var scroll = $(window).scrollTop();
+    //     if (scroll >= 120) {
+    //       $stickyNav.addClass("navbar-sticky-moved-up");
+    //     } else {
+    //       $stickyNav.removeClass("navbar-sticky-moved-up");
+    //     }
+    //     // apply transition
+    //     if (scroll >= 250) {
+    //       $stickyNav.addClass("navbar-sticky-transitioned");
+    //     } else {
+    //       $stickyNav.removeClass("navbar-sticky-transitioned");
+    //     }
+    //     // sticky on
+    //     if (scroll >= 500) {
+    //       $stickyNav.addClass("navbar-sticky-on");
+    //     } else {
+    //       $stickyNav.removeClass("navbar-sticky-on");
+    //     }
+    //   });
+    // }
+    // navMenu();
+
+    // :: 3.0 SCROLL TO TOP ACTIVE CODE
+    var offset = 300;
+    var duration = 500;
+
+    $window.on("scroll", function () {
+      if ($(this).scrollTop() > offset) {
+        $("#scrollUp").fadeIn(duration);
       } else {
-        $stickyNav.removeClass("navbar-sticky-moved-up");
-      }
-      // apply transition
-      if (scroll >= 250) {
-        $stickyNav.addClass("navbar-sticky-transitioned");
-      } else {
-        $stickyNav.removeClass("navbar-sticky-transitioned");
-      }
-      // sticky on
-      if (scroll >= 500) {
-        $stickyNav.addClass("navbar-sticky-on");
-      } else {
-        $stickyNav.removeClass("navbar-sticky-on");
+        // alert("fix this plz");
+        $("#scrollUp").fadeOut(duration);
       }
     });
-  }
-  navMenu();
 
-  // :: 3.0 SCROLL TO TOP ACTIVE CODE
-  var offset = 300;
-  var duration = 500;
-
-  $window.on("scroll", function () {
-    if ($(this).scrollTop() > offset) {
-      $("#scrollUp").fadeIn(duration);
-    } else {
-      // alert("fix this plz");
-      $("#scrollUp").fadeOut(duration);
-    }
-  });
-
-  $("#scrollUp").on("click", function () {
-    $("html, body").animate(
-      {
-        scrollTop: 0,
-      },
-      duration,
-    );
-  });
-
-  // :: 4.0 SCROLL LINK ACTIVE CODE
-  var scrollLink = $(".scroll");
-
-  // :: 5.0 SMOOTH SCROLLING ACTIVE CODE
-  scrollLink.on("click", function (e) {
-    e.preventDefault();
-
-    (function closeMobileMenuIfLogoIsClicked() {
-      const menuIsOpen = $(".navbar-inner").css("right") === "0px";
-
-      console.log(menuIsOpen);
-
-      if (menuIsOpen) {
-        document.querySelector(".navbar-toggler").click();
-      }
-    })();
-
-    const offset = e.target.getAttribute("data-scroll-offset")
-      ? parseInt(e.target.getAttribute("data-scroll-offset"))
-      : 0;
-
-    $("body,html").animate(
-      {
-        scrollTop: $(this.hash).offset().top + offset,
-      },
-      1000,
-    );
-  });
-
-  // :: 6.0 AOS ACTIVE CODE
-  AOS.init();
-
-  // :: 7.0 WOW ACTIVE CODE
-  new WOW().init();
-
-  // :: 8.0 PREVENT DEFAULT ACTIVE CODE
-  $("a[href='#']").on("click", function ($) {
-    $.preventDefault();
-  });
-
-  // :: 10.0 FANCYBOX VIDEO POPUP ACTIVE CODE
-  $(".fancyVideo").fancybox({
-    animationEffect: "zoom-in-out",
-    transitionEffect: "circular",
-    maxWidth: 800,
-    maxHeight: 600,
-  });
-
-  // :: 14.0 REVIEWS SLIDER
-  $("#reviews .app-screenshots").slick({
-    lazyLoad: "ondemand",
-    dots: false,
-    initialSlide: 0,
-    arrows: true,
-    speed: 1000,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 10000,
-    pauseOnHover: false,
-    pauseOnFocus: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
+    $("#scrollUp").on("click", function () {
+      $("html, body").animate(
+        {
+          scrollTop: 0,
         },
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          autoplay: false,
-          dots: false,
+        duration,
+      );
+    });
+
+    // :: 4.0 SCROLL LINK ACTIVE CODE
+    var scrollLink = $(".scroll");
+
+    // :: 5.0 SMOOTH SCROLLING ACTIVE CODE
+    scrollLink.on("click", function (e) {
+      e.preventDefault();
+
+      (function closeMobileMenuIfLogoIsClicked() {
+        const menuIsOpen = $(".navbar-inner").css("right") === "0px";
+
+        if (menuIsOpen) {
+          document.querySelector(".navbar-toggler").click();
+        }
+      })();
+
+      const offset = e.target.getAttribute("data-scroll-offset")
+        ? parseInt(e.target.getAttribute("data-scroll-offset"))
+        : 0;
+
+      $("body,html").animate(
+        {
+          scrollTop: $(this.hash).offset().top + offset,
         },
-      },
-    ],
-  });
-})(jQuery);
+        1000,
+      );
+    });
+
+    // :: 6.0 AOS ACTIVE CODE
+    // AOS.init();
+
+    // :: 7.0 WOW ACTIVE CODE
+    // new WOW().init();
+
+    // :: 8.0 PREVENT DEFAULT ACTIVE CODE
+    $("a[href='#']").on("click", function ($) {
+      $.preventDefault();
+    });
+
+    // :: 10.0 FANCYBOX VIDEO POPUP ACTIVE CODE
+    $(".fancyVideo").fancybox({
+      animationEffect: "zoom-in-out",
+      transitionEffect: "circular",
+      maxWidth: 800,
+      maxHeight: 600,
+    });
+
+    // :: 14.0 REVIEWS SLIDER
+    $("#reviews .app-screenshots").slick({
+      lazyLoad: "ondemand",
+      dots: false,
+      initialSlide: 0,
+      arrows: true,
+      speed: 1000,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 10000,
+      pauseOnHover: false,
+      pauseOnFocus: false,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: false,
+            dots: false,
+          },
+        },
+      ],
+    });
+  };
+  // window.customCode();
+})(window.jQuery);
 
 /* Custom Code 
   ===================================== */
@@ -484,7 +486,9 @@ ezfy = (function () {
   }
 
   function redirectToPaymentGateway() {
-    const atc = document.querySelectorAll(".services-button");
+    const atc = document.querySelectorAll(
+      ".services-button:not(.services-button--contact)",
+    );
     const redirectText = `Please wait...`;
 
     if (!atc) {
@@ -529,7 +533,6 @@ ezfy = (function () {
       freeMode: false,
       resistance: true,
       resistanceRatio: 0.6,
-      infinite: false,
       grabCursor: true,
       slidesPerView: "auto",
       centeredSlides: true,
@@ -571,17 +574,23 @@ ezfy = (function () {
       readMoreForServices();
       redirectToPaymentGateway();
     },
+    lazyload: () => {
+      lazyLoadImages();
+      lazyLoadVideos();
+    },
+    start: () => {
+      window.ezfy.lazyload();
+      addTagsToPortfolioItems();
+      addTagsToPortfolioFilter();
+      portfolioTagHandleOnClick();
+      autoplayVideo();
+      reviewsTextSlider();
+      window.ezfy.initServices();
+      window.customCode();
+    },
     init: function () {
       document.addEventListener("DOMContentLoaded", function () {
-        lazyLoadImages();
-        lazyLoadVideos();
-        addTagsToPortfolioItems();
-        addTagsToPortfolioFilter();
-        portfolioTagHandleOnClick();
-        autoplayVideo();
-
-        reviewsTextSlider();
-        window.ezfy.initServices();
+        window.ezfy.start();
       });
 
       window.onresize = function (event) {};

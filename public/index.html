@@ -2,12 +2,24 @@
 <html lang="en">
 
 <head>
+
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description"
     content="Globally recognised Shopify Expert, creating beautiful online experiences and results-driven custom coding." />
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TR7HFTW');</script>
+  <!-- End Google Tag Manager -->
 
   <!-- Start Single Page Apps for GitHub Pages -->
   <script type="text/javascript">
@@ -54,14 +66,14 @@
   </script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112401482-2"></script>
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112401482-2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'UA-112401482-2');
-  </script>
+  </script> -->
 
   <!-- Facebook Pixel Code -->
   <!-- <script>
@@ -83,15 +95,45 @@
       src="https://www.facebook.com/tr?id=141531226612256&ev=PageView&noscript=1" /></noscript> -->
   <!-- End Facebook Pixel Code -->
 
+  <script type="text/javascript">
+
+    function loadGoogleAds() {
+      const isBlogPage = /blog/gim.test(window.location.href);
+      console.log(isBlogPage)
+
+      if (!isBlogPage) {
+
+        return;
+      }
+
+
+      var script = document.createElement('script');
+
+      script.setAttribute('src', 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js');
+      script.setAttribute('type', 'text/javascript');
+      script.setAttribute('data-ad-client', 'ca-pub-4423523338909633');
+
+      document.getElementsByTagName('head')[0].appendChild(script);
+    }
+
+
+    loadGoogleAds();
+
+
+  </script>
+
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <script defer="defer" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script defer="defer" src="./js/vendors.js"></script>
-  <script defer="defer" src="./js/custom.js"></script>
 
+  <script defer="defer" src="/js/vendors.js"> </script>
+  <script defer="defer" src="/js/custom.js"> </script>
 </head>
 
 <body>
-
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TR7HFTW" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   <!--
