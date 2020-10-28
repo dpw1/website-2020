@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const url = `http://rinfor2.dreamhosters.com/json`;
+const url = `https://ezfy.club/json`;
 
 export const blogApi = {
   /* 
-  http://rinfor2.dreamhosters.com/json/wp/v2/posts
+  https://ezfy.club/json/wp/v2/posts
   */
   getPosts: async (query) => {
     query = query && /\?/.test(query) ? query.replace("?", "") : query;
