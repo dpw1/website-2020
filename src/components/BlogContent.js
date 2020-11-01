@@ -85,9 +85,9 @@ const BlogContent = (props) => {
                   {/* Blog Share */}
                   <div className="blog-share blog-content-share ml-auto d-none d-sm-block">
                     {/* Social Icons */}
-                    <div className="social-icons d-flex ">
+                    <div className="social-icons social-icons--blog d-flex ">
                       <a
-                        className="bg-white facebook"
+                        className="bg-white facebook social-icon"
                         href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`}
                         rel="noopener noreferrer"
                         target="_blank">
@@ -95,7 +95,7 @@ const BlogContent = (props) => {
                         <i className="fab fa-facebook-f" />
                       </a>
                       <a
-                        className="bg-white twitter"
+                        className="bg-white twitter  social-icon"
                         href={`https://twitter.com/intent/tweet?url=${window.location.href}&text=${title}`}
                         rel="noopener noreferrer"
                         target="_blank">
@@ -103,7 +103,7 @@ const BlogContent = (props) => {
                         <i className="fab fa-twitter" />
                       </a>
                       <a
-                        className="bg-white pinterest"
+                        className="bg-white pinterest social-icon"
                         href={`http://pinterest.com/pin/create/button/?url=${window.location.href}&description=${title}`}
                         rel="noopener noreferrer"
                         target="_blank">
@@ -111,7 +111,7 @@ const BlogContent = (props) => {
                         <i className="fab fa-pinterest" aria-hidden="true"></i>
                       </a>
                       <a
-                        className="bg-white linkedin"
+                        className="bg-white linkedin social-icon"
                         href={`http://www.linkedin.com/shareArticle?mini=true&url=${window.location.href}&title=${title}`}
                         rel="noopener noreferrer"
                         target="_blank">
@@ -120,7 +120,7 @@ const BlogContent = (props) => {
                       </a>
 
                       <WhatsappShareButton url={window.location.href}>
-                        <span className="bg-white social-icon whatsapp">
+                        <span className="bg-white social-icon whatsapp social-icon">
                           <i className="fab fa-whatsapp" aria-hidden="true"></i>
                           <i className="fab fa-whatsapp" aria-hidden="true"></i>
                         </span>
@@ -129,7 +129,7 @@ const BlogContent = (props) => {
                       <FacebookMessengerShareButton
                         appId={"2995462243875033"}
                         url={window.location.href}>
-                        <span className="bg-white social-icon facebook-messenger">
+                        <span className="bg-white social-icon facebook-messenger social-icon">
                           <i
                             className="fab fa-facebook-messenger"
                             aria-hidden="true"></i>

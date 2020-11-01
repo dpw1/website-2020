@@ -128,8 +128,8 @@ $padding: 30px;
 
   &-about {
     width: 100%;
-    svg > * {
-      fill: gold;
+    .fas {
+      color: gold;
     }
 
     h2 {

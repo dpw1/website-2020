@@ -27,6 +27,12 @@
 #scrollUp > svg {
   font-size: 14px;
 }
+#scrollUp i {
+  color: white;
+  position: relative;
+  top: 9px;
+  font-size: 16px;
+}
 [data-toggle="collapse"]:after {
   transition: all 0.23s ease;
 }
@@ -201,8 +207,6 @@ section[id]:not(#footerSection) {
     border: unset !important;
   }
 }
-
-
 
 /* ALL PAGES end
 =============================================== */

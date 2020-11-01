@@ -19169,17 +19169,24 @@ img {
   transition: all 0.3s ease 0s;
 }
 
-.social-icons svg {
+$icon-offset: 5px;
+.social-icons svg,
+.social-icons i {
+  position: relative;
   display: block;
   height: 100%;
   line-height: 45px;
   margin: 0 auto;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  text-align: center;
+  top: -1px;
 }
 
-.social-icons > a:hover svg:first-child {
-  margin-top: -45px;
+.social-icons .social-icon:hover i:first-child,
+.social-icons > a:hover svg:first-child,
+.social-icons > a:hover i:first-child {
+  margin-top: -41px;
 }
 
 .social-icons > a.facebook {

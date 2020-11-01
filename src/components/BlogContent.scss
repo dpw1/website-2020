@@ -41,6 +41,14 @@
   }
 
   &-info {
+    @media (max-width: $xxxs) {
+      font-size: 12px;
+    }
+
+    @media (max-width: 340px) {
+      font-size: 11px;
+    }
+
     li:nth-child(1) {
       padding-left: 0 !important;
     }
@@ -75,5 +83,14 @@
 
   .post-date {
     line-height: normal !important;
+  }
+
+  .social-icons .social-icon i {
+    line-height: 36px;
+
+    &:nth-child(2) {
+      position: relative;
+      top: 5px;
+    }
   }
 }
