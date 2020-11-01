@@ -32,63 +32,6 @@
       }
     });
 
-    // :: 2.0 NAVIGATION MENU ACTIVE CODE
-    // dropdown for mobile
-    // $(document).ready(function () {
-    //   checkWidth(true);
-    //   $(window).resize(function () {
-    //     checkWidth(false);
-    //   });
-    // });
-
-    // function checkWidth(init) {
-    //   // If browser resized, check width again
-    //   if ($(window).width() <= 991) {
-    //     $(".dropdown-submenu a").on("click", function (e) {
-    //       $(this).next("ul").toggle();
-    //       e.stopPropagation();
-    //       e.preventDefault();
-    //     });
-    //   }
-    // }
-
-    // function navMenu() {
-    //   // MAIN MENU TOGGLER ICON (MOBILE SITE ONLY)
-    //   $('[data-toggle="navbarToggler"]').click(function () {
-    //     $(".navbar").toggleClass("active");
-    //     $("body").toggleClass("canvas-open");
-    //   });
-    //   // MAIN MENU TOGGLER ICON
-    //   $(".navbar-toggler").click(function () {
-    //     $(".navbar-toggler-icon").toggleClass("active");
-    //   });
-
-    //   // NAVBAR STICKY
-    //   var $stickyNav = $(".navbar-sticky");
-
-    //   $(window).on("scroll load", function () {
-    //     var scroll = $(window).scrollTop();
-    //     if (scroll >= 120) {
-    //       $stickyNav.addClass("navbar-sticky-moved-up");
-    //     } else {
-    //       $stickyNav.removeClass("navbar-sticky-moved-up");
-    //     }
-    //     // apply transition
-    //     if (scroll >= 250) {
-    //       $stickyNav.addClass("navbar-sticky-transitioned");
-    //     } else {
-    //       $stickyNav.removeClass("navbar-sticky-transitioned");
-    //     }
-    //     // sticky on
-    //     if (scroll >= 500) {
-    //       $stickyNav.addClass("navbar-sticky-on");
-    //     } else {
-    //       $stickyNav.removeClass("navbar-sticky-on");
-    //     }
-    //   });
-    // }
-    // navMenu();
-
     // :: 3.0 SCROLL TO TOP ACTIVE CODE
     var offset = 300;
     var duration = 500;
@@ -158,37 +101,37 @@
     });
 
     // :: 14.0 REVIEWS SLIDER
-    $("#reviews .app-screenshots").slick({
-      lazyLoad: "ondemand",
-      dots: false,
-      initialSlide: 0,
-      arrows: true,
-      speed: 1000,
-      slidesToShow: 2,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 10000,
-      pauseOnHover: false,
-      pauseOnFocus: false,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-          },
-        },
-        {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: false,
-            dots: false,
-          },
-        },
-      ],
-    });
+    // $("#reviews .app-screenshots").slick({
+    //   lazyLoad: "ondemand",
+    //   dots: false,
+    //   initialSlide: 0,
+    //   arrows: true,
+    //   speed: 1000,
+    //   slidesToShow: 2,
+    //   slidesToScroll: 1,
+    //   autoplay: true,
+    //   autoplaySpeed: 10000,
+    //   pauseOnHover: false,
+    //   pauseOnFocus: false,
+    //   responsive: [
+    //     {
+    //       breakpoint: 1024,
+    //       settings: {
+    //         slidesToShow: 2,
+    //         slidesToScroll: 1,
+    //       },
+    //     },
+    //     {
+    //       breakpoint: 767,
+    //       settings: {
+    //         slidesToShow: 1,
+    //         slidesToScroll: 1,
+    //         autoplay: false,
+    //         dots: false,
+    //       },
+    //     },
+    //   ],
+    // });
   };
   // window.customCode();
 })(window.jQuery);
