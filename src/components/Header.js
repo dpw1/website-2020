@@ -121,7 +121,6 @@ function Header(props) {
           logged_in_greeting="Hi! How can we help you?"
           logged_out_greeting="Hi! How can we help you?"></div>
       </header>
-      <FacebookButton></FacebookButton>
     </React.Fragment>
   );
 }
