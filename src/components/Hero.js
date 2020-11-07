@@ -58,8 +58,15 @@ function Hero(props) {
                 </span>
                 <br />
                 <span>
-                  Hire one of the best Shopify developers to quickly attend all
-                  of your technical needs.
+                  Hire a{" "}
+                  <a
+                    rel="noopener noreferrer"
+                    href="https://community.shopify.com/c/user/viewprofilepage/user-id/577094"
+                    target="_blank"
+                    className="hero-link">
+                    certified Shopify Partner
+                  </a>{" "}
+                  to quickly attend all of your technical needs.
                 </span>
               </h3>
               <p className="text-white mt-3 mb-4">
