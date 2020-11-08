@@ -21,16 +21,16 @@
     var zero = 0;
 
     // :: 1.0 PRELOADER ACTIVE CODE
-    $(window).on("load", function () {
-      $(".preloader-wapper").addClass("loaded");
-      if ($(".preloader-wapper").hasClass("loaded")) {
-        $(".preloader-main")
-          .delay(400)
-          .queue(function () {
-            $(this).remove();
-          });
-      }
-    });
+    // $(window).on("load", function () {
+    //   $(".preloader-wapper").addClass("loaded");
+    //   if ($(".preloader-wapper").hasClass("loaded")) {
+    //     $(".preloader-main")
+    //       .delay(400)
+    //       .queue(function () {
+    //         $(this).remove();
+    //       });
+    //   }
+    // });
 
     // :: 3.0 SCROLL TO TOP ACTIVE CODE
     var offset = 300;
@@ -512,7 +512,27 @@ ezfy = (function () {
     // });
   }
 
+  function scrollToHash() {
+    const hash = window.location.hash.trim().replace("#", "");
+
+    if (hash === "" || !hash) {
+      return;
+    }
+
+    const $hash = document.getElementById(hash);
+
+    if (!$hash) {
+      return;
+    }
+
+    $hash.scrollIntoView({
+      behavior: "smooth", // smooth scroll
+      block: "start", // the upper border of the element will be aligned at the top of the visible part of the window of the scrollable area.
+    });
+  }
+
   return {
+    reviewsTextSlider: reviewsTextSlider,
     initServices: () => {
       readMoreForServices();
       redirectToPaymentGateway();
@@ -528,6 +548,7 @@ ezfy = (function () {
       portfolioTagHandleOnClick();
       autoplayVideo();
       reviewsTextSlider();
+      setTimeout(scrollToHash, 350);
       window.ezfy.initServices();
       window.customCode();
     },
