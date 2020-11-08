@@ -25,6 +25,24 @@ function Preloader() {
     //       });
     //   }
     // });
+
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        const preloader = window.document.querySelector(`.preloader-wapper`);
+
+        if (!preloader) {
+          return;
+        }
+
+        preloader.classList.add("loaded");
+        if (preloader.classList.contains("loaded")) {
+          const loader = window.document.querySelector(`.preloader-main`);
+
+          setTimeout(() => loader.remove(), 500);
+        }
+        console.log(preloader);
+      }, 100);
+    });
   }, []);
 
   return (

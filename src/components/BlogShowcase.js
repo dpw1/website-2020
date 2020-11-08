@@ -76,7 +76,7 @@ function BlogShowcase(props) {
     }
 
     setTimeout(() => {
-      window.ezfy.lazyload();
+      window.ezfy && window.ezfy.lazyload();
     }, 50);
   }, [posts]);
 

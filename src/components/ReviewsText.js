@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import "./ReviewsText.scss";
 
 // the slider for this section can be found at custom.js, at the bottom of the file.
@@ -118,6 +118,9 @@ const reviews = [
 const Review = (props) => {
   const { image, name, country, testimonial, source } = props.data;
 
+  useEffect(() => {
+    setTimeout(window.ezfy.reviewsTextSlider, 50);
+  }, []);
   return (
     <article key={source} className="swiper-slide reviews-text-item">
       <div className="reviews-text-slider-wrapper">

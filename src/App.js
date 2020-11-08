@@ -16,7 +16,11 @@ import Routes from "./Routes";
 
 function App(props) {
   useEffect(() => {
-    console.log("sitemap");
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        window.ezfy.start();
+      }, 100);
+    });
   }, []);
 
   return (

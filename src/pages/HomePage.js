@@ -1,22 +1,22 @@
-import React, { Component } from "react";
-import ScrollToTop from "./../components/ScrollToTop";
-import Header from "./../components/Header";
-import Hero from "./../components/Hero";
-import Portfolio from "./../components/Portfolio";
-import Faq from "./../components/Faq";
-import Contact from "./../components/Contact";
-import Footer from "./../components/Footer";
+import React, { Component, Suspense } from "react";
 import Preloader from "./../components/Preloader";
-import About from "./../components/About";
-import BlogShowcase from "./../components/BlogShowcase";
-import ReviewsText from "./../components/ReviewsText";
-import Services from "./../components/Services";
-import Parallax from "./../components/Parallax";
-import Steps from "./../components/Steps";
+const ScrollToTop = React.lazy(() => import("./../components/ScrollToTop"));
+const Header = React.lazy(() => import("./../components/Header"));
+const Hero = React.lazy(() => import("./../components/Hero"));
+const Portfolio = React.lazy(() => import("./../components/Portfolio"));
+const Faq = React.lazy(() => import("./../components/Faq"));
+const Contact = React.lazy(() => import("./../components/Contact"));
+const Footer = React.lazy(() => import("./../components/Footer"));
+
+const About = React.lazy(() => import("./../components/About"));
+const BlogShowcase = React.lazy(() => import("./../components/BlogShowcase"));
+const ReviewsText = React.lazy(() => import("./../components/ReviewsText"));
+const Services = React.lazy(() => import("./../components/Services"));
+const Parallax = React.lazy(() => import("./../components/Parallax"));
+const Steps = React.lazy(() => import("./../components/Steps"));
 
 const HomePage = () => (
-  <React.Fragment>
-    <Preloader></Preloader>
+  <Suspense fallback={<Preloader />}>
     <ScrollToTop></ScrollToTop>
     <Header page={"home"}></Header>
     <Hero scrollTo="#about"></Hero>
@@ -25,15 +25,14 @@ const HomePage = () => (
     <ReviewsText></ReviewsText>
     <Services></Services>
     <Parallax
-      title="Get a free quote"
-      subtitle={`Didn't find what you need? Let us know, we'll work together to find
-            a custom solution that attend your needs.`}
+      title="Request immediate assistance"
+      subtitle={`In need of technical support? Please send us a message or an email, we'll get back to you within 24 hours.`}
       buttonText={"Request a free quote"}></Parallax>
     <Faq></Faq>
     <Steps></Steps>
     <Contact></Contact>
     <Footer page={"home"}></Footer>
-  </React.Fragment>
+  </Suspense>
 );
 
 export default HomePage;
