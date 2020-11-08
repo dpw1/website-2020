@@ -42,9 +42,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "scripts": {
-      "postbuild": "react-snap"
-    },
+    "postbuild": "react-snap && purgecss --css build/static/css/*.css --content build/index.html build/static/js/*.js --output build/static/css",
     "sitemap": "babel-node \"D:/Web Dev/diegofortes.com/website-2020/september/ezfy/src/utils/sitemap-generator.js\""
   },
   "eslintConfig": {
